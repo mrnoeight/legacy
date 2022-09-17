@@ -1,0 +1,63 @@
+/*
+ * typography.scss
+ *
+ * $Rev:: 13112         $:  Revision of last commit
+ * $Author:: lilee      $:  Author of last commit
+ * $Date:: 2014-07-30 1#$:  Date of last commit
+*/
+
+
+
+@font-face {
+  font-family: 'WindSongMedium';
+  src: url('../fonts/WindSongMedium.eot');
+  src: url('../fonts/WindSongMedium.eot') format('embedded-opentype'),
+       url('../fonts/WindSongMedium.woff2') format('woff2'),
+       url('../fonts/WindSongMedium.woff') format('woff'),
+       url('../fonts/WindSongMedium.ttf') format('truetype'),
+       url('../fonts/WindSongMedium.svg#WindSongMedium') format('svg');
+}
+
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+  font-family: 'Noto Serif Display';
+	text-transform: uppercase;
+}
+
+
+
+
+strong {
+  font-weight: bold;
+}
+
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+a {
+  transition: transform 1s;
+  
+}
