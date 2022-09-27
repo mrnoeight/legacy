@@ -6,12 +6,13 @@ var pApartment = {
         $(window).on('resize', pApartment.onResize);
         pApartment.OpenCard();
         pApartment.checklenght();
+        pApartment.popupFloorPlanDetail();
         // pApartment.sliderRoofMobile();
         // PRELOADER.hide();
         $('.btnTab').on("click",pApartment.TabDepartment);
         $('.ShowMore').on("click",pApartment.ShowMore);
         $('.ShowLess').on("click",pApartment.ShowLess);
-        $('.mainLinkFl').on("click",pApartment.ShowFloorPlan);
+        $('.js-mainLinkFl').on("click",pApartment.ShowFloorPlan);
         $('.jsCloseTow').on("click",pApartment.CloseFloorPlan);
         $('.listPlanTow a').on("click",pApartment.OpenTowerDetail);
     },
@@ -21,6 +22,17 @@ var pApartment = {
         if($('#tab2').is(':visible')) {
             pApartment.sliderRoofMobile();
         }
+        
+    },
+
+    popupFloorPlanDetail: function (e) {
+        $('.js-floorplandetail').on("click",function(){
+            $('#FloorPlanDetail').stop(true,true).fadeIn();
+        });
+
+        $('.js-closefloorplandetail').on("click",function(){
+            $('#FloorPlanDetail').stop(true,true).fadeOut();
+        });
         
     },
 

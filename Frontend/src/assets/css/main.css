@@ -2480,7 +2480,7 @@ main p {
   background: -webkit-linear-gradient(left, #b99d74 0%, #d9bf9b 52%, #b99d74 100%);
   background: -o-linear-gradient(left, #b99d74 0%, #d9bf9b 52%, #b99d74 100%);
   background: -ms-linear-gradient(left, #b99d74 0%, #d9bf9b 52%, #b99d74 100%);
-  background: linear, to right, #b99d74 0%, #d9bf9b 52%, #b99d74 100%;
+  background: linear-gradient(to right, #b99d74 0%, #d9bf9b 52%, #b99d74 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b99d74', endColorstr='#b99d74', GradientType=1 ); }
   .pdf .copy {
     text-transform: uppercase;
@@ -2847,7 +2847,7 @@ main p {
   background: -webkit-linear-gradient(left, #b99d74 0%, #d9bf9b 52%, #b99d74 100%);
   background: -o-linear-gradient(left, #b99d74 0%, #d9bf9b 52%, #b99d74 100%);
   background: -ms-linear-gradient(left, #b99d74 0%, #d9bf9b 52%, #b99d74 100%);
-  background: linear, to right, #b99d74 0%, #d9bf9b 52%, #b99d74 100%;
+  background: linear-gradient(to right, #b99d74 0%, #d9bf9b 52%, #b99d74 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b99d74', endColorstr='#b99d74', GradientType=1 ); }
   .btn span {
     display: inline-block;
@@ -3405,17 +3405,17 @@ main p {
     .towerFloorplanWrap .tooltipCard .copyCard p {
       font-size: 12px; }
 
-.ttTowWrap span:nth-child(1) {
-  top: 29%;
-  transform: translate(186%, 0); }
-
-.ttTowWrap span:nth-child(2) {
-  top: 23%;
-  transform: translate(-248%, 0); }
-
-.ttTowWrap span:nth-child(3) {
-  top: 11%;
-  transform: translate(-40%, 0); }
+.ttTowWrap span {
+  cursor: pointer; }
+  .ttTowWrap span:nth-child(1) {
+    top: 29%;
+    transform: translate(186%, 0); }
+  .ttTowWrap span:nth-child(2) {
+    top: 23%;
+    transform: translate(-248%, 0); }
+  .ttTowWrap span:nth-child(3) {
+    top: 11%;
+    transform: translate(-40%, 0); }
 
 .ttTow {
   display: inline-block;
@@ -3512,6 +3512,86 @@ main p {
     max-width: 512px; }
   .floorplanImg.towC {
     max-width: 512px; }
+  .floorplanImg svg {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; }
+    .floorplanImg svg path {
+      cursor: pointer;
+      fill: rgba(163, 129, 95, 0);
+      transition: all 0.3s; }
+      .floorplanImg svg path:hover {
+        fill: rgba(163, 129, 95, 0.8); }
+
+.floorPlanDetailPu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background: #fff;
+  z-index: 9;
+  padding: 140px 0;
+  display: none; }
+  .floorPlanDetailPu .container {
+    display: flex; }
+  .floorPlanDetailPu .left {
+    width: 50%;
+    display: flex;
+    align-content: space-between;
+    flex-wrap: wrap;
+    position: relative; }
+    .floorPlanDetailPu .left .img {
+      display: none; }
+  .floorPlanDetailPu .right {
+    width: 50%; }
+  .floorPlanDetailPu .top {
+    padding-bottom: 30px;
+    width: 100%; }
+    .floorPlanDetailPu .top p {
+      color: #242021;
+      text-transform: uppercase;
+      padding-bottom: 10px; }
+  .floorPlanDetailPu .bottom {
+    width: 100%; }
+    .floorPlanDetailPu .bottom .item {
+      padding-bottom: 10px; }
+      .floorPlanDetailPu .bottom .item p {
+        color: #242021;
+        text-transform: uppercase; }
+      .floorPlanDetailPu .bottom .item h3 {
+        font-size: 30px;
+        color: #BFA47C;
+        font-weight: 700;
+        font-family: 'Montserrat'; }
+
+.btnBack {
+  display: block;
+  position: absolute;
+  top: -90px;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  border-radius: 200px;
+  background: linear-gradient(269.22deg, #B99D74 -15.78%, #D9BF9B 47.95%, #BFA47C 115.79%);
+  transform: matrix(0, -1, -1, 0, 0, 0);
+  cursor: pointer; }
+  .btnBack span {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(../images/btn-prev.png) center center no-repeat;
+    background-size: 12px;
+    transform: rotate(-90deg); }
+  .btnBack:hover {
+    background: #000; }
 
 footer {
   background: #1C1819; }

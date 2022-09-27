@@ -1912,6 +1912,7 @@ main {
 
 .ttTowWrap {
 	span {
+		cursor: pointer;
 		&:nth-child(1) {
 			top: 29%;
 			transform: translate(186%,0);
@@ -2047,5 +2048,102 @@ main {
 	}
 	&.towC {
 		max-width: 512px;
+	}
+
+	svg {
+		display: block;
+		@include coverer;
+
+		path {
+			cursor: pointer;
+			fill: transparentize($color: #A3815F, $amount: 1);
+			transition: all 0.3s;
+
+			&:hover {
+				fill: transparentize($color: #A3815F, $amount: 0.2);
+			}
+		}
+	}
+}
+
+.floorPlanDetailPu {
+	@include coverer;
+	position: fixed;
+	background: #fff;
+	z-index: 9;
+	padding: 140px 0;
+	display: none;
+
+	.container {
+		display: flex;
+		
+	}
+
+	.left {
+		width: 50%;
+		display: flex;
+		align-content: space-between;
+		flex-wrap: wrap;
+		position: relative;
+
+		.img {
+			display: none;
+		}
+	}
+	.right {
+		width: 50%;
+	}
+
+	.top {
+		padding-bottom: 30px;
+		width: 100%;
+		p {
+			color: #242021;
+			text-transform: uppercase;
+			padding-bottom: 10px;
+		}
+	}
+	.bottom {
+		width: 100%;
+		.item {
+			padding-bottom: 10px;
+			p {
+				color: #242021;
+				text-transform: uppercase;
+				
+			}
+
+			h3 {
+				font-size: 30px;
+				color: #BFA47C;
+				font-weight: 700;
+				font-family: 'Montserrat';
+			}
+		}
+	}
+}
+
+.btnBack {
+	display: block;
+	position: absolute;
+	top: -90px;
+	left: 0;
+	width: 50px;
+	height: 50px;
+	border-radius: 200px;
+	background: linear-gradient(269.22deg, #B99D74 -15.78%, #D9BF9B 47.95%, #BFA47C 115.79%);
+	transform: matrix(0, -1, -1, 0, 0, 0);
+	cursor: pointer;
+
+	span {
+		display: block;
+		@include coverer;
+		background: url(../images/btn-prev.png) center center no-repeat;
+		background-size: 12px;
+		transform: rotate(-90deg);
+	}
+
+	&:hover {
+		background: #000;
 	}
 }
