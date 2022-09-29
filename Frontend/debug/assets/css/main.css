@@ -3729,7 +3729,15 @@ main p {
     height: 100%;
     overflow: auto; }
   .floorplanDetail .top {
-    padding-bottom: 30px; }
+    padding-bottom: 30px;
+    position: relative; }
+    .floorplanDetail .top > div {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center; }
     .floorplanDetail .top p {
       color: #242021;
       text-transform: uppercase;
@@ -4008,7 +4016,8 @@ header.menuMobile {
 .bgClubMb,
 .clickCardMobile,
 .rooftopMobile,
-.capRoof {
+.capRoof,
+.btnBackAr {
   display: none; }
 
 @media screen and (max-width: 1440px) {
@@ -4162,6 +4171,60 @@ header.menuMobile {
     padding-left: 61px; }
   .sliderBusiness .activeWidth {
     width: 510px; } }
+
+@media screen and (max-width: 1023px) {
+  .towerFloorplanWrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: column-reverse;
+    flex-direction: column-reverse;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    height: auto; }
+    .towerFloorplanWrap .leftT {
+      height: auto;
+      width: 100%; }
+    .towerFloorplanWrap .rightT {
+      height: auto;
+      width: 100%;
+      position: relative; }
+  .mainInfoTw {
+    width: 100%;
+    text-align: center;
+    padding: 50px 20px; }
+  .towerWrap {
+    width: 100%;
+    height: auto; }
+    .towerWrap img {
+      width: 100%;
+      height: auto; }
+  .floorplanDetail {
+    position: fixed;
+    z-index: 9; }
+    .floorplanDetail .top div {
+      padding-bottom: 20px; }
+    .floorplanDetail .top p {
+      padding-bottom: 0; }
+  .btnBackAr {
+    width: 12px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-right: 18px; }
+  .floorPlanDetailPu .right {
+    display: none; }
+  .floorPlanDetailPu .left {
+    width: 100%; }
+    .floorPlanDetailPu .left .img {
+      display: block; }
+  .floorPlanDetailPu {
+    overflow: auto; }
+  .towerFloorplanWrap .tooltipCard.tooltipTowB {
+    top: 12%;
+    right: 19%; } }
 
 @media screen and (max-width: 850px) and (orientation: portrait) {
   .masterPlan .row, .floorplanWrap .row {

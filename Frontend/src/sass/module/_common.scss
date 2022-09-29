@@ -2017,6 +2017,12 @@ main {
 
 	.top {
 		padding-bottom: 30px;
+		position: relative;
+
+		&>div {
+			display: flex;
+			align-items: center;
+		}
 		p {
 			color: #242021;
 			text-transform: uppercase;

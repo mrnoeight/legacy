@@ -64,8 +64,11 @@ var pApartment = {
         $('.'+ovl).fadeIn();
         $('.'+tooltip).fadeIn().addClass('active');
         // $('.floorplanDetail').fadeIn();
-        $('.'+tooltip).find('.listPlanTow a:first-child').click();
+        
         $('.floorplanDetail .top p span').html(tower);
+        if($(window).width()>1023) {
+            $('.'+tooltip).find('.listPlanTow a:first-child').click();
+        }
     },
 
     sliderRoofMobile: function () {

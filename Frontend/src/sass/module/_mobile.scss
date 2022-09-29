@@ -81,7 +81,8 @@ header.menuMobile {
 .bgClubMb,
 .clickCardMobile,
 .rooftopMobile,
-.capRoof {
+.capRoof,
+.btnBackAr {
 	display: none;
 }
 
@@ -282,8 +283,80 @@ header.menuMobile {
 		width: 510px;
 	}
 }
+@media screen and (max-width: 1023px) {
+	.towerFloorplanWrap {
+		display: flex;
+		flex-direction: column-reverse;
+		flex-wrap: wrap;
+		height: auto;
 
+		.leftT {
+			height: auto;
+			width: 100%;
+		}
+		.rightT {
+			height: auto;
+			width: 100%;
+			position: relative;
+		}
+	}
+	.mainInfoTw {
+		width: 100%;
+		text-align: center;
+		padding: 50px 20px;
+	}
+	.towerWrap {
+		width: 100%;
+		height: auto;
+
+		img {
+			width: 100%;
+			height: auto;
+		}
+	}
+	.floorplanDetail {
+		position: fixed;
+		z-index: 9;
+
+		.top {
+			div {
+				padding-bottom: 20px;
+			}
+			p {
+				padding-bottom: 0;
+				
+			}
+		}
+	}
+	
+	.btnBackAr {
+		width: 12px;
+		display: flex;
+		margin-right: 18px;
+	}
+
+	.floorPlanDetailPu .right {
+		display: none;
+	}
+	.floorPlanDetailPu .left {
+		width: 100%;
+
+		.img {
+			display: block;
+		}
+	}
+	.floorPlanDetailPu {
+		overflow: auto;
+	}
+	.towerFloorplanWrap .tooltipCard.tooltipTowB {
+		top: 12%;
+		right: 19%;
+	}
+}
 @media screen and (max-width: 850px) and (orientation: portrait) {
+	
+
+
 	.masterPlan .row, .floorplanWrap .row {
 		display: block;
 	}
