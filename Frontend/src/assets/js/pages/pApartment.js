@@ -7,6 +7,7 @@ var pApartment = {
         pApartment.OpenCard();
         pApartment.checklenght();
         pApartment.popupFloorPlanDetail();
+        pApartment.selectFloorPlan();
         // pApartment.sliderRoofMobile();
         // PRELOADER.hide();
         $('.btnTab').on("click",pApartment.TabDepartment);
@@ -15,6 +16,7 @@ var pApartment = {
         $('.js-mainLinkFl').on("click",pApartment.ShowFloorPlan);
         $('.jsCloseTow').on("click",pApartment.CloseFloorPlan);
         $('.listPlanTow a').on("click",pApartment.OpenTowerDetail);
+        $('.js-closefloorplandetailMb').on("click",pApartment.CloseFloorPlanMobile);
     },
 
     onResize: function (e) {
@@ -22,6 +24,35 @@ var pApartment = {
         if($('#tab2').is(':visible')) {
             pApartment.sliderRoofMobile();
         }
+        
+    },
+    CloseFloorPlanMobile: function (e) {
+        $('.floorplanDetail').fadeOut();
+        $('.floorplanDetail select').fadeOut();
+        return false;
+        
+    },
+
+    selectFloorPlan: function (e) {
+        $(".listPlanTowSelect").change(function () {
+            $('.floorplanImg').hide();
+            var floorplan = $(this).find(':selected').attr('floor');
+            var floorDetail =$(this).find(':selected').attr('floorDetail');
+            $('#'+floorDetail).fadeIn();
+            $('.floorplanDetail h2').html(floorplan)
+            $(this).addClass('active')
+            $('.floorplanDetail').fadeIn();
+
+            $('.floorplanDetail option').each(function(){
+                if($(this).attr('floorDetail') == floorDetail) {
+                    $(this).parent().show();
+                    $(this).prop("selected", "selected")
+                }
+                
+            });
+
+        return false;
+       });
         
     },
 
