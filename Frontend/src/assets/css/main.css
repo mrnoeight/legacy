@@ -3542,7 +3542,8 @@ main p {
   padding: 140px 0;
   display: none; }
   .floorPlanDetailPu .container {
-    display: flex; }
+    display: flex;
+    padding-bottom: 30px; }
   .floorPlanDetailPu .left {
     width: 50%;
     display: flex;
@@ -3551,8 +3552,9 @@ main p {
     position: relative; }
     .floorPlanDetailPu .left .img {
       display: none; }
-  .floorPlanDetailPu .right {
-    width: 50%; }
+  .floorPlanDetailPu .right img {
+    height: 76vh;
+    width: auto; }
   .floorPlanDetailPu .top {
     padding-bottom: 30px;
     width: 100%; }
