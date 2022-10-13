@@ -37,11 +37,13 @@ var pApartment = {
     selectFloorPlan: function (e) {
         $(".listPlanTowSelect").change(function () {
             $('.floorplanImg').hide();
+            $('.hintFp').hide();
             var floorplan = $(this).find(':selected').attr('floor');
             var floorDetail =$(this).find(':selected').attr('floorDetail');
             $('#'+floorDetail).fadeIn(function(){
                 $(this).css('display', 'inline-block');
             });
+            $("[rel="+floorDetail+"]").css('display', 'flex');
             $('.floorplanDetail h2').html(floorplan)
             $(this).addClass('active')
             $('.floorplanDetail').fadeIn();
@@ -73,11 +75,13 @@ var pApartment = {
     OpenTowerDetail: function (e) {
         $('.listPlanTow a').removeClass('active');
         $('.floorplanImg').hide();
+        $('.hintFp').hide();
         var floorplan = $(this).attr('floor');
         var floorDetail = $(this).attr('floorDetail');
         $('#'+floorDetail).fadeIn(function(){
             $(this).css('display', 'inline-block');
         });
+        $("[rel="+floorDetail+"]").css('display', 'flex');
         $('.floorplanDetail h2').html(floorplan)
         $(this).addClass('active')
         $('.floorplanDetail').fadeIn();

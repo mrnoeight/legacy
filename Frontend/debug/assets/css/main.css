@@ -3729,7 +3729,7 @@ main p {
     height: 100%;
     overflow: auto; }
   .floorplanDetail .top {
-    padding-bottom: 30px;
+    padding-bottom: 10px;
     position: relative; }
     .floorplanDetail .top > div {
       display: -webkit-box;
@@ -3743,19 +3743,19 @@ main p {
       text-transform: uppercase;
       padding-bottom: 10px; }
   .floorplanDetail .copy {
-    padding-top: 20px;
     padding-left: 20px; }
     .floorplanDetail .copy li {
       list-style-type: disc;
       list-style-position: outside;
       color: #242021;
       padding-bottom: 3px;
-      font-size: 11px; }
+      font-size: 10px; }
 
 .floorplanImg {
   position: relative;
   display: none;
-  height: 50vh; }
+  height: 45vh;
+  margin-bottom: 20px; }
   .floorplanImg > img {
     width: auto;
     max-width: unset;
@@ -3908,6 +3908,44 @@ main p {
     transform: rotate(-90deg); }
   .btnBack:hover {
     background: #000; }
+
+.hintFp {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  max-width: 500px;
+  display: none; }
+  .hintFp .item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 30%;
+    margin-bottom: 11px !important; }
+    .hintFp .item:nth-child(n) {
+      margin-bottom: 5%;
+      margin-right: 5%; }
+    .hintFp .item:nth-child(3n) {
+      margin-right: 0;
+      margin-bottom: 0; }
+    .hintFp .item span {
+      display: block;
+      width: 22px;
+      height: 22px;
+      -webkit-box-flex: 0;
+      -ms-flex: none;
+      flex: none; }
+    .hintFp .item p {
+      -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+      flex-grow: 1;
+      padding-left: 10px;
+      font-size: 10px;
+      color: #242021; }
 
 footer {
   background: #1C1819; }
@@ -4237,6 +4275,12 @@ header.menuMobile {
     height: 38vh; } }
 
 @media screen and (max-width: 1023px) {
+  .floorplanDetail {
+    height: 100%;
+    overflow: auto; }
+  .floorplanDetail > div {
+    height: auto;
+    overflow: auto; }
   .towerFloorplanWrap {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -4824,6 +4868,15 @@ header.menuMobile {
       left: auto; } }
 
 @media screen and (max-width: 480px) {
+  .hintFp .item {
+    width: 47.5%;
+    margin-bottom: 11px !important; }
+    .hintFp .item:nth-child(n) {
+      margin-bottom: 5%;
+      margin-right: 5%; }
+    .hintFp .item:nth-child(2n) {
+      margin-right: 0;
+      margin-bottom: 0; }
   .locaImgFP {
     padding-left: 0;
     width: 140px; }
@@ -5360,17 +5413,38 @@ header.menuMobile {
     padding: 20px 0; }
   .sliderrooftop {
     padding-bottom: 70px;
-    height: 70vh; }
+    height: 70vh;
+    margin-top: 60px; }
     .sliderrooftop .slick-track,
     .sliderrooftop .slick-list,
     .sliderrooftop .slick-slide {
       height: 100%; }
     .sliderrooftop .slick-slide {
-      background-size: contain !important; }
+      background-size: contain !important;
+      position: relative; }
     .sliderrooftop .slick-dots {
       position: absolute;
       bottom: 0;
       left: -6px; }
+    .sliderrooftop .slick-list {
+      overflow: unset; }
+    .sliderrooftop .slick-arrow.btnSliderPrev {
+      left: 10px; }
+    .sliderrooftop .slick-arrow.btnSliderNext {
+      right: 10px; }
+    .sliderrooftop h2 {
+      display: block;
+      width: 100%;
+      position: absolute;
+      top: -40px;
+      left: 0;
+      font-weight: 700;
+      font-size: 20px;
+      text-transform: uppercase;
+      color: #fff;
+      white-space: nowrap;
+      font-family: 'Montserrat';
+      text-align: center; }
   .rooftopMobile {
     display: block; }
   .rooftopDesk {

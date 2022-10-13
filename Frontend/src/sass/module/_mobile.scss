@@ -300,6 +300,14 @@ header.menuMobile {
 	}
 }
 @media screen and (max-width: 1023px) {
+	.floorplanDetail {
+		height: 100%;
+		overflow: auto;
+	}
+	.floorplanDetail > div {
+		height: auto;
+		overflow: auto;
+	}
 	.towerFloorplanWrap {
 		display: flex;
 		flex-direction: column-reverse;
@@ -1119,6 +1127,12 @@ header.menuMobile {
 }
 
 @media screen and (max-width: 480px) {
+	.hintFp {
+		.item {
+			@include rowMachine(2, 5%);
+    		margin-bottom: 11px !important;
+		}
+	}
 	.locaImgFP {
 		padding-left: 0;
 		width: 140px;
@@ -1882,6 +1896,7 @@ header.menuMobile {
 	.sliderrooftop {
 		padding-bottom: 70px;
 		height: 70vh;
+		margin-top: 60px;
 
 		.slick-track,
 		.slick-list,
@@ -1891,12 +1906,16 @@ header.menuMobile {
 
 		.slick-slide {
 			background-size: contain !important;
+			position: relative;
 		}
 
 		.slick-dots {
 			position: absolute;
 			bottom: 0;
 			left: -6px;
+		}
+		.slick-list {
+			overflow: unset;
 		}
 
 		.slick-arrow {
@@ -1910,7 +1929,28 @@ header.menuMobile {
 		.btnSliderPrev  {
 			// right: 70px;
 		}
+		.slick-arrow.btnSliderPrev {
+			left: 10px;
+		}
+		.slick-arrow.btnSliderNext {
+			right: 10px;
+		}
 
+		h2 {
+			display: block;
+			width: 100%;
+			position: absolute;
+			top: -40px;
+			left: 0;
+			font-weight: 700;
+			font-size: 20px;
+			text-transform: uppercase;
+			color: #fff;
+			white-space: nowrap;
+			font-family: 'Montserrat';
+			text-align: center;
+
+		}
 		
 	}
 	.rooftopMobile {
