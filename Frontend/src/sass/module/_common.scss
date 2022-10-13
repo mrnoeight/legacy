@@ -2039,6 +2039,7 @@ main {
 			list-style-position: outside;
 			color: #242021;
 			padding-bottom: 3px;
+			font-size: 11px;
 		}
 	}
 }
@@ -2046,14 +2047,21 @@ main {
 .floorplanImg {
 	position: relative;
 	display: none;
-	&.towA {
-		max-width: 660px;
-	}
-	&.towB {
-		max-width: 512px;
-	}
-	&.towC {
-		max-width: 512px;
+	height: 50vh;
+	// &.towA {
+	// 	max-width: 660px;
+	// }
+	// &.towB {
+	// 	max-width: 512px;
+	// }
+	// &.towC {
+	// 	max-width: 512px;
+	// }
+
+	&>img {
+		width: auto;
+		max-width: unset;
+		height: 100%;
 	}
 
 	svg {
@@ -2082,11 +2090,14 @@ main {
 
 	.container {
 		display: flex;
+		justify-content: space-between;
 		padding-bottom: 30px;
+		max-width: 100%;
+		padding: 0 80px;
 	}
 
 	.left {
-		width: 50%;
+		width: 32%;
 		display: flex;
 		align-content: space-between;
 		flex-wrap: wrap;
@@ -2097,12 +2108,10 @@ main {
 		}
 	}
 	.right {
-		// width: 50%;
-
-		img {
-			height: 76vh;
-			width: auto;
-		}
+		width: 67%;
+		height: 81vh;
+		display: flex;
+		position: relative;
 	}
 
 	.top {
@@ -2112,6 +2121,10 @@ main {
 			color: #242021;
 			text-transform: uppercase;
 			padding-bottom: 10px;
+
+			img {
+				display: none;
+			}
 		}
 	}
 	.bottom {
@@ -2122,15 +2135,58 @@ main {
 				color: #242021;
 				text-transform: uppercase;
 				
-			}
-
-			h3 {
-				font-size: 30px;
-				color: #BFA47C;
-				font-weight: 700;
-				font-family: 'Montserrat';
+				strong {
+					color: #BFA47C;
+					font-weight: 700;
+					font-family: 'Montserrat';
+				}
 			}
 		}
+	}
+}
+
+.mainImgFP {
+	height: 100%;
+	flex-grow: 1;
+
+	img {
+		width: 100%;
+		height: 100%;
+		object-fit: contain;
+	}
+
+	.opSlideGallery {
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		width: 140px;
+		display: flex;
+		justify-content: space-between;
+	}
+}
+
+
+.locaImgFP {
+	padding-left: 40px;
+	width: 180px;
+	flex: none;
+
+	p {
+		color: #242021;
+		text-transform: uppercase;
+		display: flex;
+		align-items: center;
+		font-size: 14px;
+		padding-bottom: 10px;
+
+		img {
+			width: 20px;
+			margin-left: 10px;
+		}	
+	}
+
+	&>img {
+
 	}
 }
 

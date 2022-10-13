@@ -97,6 +97,14 @@ header.menuMobile {
     }
 }
 @media screen and (max-width: 1200px) {
+	.floorPlanDetailPu .top {
+		.mainTt {
+			font-size: 30px;
+		}
+	}
+	.floorPlanDetailPu .right {
+		height: 76vh;
+	}
 	.subMb  {
 		display: block;
 	}
@@ -283,6 +291,13 @@ header.menuMobile {
 	.sliderBusiness .activeWidth {
 		width: 510px;
 	}
+
+	.floorplanDetail {
+		padding: 40px 31px;
+	}
+	.floorplanImg {
+		height: 38vh;
+	}
 }
 @media screen and (max-width: 1023px) {
 	.towerFloorplanWrap {
@@ -315,6 +330,7 @@ header.menuMobile {
 			height: auto;
 		}
 	}
+	
 	.floorplanDetail {
 		position: fixed;
 		z-index: 9;
@@ -336,18 +352,24 @@ header.menuMobile {
 		margin-right: 18px;
 	}
 
-	.floorPlanDetailPu .right {
-		display: none;
-	}
+	
 	.floorPlanDetailPu .left {
 		width: 100%;
-
-		.img {
-			display: block;
-		}
+	}
+	.floorPlanDetailPu .right {
+		width: 100%;
+		flex-wrap: wrap;
+		justify-content: center;
+		height: auto;
 	}
 	.floorPlanDetailPu {
 		overflow: auto;
+		padding: 40px 31px;
+
+		.container {
+			padding: 0;
+			display: block;
+		}
 	}
 	.towerFloorplanWrap .tooltipCard.tooltipTowB {
 		top: 12%;
@@ -355,11 +377,50 @@ header.menuMobile {
 	}
 
 	.floorPlanDetailPu .bottom {
-		padding-top: 20px;
+		padding-top: 0;
+	}
+	.floorPlanDetailPu .top p {
+		display: flex;
+		align-items: center;
+		img {
+			display: block;
+		}
+	}
+	.mainImgFP {
+		margin-bottom: 20px;
+		height: 41vh;
+		width: 100%;
+		position: relative;
+		padding: 0 50px;
+
+		.opSlideGallery {
+			width: 100%;
+			padding: 0;
+			bottom: auto;
+			top: 50%;
+			transform: translate(0,-50%);
+		}
 	}
 }
 @media screen and (max-width: 850px) and (orientation: portrait) {
-	
+	.floorplanImg {
+		height: auto;
+
+		&.towA {
+			width: 100%;
+
+			&>img {
+				height: auto;
+				width: 100%;
+			}
+		}
+		&.towB {
+			height: 54vh;
+		}
+		&.towC {
+			height: 54vh;
+		}
+	}
 
 
 	.masterPlan .row, .floorplanWrap .row {
@@ -1058,6 +1119,42 @@ header.menuMobile {
 }
 
 @media screen and (max-width: 480px) {
+	.locaImgFP {
+		padding-left: 0;
+		width: 140px;
+	}
+	.mainImgFP .opSlideGallery {
+		.btnSlider {
+			margin-right: 0;
+		}
+	}
+	
+	.floorPlanDetailPu {
+		padding: 20px 17px;
+	}
+	.floorPlanDetailPu .top {
+		.mainTt {
+			font-size: 24px;
+		}
+	}
+	.floorplanImg {
+		height: auto;
+
+		&.towA {
+			width: 100%;
+
+			&>img {
+				height: auto;
+				width: 100%;
+			}
+		}
+		&.towB {
+			height: 37vh;
+		}
+		&.towC {
+			height: 37vh;
+		}
+	}
 	.floorplanDetail {
 		.mainTt {
 			display: none;

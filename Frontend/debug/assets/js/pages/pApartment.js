@@ -26,6 +26,7 @@ var pApartment = {
         }
         
     },
+    
     CloseFloorPlanMobile: function (e) {
         $('.floorplanDetail').fadeOut();
         $('.floorplanDetail select').fadeOut();
@@ -38,7 +39,9 @@ var pApartment = {
             $('.floorplanImg').hide();
             var floorplan = $(this).find(':selected').attr('floor');
             var floorDetail =$(this).find(':selected').attr('floorDetail');
-            $('#'+floorDetail).fadeIn();
+            $('#'+floorDetail).fadeIn(function(){
+                $(this).css('display', 'inline-block');
+            });
             $('.floorplanDetail h2').html(floorplan)
             $(this).addClass('active')
             $('.floorplanDetail').fadeIn();
@@ -72,7 +75,9 @@ var pApartment = {
         $('.floorplanImg').hide();
         var floorplan = $(this).attr('floor');
         var floorDetail = $(this).attr('floorDetail');
-        $('#'+floorDetail).fadeIn();
+        $('#'+floorDetail).fadeIn(function(){
+            $(this).css('display', 'inline-block');
+        });
         $('.floorplanDetail h2').html(floorplan)
         $(this).addClass('active')
         $('.floorplanDetail').fadeIn();
