@@ -3644,7 +3644,8 @@ main p {
     display: flex;
     align-items: center;
     width: 30%;
-    margin-bottom: 11px !important; }
+    margin-bottom: 11px !important;
+    cursor: pointer; }
     .hintFp .item:nth-child(n) {
       margin-bottom: 5%;
       margin-right: 5%; }
@@ -3653,8 +3654,8 @@ main p {
       margin-bottom: 0; }
     .hintFp .item span {
       display: block;
-      width: 22px;
-      height: 22px;
+      width: 17px;
+      height: 17px;
       flex: none; }
     .hintFp .item p {
       flex-grow: 1;
@@ -3789,6 +3790,9 @@ header.menuMobile {
 .capRoof,
 .btnBackAr,
 .listPlanTowSelect {
+  display: none; }
+
+.floorplanDetail .copy.mb {
   display: none; }
 
 @media screen and (max-width: 1440px) {
@@ -4474,15 +4478,36 @@ header.menuMobile {
       left: auto; } }
 
 @media screen and (max-width: 480px) {
-  .hintFp .item {
-    width: 47.5%;
-    margin-bottom: 11px !important; }
-    .hintFp .item:nth-child(n) {
-      margin-bottom: 5%;
-      margin-right: 5%; }
-    .hintFp .item:nth-child(2n) {
-      margin-right: 0;
-      margin-bottom: 0; }
+  .mainImgFP {
+    height: auto;
+    margin-top: 20px; }
+  .floorplanDetail .copy {
+    display: none; }
+  .hintFp {
+    margin-bottom: 25px; }
+    .hintFp .item {
+      width: 100%;
+      margin-bottom: 0 !important;
+      border-bottom: 1px #A3815F solid;
+      padding: 11px 0;
+      position: relative; }
+      .hintFp .item:nth-child(n) {
+        margin-bottom: 0%;
+        margin-right: 0%; }
+      .hintFp .item:nth-child(1n) {
+        margin-right: 0;
+        margin-bottom: 0; }
+      .hintFp .item:after {
+        display: block;
+        content: "";
+        width: 7px;
+        height: 14px;
+        position: absolute;
+        right: 0;
+        top: 50%;
+        margin-top: -7px;
+        background: url(../images/ar-4.png) center center no-repeat;
+        background-size: 100%; }
   .locaImgFP {
     padding-left: 0;
     width: 140px; }

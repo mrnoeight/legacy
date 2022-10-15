@@ -2225,11 +2225,12 @@ main {
 		align-items: center;
 		@include rowMachine(3, 5%);
     	margin-bottom: 11px !important;
+		cursor: pointer;
 
 		span {
 			display: block;
-			width: 22px;
-			height: 22px;
+			width: 17px;
+			height: 17px;
 			flex: none;
 		}
 		p {

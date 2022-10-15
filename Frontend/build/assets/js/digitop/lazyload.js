@@ -1,11 +1,1 @@
-function lazyLoadAll() {
-    var imgDefer = document.getElementsByTagName('img');
-    for (var i=0; i<imgDefer.length; i++) {
-        if(imgDefer[i].getAttribute('data-src')) {
-            imgDefer[i].setAttribute('src',imgDefer[i].getAttribute('data-src'));
-        } 
-    }
-}
-
-// Check <img> lazy load:
-lazyLoadAll();
+"use strict";function lazyLoadAll(){for(var t=document.getElementsByTagName("img"),e=0;e<t.length;e++)t[e].getAttribute("data-src")&&t[e].setAttribute("src",t[e].getAttribute("data-src"))}lazyLoadAll();

@@ -38,12 +38,15 @@ var pApartment = {
         $(".listPlanTowSelect").change(function () {
             $('.floorplanImg').hide();
             $('.hintFp').hide();
+            $('.floorplanDetail .copy.mb').hide();
             var floorplan = $(this).find(':selected').attr('floor');
             var floorDetail =$(this).find(':selected').attr('floorDetail');
             $('#'+floorDetail).fadeIn(function(){
                 $(this).css('display', 'inline-block');
             });
             $("[rel="+floorDetail+"]").css('display', 'flex');
+            console.log(floorDetail);
+            $("[data-text="+floorDetail+"]").show();
             $('.floorplanDetail h2').html(floorplan)
             $(this).addClass('active')
             $('.floorplanDetail').fadeIn();

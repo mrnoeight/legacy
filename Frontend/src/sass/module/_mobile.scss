@@ -87,6 +87,10 @@ header.menuMobile {
 	display: none;
 }
 
+.floorplanDetail .copy.mb {
+	display: none;
+}
+
 
 @media screen and (max-width: 1440px) {
 	.overviewWrap .img {
@@ -1127,10 +1131,34 @@ header.menuMobile {
 }
 
 @media screen and (max-width: 480px) {
+	.mainImgFP {
+		height: auto;
+		margin-top: 20px;
+	}
+	.floorplanDetail .copy {
+		display: none;
+	}
 	.hintFp {
+		margin-bottom: 25px;
 		.item {
-			@include rowMachine(2, 5%);
-    		margin-bottom: 11px !important;
+			@include rowMachine(1, 0%);
+    		margin-bottom: 0 !important;
+			border-bottom: 1px #A3815F solid;
+			padding: 11px 0;
+			position: relative;
+
+			&:after {
+				display: block;
+				content: "";
+				width: 7px;
+				height: 14px;
+				position: absolute;
+				right: 0;
+				top: 50%;
+				margin-top: -7px;
+				background: url(../images/ar-4.png) center center no-repeat;
+				background-size: 100%;
+			}
 		}
 	}
 	.locaImgFP {
