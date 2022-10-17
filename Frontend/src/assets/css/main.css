@@ -2119,7 +2119,14 @@ main p {
   color: #A3815F;
   font-size: 40px;
   line-height: 1.0;
-  background: -webkit-linear-gradient(269.68deg, #C6AD88 10.03%, #A78C64 26.07%, #CEB590 57.12%, #B99D74 77.71%, #C6AD88 99.89%);
+  background: #c6ad88;
+  background: -moz-linear-gradient(left, #c6ad88 0%, #a78c64 15%, #ceb590 50%, #b99d74 75%, #c6ad88 100%);
+  background: -webkit-gradient(left top, right top, color-stop(0%, #c6ad88), color-stop(15%, #a78c64), color-stop(50%, #ceb590), color-stop(75%, #b99d74), color-stop(100%, #c6ad88));
+  background: -webkit-linear-gradient(left, #c6ad88 0%, #a78c64 15%, #ceb590 50%, #b99d74 75%, #c6ad88 100%);
+  background: -o-linear-gradient(left, #c6ad88 0%, #a78c64 15%, #ceb590 50%, #b99d74 75%, #c6ad88 100%);
+  background: -ms-linear-gradient(left, #c6ad88 0%, #a78c64 15%, #ceb590 50%, #b99d74 75%, #c6ad88 100%);
+  background: linear-gradient(to right, #c6ad88 0%, #a78c64 15%, #ceb590 50%, #b99d74 75%, #c6ad88 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c6ad88', endColorstr='#c6ad88', GradientType=1 );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -3015,7 +3022,14 @@ main p {
   font-size: 30px;
   color: #A78C64;
   font-family: 'Montserrat';
-  background: -webkit-linear-gradient(269.68deg, #C6AD88 10.03%, #A78C64 26.07%, #CEB590 57.12%, #B99D74 77.71%, #C6AD88 99.89%);
+  background: #c6ad88;
+  background: -moz-linear-gradient(left, #c6ad88 0%, #a78c64 15%, #ceb590 50%, #b99d74 75%, #c6ad88 100%);
+  background: -webkit-gradient(left top, right top, color-stop(0%, #c6ad88), color-stop(15%, #a78c64), color-stop(50%, #ceb590), color-stop(75%, #b99d74), color-stop(100%, #c6ad88));
+  background: -webkit-linear-gradient(left, #c6ad88 0%, #a78c64 15%, #ceb590 50%, #b99d74 75%, #c6ad88 100%);
+  background: -o-linear-gradient(left, #c6ad88 0%, #a78c64 15%, #ceb590 50%, #b99d74 75%, #c6ad88 100%);
+  background: -ms-linear-gradient(left, #c6ad88 0%, #a78c64 15%, #ceb590 50%, #b99d74 75%, #c6ad88 100%);
+  background: linear-gradient(to right, #c6ad88 0%, #a78c64 15%, #ceb590 50%, #b99d74 75%, #c6ad88 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c6ad88', endColorstr='#c6ad88', GradientType=1 );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -3050,7 +3064,14 @@ main p {
       font-size: 14px;
       color: #A78C64;
       font-family: 'Montserrat';
-      background: -webkit-linear-gradient(269.68deg, #C6AD88 10.03%, #A78C64 26.07%, #CEB590 57.12%, #B99D74 77.71%, #C6AD88 99.89%);
+      background: #c6ad88;
+      background: -moz-linear-gradient(left, #c6ad88 0%, #a78c64 15%, #ceb590 50%, #b99d74 75%, #c6ad88 100%);
+      background: -webkit-gradient(left top, right top, color-stop(0%, #c6ad88), color-stop(15%, #a78c64), color-stop(50%, #ceb590), color-stop(75%, #b99d74), color-stop(100%, #c6ad88));
+      background: -webkit-linear-gradient(left, #c6ad88 0%, #a78c64 15%, #ceb590 50%, #b99d74 75%, #c6ad88 100%);
+      background: -o-linear-gradient(left, #c6ad88 0%, #a78c64 15%, #ceb590 50%, #b99d74 75%, #c6ad88 100%);
+      background: -ms-linear-gradient(left, #c6ad88 0%, #a78c64 15%, #ceb590 50%, #b99d74 75%, #c6ad88 100%);
+      background: linear-gradient(to right, #c6ad88 0%, #a78c64 15%, #ceb590 50%, #b99d74 75%, #c6ad88 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c6ad88', endColorstr='#c6ad88', GradientType=1 );
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
@@ -3563,6 +3584,8 @@ main p {
   .floorPlanDetailPu .top {
     padding-bottom: 30px;
     width: 100%; }
+    .floorPlanDetailPu .top h2 {
+      font-size: 32px; }
     .floorPlanDetailPu .top p {
       color: #242021;
       text-transform: uppercase;
@@ -3579,7 +3602,8 @@ main p {
         .floorPlanDetailPu .bottom .item p strong {
           color: #BFA47C;
           font-weight: 700;
-          font-family: 'Montserrat'; }
+          font-family: 'Montserrat';
+          text-transform: none; }
 
 .mainImgFP {
   height: 100%;
@@ -3800,6 +3824,19 @@ header.menuMobile {
     height: 560px; }
   .itemLocationList .info li {
     font-size: 15px; } }
+
+@media screen and (max-width: 1366px) {
+  nav a {
+    margin-right: 17px; }
+  .mainTt {
+    font-size: 35px; } }
+
+@media screen and (min-width: 1024px) and (max-height: 730px) {
+  .floorplanImg {
+    height: 41vh;
+    margin-bottom: 10px; }
+  .hintFp .item {
+    margin-bottom: 5px !important; } }
 
 @media screen and (max-width: 1200px) {
   .floorPlanDetailPu .top .mainTt {
