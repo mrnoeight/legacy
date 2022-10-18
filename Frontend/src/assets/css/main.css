@@ -3086,14 +3086,38 @@ main p {
     background: rgba(0, 0, 0, 0.9); }
 
 .lancasterClubWrap {
-  position: relative;
-  height: 850px;
-  background: url(../images/demo/bg-club.jpg) center center no-repeat;
-  background-size: cover; }
+  position: relative; }
   .lancasterClubWrap .ttPage p {
     max-width: 620px; }
   .lancasterClubWrap .container {
-    z-index: 3; }
+    z-index: 3;
+    position: absolute;
+    top: 10%;
+    width: 100%;
+    max-width: 100%; }
+
+.contentLans {
+  position: relative; }
+  .contentLans svg {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; }
+  .contentLans path {
+    cursor: pointer;
+    transition: all 0.3s;
+    fill: rgba(255, 255, 255, 0); }
+    .contentLans path:hover {
+      fill: rgba(255, 255, 255, 0.1); }
+  .contentLans .tooltipCard {
+    padding: 50px;
+    width: 467px; }
+    .contentLans .tooltipCard.card-platinum {
+      transform: translate(0, -50%);
+      top: 32%;
+      left: 121%; }
 
 .captionCardWrap {
   display: none; }
@@ -3686,6 +3710,8 @@ main p {
       padding-left: 10px;
       font-size: 10px;
       color: #242021; }
+    .hintFp .item:hover p {
+      font-weight: bold; }
 
 footer {
   background: #1C1819; }

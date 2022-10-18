@@ -1453,9 +1453,9 @@ main {
 
 .lancasterClubWrap {
     position: relative;
-    height: 850px;
-    background: url(../images/demo/bg-club.jpg) center center no-repeat;
-	background-size: cover;
+    // height: 850px;
+    // background: url(../images/demo/bg-club.jpg) center center no-repeat;
+	// background-size: cover;
     
     .ttPage {
         p {
@@ -1465,10 +1465,43 @@ main {
 
 	.container {
 		z-index: 3;
+		position: absolute;
+		top: 10%;
+		width: 100%;
+		max-width: 100%;
 	}
 
 	
     
+}
+.contentLans {
+	position: relative;
+
+	svg {
+		display: block;
+		@include coverer;
+	}
+	
+	path {
+		cursor: pointer;
+		transition: all 0.3s;
+		fill: transparentize($color: #fff, $amount: 1);
+
+		&:hover {
+			fill: transparentize($color: #fff, $amount: 0.9);
+		}
+	}
+
+	.tooltipCard {
+		padding: 50px;
+		width: 467px;
+
+		&.card-platinum {
+			transform: translate(0,-50%);
+			top: 32%;
+			left: 121%;
+		}
+	}
 }
 .captionCardWrap {
 	display: none;
@@ -2267,6 +2300,12 @@ main {
 			padding-left: 10px;
 			font-size: 10px;
 			color: #242021;
+		}
+
+		&:hover {
+			p {
+				font-weight: bold;
+			}
 		}
 	}
 }
