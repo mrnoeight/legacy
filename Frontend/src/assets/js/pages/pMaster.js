@@ -6,7 +6,7 @@ var pMaster = {
     //pAbout.galleryInit();
     $(window).on('resize', pMaster.onResize);
     pMaster.onResize();
-    pMaster.OpenCard();
+    // pMaster.OpenCard();
     pMaster.OpenText();
     pMaster.SliderService();
     // pMaster.carouselTeam();
@@ -14,7 +14,9 @@ var pMaster = {
 
     $('.openPopupTeam').on("click",pMaster.OpenPopupTeam);
     $('.jsClosePopupTeam').on("click",pMaster.ClosePopupTeam);
-    $('.clickCardMobile').on("click",pMaster.OpenCardMobile);
+    $('.jsclickCardMobile').on("click",pMaster.OpenCardMobile);
+    $('.jsOpenCard').on("click",pMaster.OpenCard);
+	$('.jsCloseCard').on("click",pMaster.CloseCard);
     // $('.closeTooltip').on("click",pMaster.CloseCard)
     // $('.ovlCard').on("click",pMaster.CloseCard)
   },
@@ -32,11 +34,13 @@ var pMaster = {
     // },
 
     OpenCardMobile: function () {
+		$(".jsclickCardMobile").removeClass('active');
+		$(this).addClass('active');
+		$('.contentLans.mb').addClass('active');
 		var index = $(this).attr("index")
-    $('.lancasterClubWrap').addClass('active');
-		$('.linkCard').removeClass('active');
-		$(this).parent().addClass('active');
-		$('.ovlCard').fadeIn();
+		var tooltip = $(this).attr('tooltip');
+			$('.ovlCard').hide();
+			$("[ovlCard="+tooltip+"]").show();
 		if(!isSlickCard) {
 			$('.caption').hide();
 			$('.sliderCard').addClass('show');
@@ -64,7 +68,7 @@ var pMaster = {
 			slider.on(
 				"afterChange",
 				function (event, slick, currentSlide, nextSlide) {
-					$('.clickCardMobile[index="'+currentSlide+'"]').click();
+					$('.jsclickCardMobile[index="'+currentSlide+'"]').click();
 		
 				}
 			);
@@ -122,29 +126,44 @@ var pMaster = {
         $(this).find(".text").slideUp();
       });
     },
-    OpenCard: function () {
-      $( ".jsOpenCard" )
-      .mouseover(function() {
-        $('.lancasterClubWrap').addClass('active');
-        $(this).parent().find(".tooltipCard ").addClass('show');
-        $(this).parent().addClass('active');
-        $('.ovlCard').stop(true,true).fadeIn();
-      })
-      .mouseleave(function() {
-        $('.lancasterClubWrap').removeClass('active');
-         $(this).parent().find(".tooltipCard ").removeClass('show');
-          $(this).parent().removeClass('active');
-          $('.ovlCard').stop(true,true).fadeOut();
-      });
-    },
+	OpenCard: function () {
+		if(!$(this).hasClass("active")){
+			$(this).addClass("active");
+			var tooltip = $(this).attr('tooltip');
+			$('.ovlCard').hide();
+			$('.lancasterClubWrap .tooltipCard').removeClass('show');
+			$("[rel="+tooltip+"]").addClass('show');
+			$("[ovlCard="+tooltip+"]").show();
+		}
+	},
+	CloseCard: function () {
+		$(".jsOpenCard").removeClass("active");
+		$('.ovlCard').hide();
+		$('.lancasterClubWrap .tooltipCard').removeClass('show');
+	},
+    // OpenCard: function () {
+    //   $( ".jsOpenCard" )
+    //   .mouseover(function() {
+    //     $('.lancasterClubWrap').addClass('active');
+    //     $(this).parent().find(".tooltipCard ").addClass('show');
+    //     $(this).parent().addClass('active');
+    //     $('.ovlCard').stop(true,true).fadeIn();
+    //   })
+    //   .mouseleave(function() {
+    //     $('.lancasterClubWrap').removeClass('active');
+    //      $(this).parent().find(".tooltipCard ").removeClass('show');
+    //       $(this).parent().removeClass('active');
+    //       $('.ovlCard').stop(true,true).fadeOut();
+    //   });
+    // },
     
-    CloseCard: function () {
-        $('.tooltipCard').removeClass('show');
-        setTimeout(() => {
-            $('.linkCard').removeClass('active');
-        }, 500);
-        $('.ovlCard').fadeOut();
-    },
+    // CloseCard: function () {
+    //     $('.tooltipCard').removeClass('show');
+    //     setTimeout(() => {
+    //         $('.linkCard').removeClass('active');
+    //     }, 500);
+    //     $('.ovlCard').fadeOut();
+    // },
     
   
    OpenPopupTeam: function () {

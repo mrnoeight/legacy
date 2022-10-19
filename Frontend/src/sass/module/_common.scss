@@ -1471,7 +1471,43 @@ main {
 		max-width: 100%;
 	}
 
-	
+	.tooltipCard {
+		padding: 50px;
+		width: 467px;
+		z-index: 6;
+
+		&.card-platinum {
+			transform: translate(0,-50%);
+			top: 62%;
+    		left: 40%;
+		}
+
+		&.card-diamond {
+			transform: translate(0,-50%);
+			top: 60%;
+    		left: 53%;
+		}
+
+		&.card-gold {
+			transform: translate(0,-50%);
+			top: 65%;
+    		left: 22%;
+		}
+
+		.closeTooltip {
+			transform: rotate(45deg);
+			cursor: pointer;
+
+			&:hover {
+				background: #000;
+   			 	color: #fff;
+			}
+		}
+	}
+
+	.ovlCard {
+		display: none;
+	}
     
 }
 .contentLans {
@@ -1482,25 +1518,25 @@ main {
 		@include coverer;
 	}
 	
-	path {
+	path.jsOpenCard,
+	path.jsclickCardMobile {
 		cursor: pointer;
 		transition: all 0.3s;
 		fill: transparentize($color: #fff, $amount: 1);
 
-		&:hover {
-			fill: transparentize($color: #fff, $amount: 0.9);
-		}
-	}
+	// 	&:hover {
+	// 		fill: transparentize($color: #fff, $amount: 0.9);
+	// 	}
+	 }
 
-	.tooltipCard {
-		padding: 50px;
-		width: 467px;
+	 path.jsclickCardMobile.active {
+		fill: transparentize($color: #000, $amount: 1) !important;
+	 }
 
-		&.card-platinum {
-			transform: translate(0,-50%);
-			top: 32%;
-			left: 121%;
-		}
+	&.active {
+		path.jsclickCardMobile {
+			fill: transparentize($color: #000, $amount: 0.1);
+		 }
 	}
 }
 .captionCardWrap {

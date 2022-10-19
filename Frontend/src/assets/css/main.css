@@ -3095,6 +3095,30 @@ main p {
     top: 10%;
     width: 100%;
     max-width: 100%; }
+  .lancasterClubWrap .tooltipCard {
+    padding: 50px;
+    width: 467px;
+    z-index: 6; }
+    .lancasterClubWrap .tooltipCard.card-platinum {
+      transform: translate(0, -50%);
+      top: 62%;
+      left: 40%; }
+    .lancasterClubWrap .tooltipCard.card-diamond {
+      transform: translate(0, -50%);
+      top: 60%;
+      left: 53%; }
+    .lancasterClubWrap .tooltipCard.card-gold {
+      transform: translate(0, -50%);
+      top: 65%;
+      left: 22%; }
+    .lancasterClubWrap .tooltipCard .closeTooltip {
+      transform: rotate(45deg);
+      cursor: pointer; }
+      .lancasterClubWrap .tooltipCard .closeTooltip:hover {
+        background: #000;
+        color: #fff; }
+  .lancasterClubWrap .ovlCard {
+    display: none; }
 
 .contentLans {
   position: relative; }
@@ -3105,19 +3129,15 @@ main p {
     left: 0;
     width: 100%;
     height: 100%; }
-  .contentLans path {
+  .contentLans path.jsOpenCard,
+  .contentLans path.jsclickCardMobile {
     cursor: pointer;
     transition: all 0.3s;
     fill: rgba(255, 255, 255, 0); }
-    .contentLans path:hover {
-      fill: rgba(255, 255, 255, 0.1); }
-  .contentLans .tooltipCard {
-    padding: 50px;
-    width: 467px; }
-    .contentLans .tooltipCard.card-platinum {
-      transform: translate(0, -50%);
-      top: 32%;
-      left: 121%; }
+  .contentLans path.jsclickCardMobile.active {
+    fill: rgba(0, 0, 0, 0) !important; }
+  .contentLans.active path.jsclickCardMobile {
+    fill: rgba(0, 0, 0, 0.9); }
 
 .captionCardWrap {
   display: none; }
@@ -3839,7 +3859,8 @@ header.menuMobile {
 .rooftopMobile,
 .capRoof,
 .btnBackAr,
-.listPlanTowSelect {
+.listPlanTowSelect,
+.contentLans.mb {
   display: none; }
 
 .floorplanDetail .copy.mb {
@@ -3865,6 +3886,8 @@ header.menuMobile {
     margin-bottom: 5px !important; } }
 
 @media screen and (max-width: 1200px) {
+  .lancasterClubWrap .tooltipCard {
+    padding: 25px; }
   .floorPlanDetailPu .top .mainTt {
     font-size: 30px; }
   .floorPlanDetailPu .right {
@@ -4006,6 +4029,10 @@ header.menuMobile {
     height: 38vh; } }
 
 @media screen and (max-width: 1023px) {
+  .lancasterClubWrap .container {
+    top: 5%; }
+    .lancasterClubWrap .container .ttPage h2 {
+      padding-bottom: 15px; }
   .floorplanDetail {
     height: 100%;
     overflow: auto; }
@@ -4111,9 +4138,6 @@ header.menuMobile {
   .linkCard .tooltipCard {
     padding: 30px;
     width: 321px; }
-  .lancasterClubWrap {
-    height: 579px;
-    padding: 42px 0; }
   .linkCard .card {
     width: 138px;
     height: 221px; }
@@ -4541,6 +4565,10 @@ header.menuMobile {
       left: auto; } }
 
 @media screen and (max-width: 480px) {
+  .contentLans.mb {
+    display: block; }
+  .contentLans.des {
+    display: none; }
   .mainImgFP {
     height: auto;
     margin-top: 20px; }
