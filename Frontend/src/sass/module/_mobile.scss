@@ -119,6 +119,17 @@ header.menuMobile {
 	}
 }
 @media screen and (max-width: 1200px) {
+	.hintFp.sideHint {
+		position: relative;
+		top: auto;
+		right: auto;
+		width: 100%;
+
+		.item {
+			@include rowMachine(3, 2%);
+			margin-bottom: 11px !important;
+		}
+	}
 	.hintFp .item {
 		@include rowMachine(3, 2%);
     	margin-bottom: 11px !important;
@@ -1186,6 +1197,13 @@ header.menuMobile {
 	.floorplanDetail .copy {
 		display: none;
 	}
+	.hintFp.sideHint {
+
+		.item {
+			@include rowMachine(1, 0%);
+    		margin-bottom: 0 !important;
+		}
+	}
 	.hintFp {
 		margin-bottom: 25px;
 		.item {
@@ -1229,21 +1247,28 @@ header.menuMobile {
 	}
 	.floorplanImg {
 		height: auto;
+		width: 100% !important;
+		height: auto !important;
 
-		&.towA {
-			width: 100%;
+		&>img {
+			height: auto !important;
+			width: 100% !important;
+		}
 
-			&>img {
-				height: auto;
-				width: 100%;
-			}
-		}
-		&.towB {
-			height: 37vh;
-		}
-		&.towC {
-			height: 37vh;
-		}
+		// &.towA {
+		// 	width: 100%;
+
+		// 	&>img {
+		// 		height: auto;
+		// 		width: 100%;
+		// 	}
+		// }
+		// &.towB {
+		// 	height: 37vh;
+		// }
+		// &.towC {
+		// 	height: 37vh;
+		// }
 	}
 	.floorplanDetail {
 		.mainTt {

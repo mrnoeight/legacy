@@ -3732,6 +3732,21 @@ main p {
       color: #242021; }
     .hintFp .item:hover p {
       font-weight: bold; }
+  .hintFp.sideHint {
+    display: block;
+    position: absolute;
+    right: 40px;
+    top: 40px;
+    width: 200px; }
+    .hintFp.sideHint .item {
+      width: 100%;
+      margin-bottom: 10px !important; }
+      .hintFp.sideHint .item:nth-child(n) {
+        margin-bottom: 0;
+        margin-right: 0; }
+      .hintFp.sideHint .item:nth-child(1n) {
+        margin-right: 0;
+        margin-bottom: 0; }
 
 footer {
   background: #1C1819; }
@@ -3885,6 +3900,20 @@ header.menuMobile {
     margin-bottom: 5px !important; } }
 
 @media screen and (max-width: 1200px) {
+  .hintFp.sideHint {
+    position: relative;
+    top: auto;
+    right: auto;
+    width: 100%; }
+    .hintFp.sideHint .item {
+      width: 32%;
+      margin-bottom: 11px !important; }
+      .hintFp.sideHint .item:nth-child(n) {
+        margin-bottom: 2%;
+        margin-right: 2%; }
+      .hintFp.sideHint .item:nth-child(3n) {
+        margin-right: 0;
+        margin-bottom: 0; }
   .hintFp .item {
     width: 32%;
     margin-bottom: 11px !important; }
@@ -4585,6 +4614,15 @@ header.menuMobile {
     margin-top: 20px; }
   .floorplanDetail .copy {
     display: none; }
+  .hintFp.sideHint .item {
+    width: 100%;
+    margin-bottom: 0 !important; }
+    .hintFp.sideHint .item:nth-child(n) {
+      margin-bottom: 0%;
+      margin-right: 0%; }
+    .hintFp.sideHint .item:nth-child(1n) {
+      margin-right: 0;
+      margin-bottom: 0; }
   .hintFp {
     margin-bottom: 25px; }
     .hintFp .item {
@@ -4620,16 +4658,12 @@ header.menuMobile {
   .floorPlanDetailPu .top .mainTt {
     font-size: 24px; }
   .floorplanImg {
-    height: auto; }
-    .floorplanImg.towA {
-      width: 100%; }
-      .floorplanImg.towA > img {
-        height: auto;
-        width: 100%; }
-    .floorplanImg.towB {
-      height: 37vh; }
-    .floorplanImg.towC {
-      height: 37vh; }
+    height: auto;
+    width: 100% !important;
+    height: auto !important; }
+    .floorplanImg > img {
+      height: auto !important;
+      width: 100% !important; }
   .floorplanDetail .mainTt {
     display: none; }
   .floorplanDetail .listPlanTowSelect {
