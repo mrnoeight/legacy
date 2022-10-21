@@ -3575,7 +3575,7 @@ main p {
 .floorplanImg {
   position: relative;
   display: none;
-  height: 45vh;
+  height: calc(100vh - 350px);
   margin-bottom: 20px; }
   .floorplanImg > img {
     width: auto;
@@ -3880,12 +3880,20 @@ header.menuMobile {
 
 @media screen and (min-width: 1024px) and (max-height: 730px) {
   .floorplanImg {
-    height: 41vh;
     margin-bottom: 10px; }
   .hintFp .item {
     margin-bottom: 5px !important; } }
 
 @media screen and (max-width: 1200px) {
+  .hintFp .item {
+    width: 32%;
+    margin-bottom: 11px !important; }
+    .hintFp .item:nth-child(n) {
+      margin-bottom: 2%;
+      margin-right: 2%; }
+    .hintFp .item:nth-child(3n) {
+      margin-right: 0;
+      margin-bottom: 0; }
   .lancasterClubWrap .tooltipCard {
     padding: 25px; }
   .floorPlanDetailPu .top .mainTt {
@@ -4025,8 +4033,11 @@ header.menuMobile {
     width: 510px; }
   .floorplanDetail {
     padding: 40px 31px; }
-  .floorplanImg {
-    height: 38vh; } }
+  .floorplanImg.towA {
+    height: auto; }
+    .floorplanImg.towA > img {
+      width: 100%;
+      height: auto; } }
 
 @media screen and (max-width: 1023px) {
   .lancasterClubWrap .container {

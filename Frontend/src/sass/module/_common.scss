@@ -2140,7 +2140,7 @@ main {
 .floorplanImg {
 	position: relative;
 	display: none;
-	height: 45vh;
+	height: calc(100vh - 350px);
 	margin-bottom: 20px;
 	// &.towA {
 	// 	max-width: 660px;
