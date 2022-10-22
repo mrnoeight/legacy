@@ -1,0 +1,17 @@
+import './admin-user';
+import './profile-edit-profile';
+import './profile-edit-password';
+import './talent-user';
+import './tag';
+import './film';
+import './company';
+import './post';
+import './event';
+import './city';
+import './page';
+import './registration';
+import './block';
+import './prole';
+import './experience';
+import './homepage';
+import './block-info';
