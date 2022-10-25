@@ -104,13 +104,13 @@
                         <p>{{isset($arrText['buildingC_text']) ? $arrText['buildingC_text'] : ''}}</p>
                         <div class="listPlanTow">
                             @foreach ($oFloorC as $i=>$f)
-                            <a floorDetail="tow-a-{{++$i}}" floor="{{ $f->head_title1 }}" href="#">{{ $f->head_title1 }}</a>
+                            <a floorDetail="tow-c-{{++$i}}" floor="{{ $f->head_title1 }}" href="#">{{ $f->head_title1 }}</a>
                             @endforeach
                         </div>
                         <select class="listPlanTowSelect">
                             <option value="" hidden>chọn tầng</option>
                             @foreach ($oFloorC as $i=>$f)
-                            <option floorDetail="tow-a-{{++$i}}" floor="{{ $f->head_title1 }}">{{ $f->head_title1 }}</option>
+                            <option floorDetail="tow-c-{{++$i}}" floor="{{ $f->head_title1 }}">{{ $f->head_title1 }}</option>
                             @endforeach
                         </select>
                     </div>
@@ -129,13 +129,13 @@
                         <p>{{isset($arrText['buildingB_text']) ? $arrText['buildingB_text'] : ''}}</p>
                         <div class="listPlanTow">
                             @foreach ($oFloorB as $i=>$f)
-                            <a floorDetail="tow-a-{{++$i}}" floor="{{ $f->head_title1 }}" href="#">{{ $f->head_title1 }}</a>
+                            <a floorDetail="tow-b-{{++$i}}" floor="{{ $f->head_title1 }}" href="#">{{ $f->head_title1 }}</a>
                             @endforeach
                         </div>
                         <select class="listPlanTowSelect">
                             <option value="" hidden>chọn tầng</option>
                             @foreach ($oFloorB as $i=>$f)
-                            <option floorDetail="tow-a-{{++$i}}" floor="{{ $f->head_title1 }}">{{ $f->head_title1 }}</option>
+                            <option floorDetail="tow-b-{{++$i}}" floor="{{ $f->head_title1 }}">{{ $f->head_title1 }}</option>
                             @endforeach
                         </select>
                     </div>
@@ -220,19 +220,6 @@
                                 fill="" />
                         </svg>
                     </div>
-                    <div data-text="tow-a-1" class="copy mb">
-                        <ul>
-                            @php
-                                $lines = [];
-                                print_r($oFloorA[0]->info1);
-                                if (isset($oFloorA[0]))
-                                    $lines = explode("\n", $oFloorA[0]->info1);
-                            @endphp
-                            @foreach ($lines as $line)
-                            <li>{{ $line }}</li>
-                            @endforeach
-                        </ul>
-                    </div>
                     <div rel="tow-a-1" class="hintFp">
                         <div id-floorplan="" class="item js-floorplandetail">
                             <span style="background-color: #FCAB61;"></span>
@@ -287,18 +274,6 @@
                                 fill="" />
                         </svg>
                     </div>
-                    <div data-text="tow-a-2" class="copy mb">
-                        <ul>
-                            @php
-                                $lines = [];
-                                if (isset($oFloorA[1]))
-                                    $lines = explode("\n", $oFloorA[1]->info1);
-                            @endphp
-                            @foreach ($lines as $line)
-                            <li>{{ $line }}</li>
-                            @endforeach
-                        </ul>
-                    </div>
                     <div rel="tow-a-2" class="hintFp">
                         <div id-floorplan="" class="item js-floorplandetail">
                             <span style="background-color: #FCAB61;"></span>
@@ -351,18 +326,6 @@
                                 d="M50 288H19V360H124V373H160.5V375.5H164.5V373H196V360H198.5V271.5H199.5V251H168.5V249.5H89.5V288H79.5V289H50V288Z"
                                 fill="" />
                         </svg>
-                    </div>
-                    <div data-text="tow-a-3" class="copy mb">
-                        <ul>
-                            @php
-                                $lines = [];
-                                if (isset($oFloorA[2]))
-                                    $lines = explode("\n", $oFloorA[2]->info1);
-                            @endphp
-                            @foreach ($lines as $line)
-                            <li>{{ $line }}</li>
-                            @endforeach
-                        </ul>
                     </div>
                     <div rel="tow-a-3" class="hintFp">
                         <div id-floorplan="" class="item js-floorplandetail">
@@ -422,18 +385,6 @@
                                 fill="" />
                         </svg>
                     </div>
-                    <div data-text="tow-a-4" class="copy mb">
-                        <ul>
-                            @php
-                                $lines = [];
-                                if (isset($oFloorA[3]))
-                                    $lines = explode("\n", $oFloorA[3]->info1);
-                            @endphp
-                            @foreach ($lines as $line)
-                            <li>{{ $line }}</li>
-                            @endforeach
-                        </ul>
-                    </div>
                     <div rel="tow-a-4" class="hintFp">
                         <div id-floorplan="" class="item js-floorplandetail">
                             <span style="background-color: #DDFCE2;"></span>
@@ -492,18 +443,6 @@
                                 fill="" />
                         </svg>
                     </div>
-                    <div data-text="tow-a-5" class="copy mb">
-                        <ul>
-                            @php
-                                $lines = [];
-                                if (isset($oFloorA[4]))
-                                    $lines = explode("\n", $oFloorA[4]->info1);
-                            @endphp
-                            @foreach ($lines as $line)
-                            <li>{{ $line }}</li>
-                            @endforeach
-                        </ul>
-                    </div>
                     <div rel="tow-a-5" class="hintFp">
                         <div id-floorplan="" class="item js-floorplandetail">
                             <span style="background-color: #DDFCE2;"></span>
@@ -558,18 +497,6 @@
                                 d="M359 278.5H241.5V346.5H344.5V280H359V278.5Z" fill="" />
                         </svg>
                     </div>
-                    <div data-text="tow-c-1" class="copy mb">
-                        <ul>
-                            @php
-                                $lines = [];
-                                if (isset($oFloorC[0]))
-                                    $lines = explode("\n", $oFloorC[0]->info1);
-                            @endphp
-                            @foreach ($lines as $line)
-                            <li>{{ $line }}</li>
-                            @endforeach
-                        </ul>
-                    </div>
                     <div rel="tow-c-1" class="hintFp">
                         <div id-floorplan="" class="item js-floorplandetail">
                             <span style="background-color: #FCAB61;"></span>
@@ -612,18 +539,6 @@
                                 d="M359.5 54H218.5V83H218V176H243V135H278.5V193H279.5V210.5L359.5 211V54Z" fill="" />
                         </svg>
                     </div>
-                    <div data-text="tow-c-2" class="copy mb">
-                        <ul>
-                            @php
-                                $lines = [];
-                                if (isset($oFloorC[1]))
-                                    $lines = explode("\n", $oFloorC[1]->info1);
-                            @endphp
-                            @foreach ($lines as $line)
-                            <li>{{ $line }}</li>
-                            @endforeach
-                        </ul>
-                    </div>
                     <div rel="tow-c-2" class="hintFp">
                         <div id-floorplan="" class="item js-floorplandetail">
                             <span style="background-color: #DEFADA;"></span>
@@ -663,18 +578,6 @@
                             <path id-floorplan="" class="js-floorplandetail"
                                 d="M359 278.5H241.5V346.5H344.5V280H359V278.5Z" fill="" />
                         </svg>
-                    </div>
-                    <div data-text="tow-c-3" class="copy mb">
-                        <ul>
-                            @php
-                                $lines = [];
-                                if (isset($oFloorC[2]))
-                                    $lines = explode("\n", $oFloorC[2]->info1);
-                            @endphp
-                            @foreach ($lines as $line)
-                            <li>{{ $line }}</li>
-                            @endforeach
-                        </ul>
                     </div>
                     <div rel="tow-c-3" class="hintFp">
                         <div id-floorplan="" class="item js-floorplandetail">
@@ -716,18 +619,6 @@
                                 d="M359 278.5H241.5V346.5H344.5V280H359V278.5Z" fill="" />
                         </svg>
                     </div>
-                    <div data-text="tow-c-4" class="copy mb">
-                        <ul>
-                            @php
-                                $lines = [];
-                                if (isset($oFloorC[3]))
-                                    $lines = explode("\n", $oFloorC[3]->info1);
-                            @endphp
-                            @foreach ($lines as $line)
-                            <li>{{ $line }}</li>
-                            @endforeach
-                        </ul>
-                    </div>
                     <div rel="tow-c-4" class="hintFp">
                         <div id-floorplan="" class="item js-floorplandetail">
                             <span style="background-color: #FDE3DC;"></span>
@@ -765,18 +656,6 @@
                             <path id-floorplan="" class="js-floorplandetail"
                                 d="M359 210.5H241V346.5H344.5V280H359V210.5Z" fill="" />
                         </svg>
-                    </div>
-                    <div data-text="tow-c-5" class="copy mb">
-                        <ul>
-                            @php
-                                $lines = [];
-                                if (isset($oFloorC[4]))
-                                    $lines = explode("\n", $oFloorC[4]->info1);
-                            @endphp
-                            @foreach ($lines as $line)
-                            <li>{{ $line }}</li>
-                            @endforeach
-                        </ul>
                     </div>
                     <div rel="tow-c-5" class="hintFp">
                         <div id-floorplan="" class="item js-floorplandetail">
@@ -825,18 +704,6 @@
                                 d="M409.5 265.5H315.5V326H317V351H425.5V349H409.5V265.5Z" fill="" />
                         </svg>
                     </div>
-                    <div data-text="tow-b-1" class="copy mb">
-                        <ul>
-                            @php
-                                $lines = [];
-                                if (isset($oFloorB[0]))
-                                    $lines = explode("\n", $oFloorB[0]->info1);
-                            @endphp
-                            @foreach ($lines as $line)
-                            <li>{{ $line }}</li>
-                            @endforeach
-                        </ul>
-                    </div>
                     <div rel="tow-b-1" class="hintFp">
                         <div id-floorplan="" class="item js-floorplandetail">
                             <span style="background-color: #FDE3DC;"></span>
@@ -878,18 +745,6 @@
                                 d="M409.5 265.5H315.5V326H317V351H425.5V349H409.5V265.5Z" fill="" />
                         </svg>
                     </div>
-                    <div data-text="tow-b-2" class="copy mb">
-                        <ul>
-                            @php
-                                $lines = [];
-                                if (isset($oFloorB[1]))
-                                    $lines = explode("\n", $oFloorB[1]->info1);
-                            @endphp
-                            @foreach ($lines as $line)
-                            <li>{{ $line }}</li>
-                            @endforeach
-                        </ul>
-                    </div>
                     <div rel="tow-b-2" class="hintFp">
                         <div id-floorplan="" class="item js-floorplandetail">
                             <span style="background-color: #FDE3DC;"></span>
@@ -930,18 +785,6 @@
                                 fill="" />
                         </svg>
 
-                    </div>
-                    <div data-text="tow-b-3" class="copy mb">
-                        <ul>
-                            @php
-                                $lines = [];
-                                if (isset($oFloorB[2]))
-                                    $lines = explode("\n", $oFloorB[2]->info1);
-                            @endphp
-                            @foreach ($lines as $line)
-                            <li>{{ $line }}</li>
-                            @endforeach
-                        </ul>
                     </div>
                     <div rel="tow-b-3" class="hintFp">
                         <div id-floorplan="" class="item js-floorplandetail">
@@ -993,18 +836,6 @@
                                 fill="" />
                         </svg>
                     </div>
-                    <div data-text="tow-b-4" class="copy mb">
-                        <ul>
-                            @php
-                                $lines = [];
-                                if (isset($oFloorB[3]))
-                                    $lines = explode("\n", $oFloorB[3]->info1);
-                            @endphp
-                            @foreach ($lines as $line)
-                            <li>{{ $line }}</li>
-                            @endforeach
-                        </ul>
-                    </div>
                     <div rel="tow-b-4" class="hintFp">
                         <div id-floorplan="" class="item js-floorplandetail">
                             <span style="background-color: #DDFCE2;"></span>
@@ -1054,7 +885,7 @@
                                 d="M213 273H119V344.5H103V346.5H211.5V338H213V273Z" fill="" />
                         </svg>
                     </div>
-                    <div data-text="tow-b-5" class="copy mb">
+                    <!-- <div data-text="tow-b-5" class="copy mb">
                         <ul>
                             @php
                                 $lines = [];
@@ -1065,7 +896,7 @@
                             <li>{{ $line }}</li>
                             @endforeach
                         </ul>
-                    </div>
+                    </div> -->
                     <div rel="tow-b-5" class="hintFp">
                         <div id-floorplan="" class="item js-floorplandetail">
                             <span style="background-color: #D9EEFB;"></span>
@@ -1085,7 +916,7 @@
                         </div>
                     </div>
 
-                    <div class="copy">
+                    <!-- <div class="copy">
                         <ul>
                             @php
                                 $lines = [];
@@ -1097,7 +928,7 @@
                             @endforeach
 
                         </ul>
-                    </div>
+                    </div> -->
 
 
 

@@ -47,17 +47,21 @@
 
 @foreach ($arrProgress as $year=>$arr)
 @foreach ($arr as $p)
-<div id="idProHere{{$p->id}}" class="popup">
+<div id="idProHere{{$p->id}}" class="popup popupProgress">
     <div class="btnClose jsClosePopupProgress"></div>
+    <h3>{{__('Tháng')}} {{ \Carbon\Carbon::parse($p->block_date)->formatLocalized('%m - %Y')  }}</h3>
     <div class="slideProgressPopup">
         @foreach ($p->getListGalleryImage() as $k=>$v)
         <div class="item">
-            <h3>{{__('Tháng')}} {{ \Carbon\Carbon::parse($p->block_date)->formatLocalized('%m - %Y')  }}</h3>
-            <div class="img" style="background: url({{ $v }}) center no-repeat"></div>
-            <p>{{ $p->head_title1 }}</p>
+            <div class="img">
+                <img src="{{ $v }}" />
+            </div>
         </div>
         @endforeach
         
+    </div>
+    <div class="copy">
+        <p>{{ $p->head_title1 }}</p>
     </div>
 </div>
 @endforeach
