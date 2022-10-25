@@ -39,10 +39,16 @@
                         @include('admin.block-info.components.consultant')
                     @elseif (in_array($_GET['block_type'], array('home_text', 'apartment_text', 'menu_text', 'footer_text')))
                         @include('admin.block-info.components.text')
+                    @elseif (in_array($_GET['block_type'], array('lancaster_text')))
+                        @include('admin.block-info.components.text_lancaster')
                     @elseif (in_array($_GET['block_type'], array('slider_home')))
                         @include('admin.block-info.components.slider')
-                    @elseif (in_array($_GET['block_type'], array('gallery_home', 'partner')))
+                    @elseif (in_array($_GET['block_type'], array('gallery_home', 'partner', 'master_gallery')))
                         @include('admin.block-info.components.block_image')
+                    @elseif (in_array($_GET['block_type'], array('f_pool', 'f_yoga', 'f_playground', 'f_sauna', 'f_gym', 'f_park')))
+                        @include('admin.block-info.components.amenities')
+                    @elseif (in_array($_GET['block_type'], array('health_utilities', 'entertainment', 'business')))
+                        @include('admin.block-info.components.utilities')
                     @else
                         @include('admin.block-info.components.form-elements')
                     @endif

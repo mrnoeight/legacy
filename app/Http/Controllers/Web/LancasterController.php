@@ -21,6 +21,11 @@ class LancasterController extends Controller
         $oButler = BlockInfo::where('block_type', 'butler_service')->get(); 
         $oCards = BlockInfo::where('block_type', 'member_card')->get();     
         $oConsultants = BlockInfo::where('block_type', 'consultant')->get();
+        $oText = BlockInfo::where('block_type', 'lancaster_text')->get();
+
+        $arrText = [];
+        foreach ($oText as $text)
+            $arrText[$text->block_name] = $text->head_title1;
         
         $goldCard = $diamondCard = $platinumCard = new BlockInfo;
         foreach ($oCards as $card) {
@@ -31,7 +36,6 @@ class LancasterController extends Controller
             else
                 $goldCard = $card;
         }
-
         $i=0;
         $arrConsultants = [];
         foreach ($oConsultants as $con) {
@@ -48,6 +52,6 @@ class LancasterController extends Controller
 
         $menu_active = ['home'=>'', 'location'=>'', 'apartment'=>'', 'utilities'=>'', 'progress'=>'', 'gallery'=>'', 'news'=>'', 'lancaster'=>' class=active', 'about'=>''];
         
-        return view('web.lancaster', compact('menu_active', 'oPage', 'oMaster', 'oBasic', 'oEnhance', 'oButler', 'goldCard', 'diamondCard', 'platinumCard', 'arrConsultants'));
+        return view('web.lancaster', compact('menu_active', 'oPage', 'oMaster', 'oBasic', 'oEnhance', 'oButler', 'goldCard', 'diamondCard', 'platinumCard', 'arrConsultants', 'arrText'));
     }
 }

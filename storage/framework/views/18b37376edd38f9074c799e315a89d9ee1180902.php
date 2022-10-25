@@ -85,7 +85,12 @@
                                         <?php if($_GET['block_type'] == 'buildingA' || $_GET['block_type'] == 'buildingB' || $_GET['block_type'] == 'buildingC'): ?>
                                         <td>{{ item.block_name }}</td>
                                         <?php endif; ?>
+
+                                        <?php if($_GET['block_type'] == 'news'): ?>
+                                        <td><img v-bind:src="item.banner_mb_url" width="200"></td>
+                                        <?php else: ?>
                                         <td><img v-bind:src="item.banner_url" width="200"></td>
+                                        <?php endif; ?>
                                         
                                         
                                         

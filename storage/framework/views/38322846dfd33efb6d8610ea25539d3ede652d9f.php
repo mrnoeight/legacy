@@ -91,11 +91,9 @@
         <div class="container"></div>
         <div id="HealthUtility" class="utilitiesSliderWrap animate">
             <div class="copy">
-                <h2 class="mainTt">tiện ích <br />
-                    sức khoẻ</h2>
-                <p>Trải nghiệm phòng gym hiện đại, khu vực yoga ngoài trời và không gian riêng tư dành cho gia đình được
-                    lấp đầy bởi không gian tươi mát. Tất cả tiện ích tại Lancaster Legacy đều chú trọng yếu tố sức khỏe
-                    thể chất và tinh thần của cư dân
+                <h2 class="mainTt"><?php echo nl2br($oPage->mid_title1); ?></h2>
+                <p><?php echo nl2br($oPage->mid_desc1); ?>
+
                 </p>
             </div>
             <div class="sliderUtiWrap">
@@ -105,7 +103,7 @@
                     ?>
                     <?php $__currentLoopData = $healths; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $s): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                     <div class="hDot" indexSlider="<?php echo e($i++); ?>">
-                        <div data-popup="idUtiHere" class="item">
+                        <div data-popup="popup_<?php echo e($s->block_name); ?>" class="item">
                             <img data-src="<?php echo e($s->banner_url); ?>" alt="" class="lazyload">
                             <h2><?php echo nl2br($s->head_title1); ?></h2>
                         </div>
@@ -134,10 +132,8 @@
         </div>
         <div id="Entertainment" class="utilitiesSliderWrap animate">
             <div class="copy">
-                <h2 class="mainTt">giải trí</h2>
-                <p>Không gian BBQ ấm cúng, khu vực thưởng rượu đầy sang trọng cùng chuỗi tiện ích độc đáo theo chủ đề
-                    Sài Gòn xưa sẽ được tái hiện ngay tại Lancaster Legacy. Tất cả được kết hợp để tạo nên chất sống đầy
-                    thi vị giữa đô thị năng động.</p>
+                <h2 class="mainTt"><?php echo nl2br($oPage->info1); ?></h2>
+                <p><?php echo nl2br($oPage->info2); ?></p>
             </div>
             <div class="sliderUtiWrap">
                 <div class="sliderUti">
@@ -176,9 +172,9 @@
         </div>
         <div id="Business" class="utilitiesSliderWrap animate">
             <div class="copy">
-                <h2 class="mainTt">BUSINESS</h2>
-                <p>Không gian sống đủ đầy tại Lancaster Legacy được bổ sung thêm các tiện ích phục vụ công việc như
-                    phòng họp, phòng sáng tạo... Mở ra cánh cửa thành công cho mọi gia chủ.
+                <h2 class="mainTt"><?php echo nl2br($oPage->info3); ?></h2>
+                <p><?php echo nl2br($oPage->info4); ?>
+
                 </p>
             </div>
             <div class="sliderUtiWrap">
@@ -219,32 +215,88 @@
     </section>
 
 
-    <div id="idUtiHere" class="popup">
+    <div id="popup_pool" class="popup">
         <div class="btnClose jsClosePopupUti"></div>
         <div class="slideAboutPopup">
-            <div class="item" style="background: url(<?php echo e(asset('assets/images/demo/42.jpg')); ?>) center no-repeat">
-                <img data-src="<?php echo e(asset('assets/images/demo/8-mb.jpg')); ?>" class="lazyload" />
+            <?php $__currentLoopData = $pool; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $s): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+            <div class="item" style="background: url(<?php echo e($s->banner_url); ?>) center no-repeat">
+                <img data-src="<?php echo e($s->banner_mb_url); ?>" class="lazyload" />
                 <div class="container">
                     <div class="copy">
-                        <h2 class="mainTt">Bể bơi vô cực</h2>
-                        <p>Hồ bơi vô cực được xây dựng theo tiêu chuẩn thi đấu với 4 làn bơi riêng biệt cùng độ cao hoàn
-                            hảo để tận hưởng trọn vẹn cảnh sắc tuyệt đẹp của Sài Gòn về đêm hoặc sớm bình minh.</p>
+                        <h2 class="mainTt"><?php echo nl2br($s->head_title1); ?></h2>
+                        <p><?php echo nl2br($s->info1); ?></p>
                     </div>
                 </div>
             </div>
-            <div class="item" style="background: url(<?php echo e(asset('assets/images/demo/22.jpg')); ?>) center no-repeat">
-                <img data-src="<?php echo e(asset('assets/images/demo/8-mb.jpg')); ?>" class="lazyload" />
-                <div class="container">
-                    <div class="copy">
-                        <h2 class="mainTt">Lorem ipsum dolor sit amet</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. At nisi nulla nibh lectus donec.
-                            Vitae faucibus donec non volutpat accumsan. Lorem ipsum dolor sit amet, consectetur
-                            adipiscing elit. At nisi nulla nibh lectus donec. Vitae faucibus donec non volutpat
-                            accumsan.</p>
-                    </div>
-                </div>
-            </div>
+            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+        </div>
+    </div>
 
+    <div id="popup_gym" class="popup">
+        <div class="btnClose jsClosePopupUti"></div>
+        <div class="slideAboutPopup">
+            <?php $__currentLoopData = $gym; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $s): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+            <div class="item" style="background: url(<?php echo e($s->banner_url); ?>) center no-repeat">
+                <img data-src="<?php echo e($s->banner_mb_url); ?>" class="lazyload" />
+                <div class="container">
+                    <div class="copy">
+                        <h2 class="mainTt"><?php echo nl2br($s->head_title1); ?></h2>
+                        <p><?php echo nl2br($s->info1); ?></p>
+                    </div>
+                </div>
+            </div>
+            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+        </div>
+    </div>
+
+    <div id="popup_sauna" class="popup">
+        <div class="btnClose jsClosePopupUti"></div>
+        <div class="slideAboutPopup">
+            <?php $__currentLoopData = $sauna; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $s): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+            <div class="item" style="background: url(<?php echo e($s->banner_url); ?>) center no-repeat">
+                <img data-src="<?php echo e($s->banner_mb_url); ?>" class="lazyload" />
+                <div class="container">
+                    <div class="copy">
+                        <h2 class="mainTt"><?php echo nl2br($s->head_title1); ?></h2>
+                        <p><?php echo nl2br($s->info1); ?></p>
+                    </div>
+                </div>
+            </div>
+            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+        </div>
+    </div>
+
+    <div id="popup_playground" class="popup">
+        <div class="btnClose jsClosePopupUti"></div>
+        <div class="slideAboutPopup">
+            <?php $__currentLoopData = $playground; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $s): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+            <div class="item" style="background: url(<?php echo e($s->banner_url); ?>) center no-repeat">
+                <img data-src="<?php echo e($s->banner_mb_url); ?>" class="lazyload" />
+                <div class="container">
+                    <div class="copy">
+                        <h2 class="mainTt"><?php echo nl2br($s->head_title1); ?></h2>
+                        <p><?php echo nl2br($s->info1); ?></p>
+                    </div>
+                </div>
+            </div>
+            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+        </div>
+    </div>
+
+    <div id="popup_yoga" class="popup">
+        <div class="btnClose jsClosePopupUti"></div>
+        <div class="slideAboutPopup">
+            <?php $__currentLoopData = $yoga; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $s): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+            <div class="item" style="background: url(<?php echo e($s->banner_url); ?>) center no-repeat">
+                <img data-src="<?php echo e($s->banner_mb_url); ?>" class="lazyload" />
+                <div class="container">
+                    <div class="copy">
+                        <h2 class="mainTt"><?php echo nl2br($s->head_title1); ?></h2>
+                        <p><?php echo nl2br($s->info1); ?></p>
+                    </div>
+                </div>
+            </div>
+            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
         </div>
     </div>
 </main>

@@ -22,7 +22,7 @@
     <section class="section galleryWrap">
         <div class="container">
             <div class="ttPage">
-                <h2 class="mainTt animate">Hình ảnh</h2>
+                <h2 class="mainTt animate"><?php echo nl2br($oPage->mid_title1); ?></h2>
             </div>
         </div>
         <div class="slideGalleryWrap animate">
@@ -47,7 +47,7 @@
     <section class="section galleryWrap">
         <div class="container">
             <div class="ttPage">
-                <h2 class="mainTt animate">video</h2>
+                <h2 class="mainTt animate"><?php echo nl2br($oPage->mid_desc1); ?></h2>
             </div>
         </div>
         <div class="slideGalleryWrap animate">

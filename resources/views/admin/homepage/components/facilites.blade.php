@@ -121,7 +121,7 @@
             <div class="form-group row" :class="{'has-danger': errors.has('info4_{{ $locale }}'), 'has-success': this.fields.info4_{{ $locale }} && this.fields.info4_{{ $locale }}.valid }">
                 <label for="info4_{{ $locale }}" class="col-md-2 col-form-label text-md-right">Business Description</label>
                 <div class="col-md-9" :class="{'col-xl-8': !isFormLocalized }">
-                    <input type="text" v-model="form.info4.{{ $locale }}" v-validate="''" class="form-control" :class="{'form-control-danger': errors.has('info4_{{ $locale }}'), 'form-control-success': this.fields.info4_{{ $locale }} && this.fields.info4_{{ $locale }}.valid }" id="info4_{{ $locale }}" info4="info4_{{ $locale }}" placeholder="">
+                    <textarea v-model="form.info4.{{ $locale }}" v-validate="''" class="form-control" :class="{'form-control-danger': errors.has('info4_{{ $locale }}'), 'form-control-success': this.fields.info4_{{ $locale }} && this.fields.info4_{{ $locale }}.valid }" id="info4_{{ $locale }}" info4="info4_{{ $locale }}" placeholder=""></textarea>
                     <div v-if="errors.has('info4_{{ $locale }}')" class="form-control-feedback form-text" v-cloak>{{'{{'}} errors.first('info4_{{ $locale }}') }}</div>
                 </div>
             </div>

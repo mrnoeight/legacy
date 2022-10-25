@@ -40,10 +40,16 @@
                         <?php echo $__env->make('admin.block-info.components.consultant', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
                     <?php elseif(in_array($_GET['block_type'], array('home_text', 'apartment_text', 'menu_text', 'footer_text'))): ?>
                         <?php echo $__env->make('admin.block-info.components.text', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
+                    <?php elseif(in_array($_GET['block_type'], array('lancaster_text'))): ?>
+                        <?php echo $__env->make('admin.block-info.components.text_lancaster', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
                     <?php elseif(in_array($_GET['block_type'], array('slider_home'))): ?>
                         <?php echo $__env->make('admin.block-info.components.slider', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
-                    <?php elseif(in_array($_GET['block_type'], array('gallery_home', 'partner'))): ?>
+                    <?php elseif(in_array($_GET['block_type'], array('gallery_home', 'partner', 'master_gallery'))): ?>
                         <?php echo $__env->make('admin.block-info.components.block_image', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
+                    <?php elseif(in_array($_GET['block_type'], array('f_pool', 'f_yoga', 'f_playground', 'f_sauna', 'f_gym', 'f_park'))): ?>
+                        <?php echo $__env->make('admin.block-info.components.amenities', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
+                    <?php elseif(in_array($_GET['block_type'], array('health_utilities', 'entertainment', 'business'))): ?>
+                        <?php echo $__env->make('admin.block-info.components.utilities', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
                     <?php else: ?>
                         <?php echo $__env->make('admin.block-info.components.form-elements', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
                     <?php endif; ?>

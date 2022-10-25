@@ -23,7 +23,7 @@ class ApartmentController extends Controller
         $oFloorA1 = BlockInfo::where('block_type', 'floorplanA')->get();
         $oFloorB1 = BlockInfo::where('block_type', 'floorplanB')->get();
         $oFloorC1 = BlockInfo::where('block_type', 'floorplanC')->get();
-        $oText = BlockInfo::where('block_type', 'home_text')->get();
+        $oText = BlockInfo::where('block_type', 'apartment_text')->get();
 
         $arrText = [];
         foreach ($oText as $text)

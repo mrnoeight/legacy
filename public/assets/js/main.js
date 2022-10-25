@@ -46,6 +46,7 @@ var globalJsList = [
     path_resource + "assets/js/plugins/lightgallery/lightgallery.js",
     // common scripts will execute in all templates:
     path_resource + "assets/js/digitop-common.js",
+    path_resource + "assets/js/function.js",
 ];
 
 var MAIN = {

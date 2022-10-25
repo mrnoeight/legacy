@@ -28,9 +28,11 @@
                         <?php echo $__env->make('admin.homepage.components.apartment', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
                     <?php elseif($_GET['pg'] == 'facilities'): ?>
                         <?php echo $__env->make('admin.homepage.components.facilites', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
+                    <?php elseif($_GET['pg'] == 'lancaster'): ?>
+                        <?php echo $__env->make('admin.homepage.components.lancaster', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
                     <?php elseif($_GET['pg'] == 'gallery'): ?>
                         <?php echo $__env->make('admin.homepage.components.gallery', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
-                    <?php elseif($_GET['pg'] == 'news'): ?>
+                    <?php elseif($_GET['pg'] == 'news' || $_GET['pg'] == 'progress'): ?>
                         <?php echo $__env->make('admin.homepage.components.news', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
                     <?php elseif($_GET['pg'] == 'website'): ?>
                         <?php echo $__env->make('admin.homepage.components.website', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>

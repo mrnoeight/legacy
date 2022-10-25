@@ -1,504 +1,11 @@
-@extends('web.layouts.base')
-
-@section('title', 'Thong tin can ho')
-
-@section('hidden_page', 'Thong tin can ho')
-
-@section('content')
-
-<!-- MAIN PAGE -->
-<main id="pApartment">
-    <div class="bannerSubPage go-up">
-        <img class="lazyload pc" data-src="{{ asset('assets/images/demo/banner-page-4.jpg') }}" alt="">
-        <img class="lazyload mb" data-src="{{ asset('assets/images/demo/banner-page-4-mb.jpg') }}" alt="">
-        <div class="container stagger-down">
-            <h2 class="mainTt">thông tin <br>Căn hộ</h2>
-            <div class="copy">
-                <p>Mỗi căn hộ được may đo tỉ mỉ bởi bàn tay nghệ nhân của những nhà kiến trúc uy tín bậc nhất trên thị
-                    trường bất động sản, mở ra không gian sống đậm chất thượng lưu.
-                </p>
-            </div>
-        </div>
-    </div>
-    <section id="masterplan" class="masterPlan  pd1">
-        <div class="container">
-            <div class="ttPage animate">
-                <h2 class="mainTt">master plan</h2>
-
-                <p>With 2000m2 of green space and two direct city views swimming pools,
-                    Lancaster Legacy opens up a classy and standard living space for the elite..</p>
-            </div>
-            <div class="row checklenght animate">
-                <img data-src="{{ asset('assets/images/demo/master-plan.jpg') }}" class="lazyload" />
-                <div class="listMasterPlan">
-                    <div class="left">
-                        <div index="1" class="itemPlace">
-                            <span>01</span>
-                            <p>CỔNG VÀO DỰ ÁN</p>
-                        </div>
-                        <div index="2" class="itemPlace">
-                            <span>02</span>
-                            <p>KHU VỰC ĐÓN/ TRẢ KHÁCH
-                                KHU THƯƠNG MẠI</p>
-                        </div>
-                        <div index="3" class="itemPlace">
-                            <span>03</span>
-                            <p>KHU THƯƠNG MẠI</p>
-                        </div>
-                        <div index="4" class="itemPlace">
-                            <span>04</span>
-                            <p>KHU VỰC ĐƯA/ ĐÓN CƯ DÂN</p>
-                        </div>
-                        <div index="5" class="itemPlace">
-                            <span>05</span>
-                            <p>SẢNH CHỜ DÀNH CHO CƯ DÂN</p>
-                        </div>
-                        <div index="6" class="itemPlace">
-                            <span>06</span>
-                            <p>TƯỢNG ĐÀI CẢNH QUAN</p>
-                        </div>
-                        <div index="7" class="itemPlace">
-                            <span>07</span>
-                            <p>LỐI ĐI DÀNH CHO KHÁCH HÀNG KHU THƯƠNG MẠI</p>
-                        </div>
-                        <div index="8" class="itemPlace">
-                            <span>08</span>
-                            <p>CẢNH QUAN THỰC VẬT</p>
-                        </div>
-                    </div>
-                    <div class="right">
-                        <div index="9" class="itemPlace">
-                            <span>09</span>
-                            <p>LỐI ĐI DÀNH CHO XE ĐẨY</p>
-                        </div>
-                        <div index="10" class="itemPlace">
-                            <span>10</span>
-                            <p>ĐƯỜNG GIAO THÔNG</p>
-                        </div>
-                        <div index="11" class="itemPlace">
-                            <span>11</span>
-                            <p>LỐI ĐI XUỐNG HẦM</p>
-                        </div>
-                        <div index="12" class="itemPlace">
-                            <span>12</span>
-                            <p>KHU VỰC GIAO ĐỒ</p>
-                        </div>
-                        <div index="13" class="itemPlace">
-                            <span>13</span>
-                            <p>KHU VỰC CẢNH QUAN</p>
-                        </div>
-                        <div index="14" class="itemPlace">
-                            <span>14</span>
-                            <p>KHU VỰC THÔNG HƠI</p>
-                        </div>
-                        <div index="15" class="itemPlace">
-                            <span>15</span>
-                            <p>LỐI ĐI BỘ</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="btnWrap center">
-                    <div class="btn whiteBg ShowMore">
-                        <span>SEE MORE</span>
-                    </div>
-                    <div class="btn whiteBg ShowLess">
-                        <span>SEE LESS</span>
-                    </div>
-                </div>
-
-            </div>
-
-        </div>
-    </section>
-
-    <section id="floorplan" class="floorplanWrap pd1">
-        <div class="container">
-            <div class="ttPage animate">
-                <h2 class="mainTt">Mặt bằng tiện ích</h2>
-            </div>
-            <div class="btnTabWrap animate">
-                <div data-tab="tab1" class="btnTab active">Tiện ích tầng 6</div>
-                <div data-tab="tab2" class="btnTab rooftopLink">Tiện ích tầng thượng</div>
-            </div>
-            <div id="tab1" class="ctTab">
-                <div class="row checklenght animate">
-                    <img data-src="{{ asset('assets/images/demo/floorplan.png') }}" class="lazyload" />
-                    <div class="listMasterPlan">
-                        <div class="left">
-                            <div index="1" class="itemPlace">
-                                <span>01</span>
-                                <p>KHU VỰC CHECK-IN VÀO BỂ BƠI</p>
-                            </div>
-                            <div index="2" class="itemPlace">
-                                <span>02</span>
-                                <p>HỒ JACUZZI</p>
-                            </div>
-                            <div index="3" class="itemPlace">
-                                <span>03</span>
-                                <p>CHÒI NGHỈ CHÂN</p>
-                            </div>
-                            <div index="4" class="itemPlace">
-                                <span>04</span>
-                                <p>HỒ SỤC MASSAGE</p>
-                            </div>
-                            <div index="5" class="itemPlace">
-                                <span>05</span>
-                                <p>KHU VỰC TẮM NẮNG</p>
-                            </div>
-                            <div index="6" class="itemPlace">
-                                <span>06</span>
-                                <p>HỒ BƠI NÔNG</p>
-                            </div>
-                            <div index="7" class="itemPlace">
-                                <span>07</span>
-                                <p>HỒ BƠI VÔ CỰC</p>
-                            </div>
-                            <div index="8" class="itemPlace">
-                                <span>08</span>
-                                <p>KHU VỰC NGẮM CẢNH</p>
-                            </div>
-                            <div index="9" class="itemPlace">
-                                <span>09</span>
-                                <p>CẢNH QUAN XANH</p>
-                            </div>
-                            <div index="10" class="itemPlace">
-                                <span>10</span>
-                                <p>HỒ BƠI CHO TRẺ EM</p>
-                            </div>
-                        </div>
-                        <div class="right">
-
-                            <div index="11" class="itemPlace">
-                                <span>11</span>
-                                <p>ĐÀI CẢNH QUAN</p>
-                            </div>
-                            <div index="12" class="itemPlace">
-                                <span>12</span>
-                                <p>KHU VỰC BBQ</p>
-                            </div>
-                            <div index="13" class="itemPlace">
-                                <span>13</span>
-                                <p>KHU VỰC DÀNH CHO GIA ĐÌNH</p>
-                            </div>
-                            <div index="14" class="itemPlace">
-                                <span>14</span>
-                                <p>KHU LUYỆN TẬP YOGA NGOÀI TRỜI</p>
-                            </div>
-                            <div index="15" class="itemPlace">
-                                <span>15</span>
-                                <p>KHU VUI CHƠI CHO TRẺ EM</p>
-                            </div>
-                        </div>
-                        <div class="btnWrap center">
-                            <div class="btn transBg ShowMore">
-                                <span>SEE MORE</span>
-                            </div>
-                            <div class="btn transBg ShowLess">
-                                <span>SEE LESS</span>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-
-            <div id="tab2" class="ctTab">
-                <div class="rooftopDesk">
-                    <div class="l">
-                        <div class="floorItem rightAl jsOpenFloor">
-                            <div class="floor">
-                                <img data-src="{{ asset('assets/images/demo/toa-c.png') }}" class="lazyload" />
-                                <h3>toà c</h3>
-                            </div>
-                            <div class="tooltipCard right">
-                                <div class="closeTooltip">
-                                    <svg width="1em" height="1em" viewBox="0 0 21 20" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M10 0.120014V19.5" stroke="currentcolor" />
-                                        <path d="M0.879883 10L20.2599 10" stroke="currentcolor" />
-                                    </svg>
-                                </div>
-                                <div class="copyCard">
-                                    <h2>toà c</h2>
-                                    <div class="listMasterPlanTool">
-                                        <div class="itemPlace">
-                                            <span>01</span>
-                                            <p>KHU VỰC THƯ GIÃN NGOÀI TRỜI</p>
-                                        </div>
-                                        <div class="itemPlace">
-                                            <span>02</span>
-                                            <p>VƯỜN NƯỚNG BBQ</p>
-                                        </div>
-                                        <div class="itemPlace">
-                                            <span>03</span>
-                                            <p>KHU VỰC ĂN UỐNG</p>
-                                        </div>
-                                        <div class="itemPlace">
-                                            <span>04</span>
-                                            <p>KHU VỰC NGHỈ CHÂN</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="floorItem rightAl jsOpenFloor">
-                            <div class="floor">
-                                <img data-src="{{ asset('assets/images/demo/toa-b.png') }}" class="lazyload" />
-                                <h3>toà B</h3>
-                            </div>
-                            <div class="tooltipCard right">
-                                <div class="closeTooltip">
-                                    <svg width="1em" height="1em" viewBox="0 0 21 20" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M10 0.120014V19.5" stroke="currentcolor" />
-                                        <path d="M0.879883 10L20.2599 10" stroke="currentcolor" />
-                                    </svg>
-                                </div>
-                                <div class="copyCard">
-                                    <h2>toà b</h2>
-                                    <div class="listMasterPlanTool">
-                                        <div class="itemPlace">
-                                            <span>01</span>
-                                            <p>KHU VỰC THƯ GIÃN NGOÀI TRỜI</p>
-                                        </div>
-                                        <div class="itemPlace">
-                                            <span>02</span>
-                                            <p>VƯỜN NƯỚNG BBQ</p>
-                                        </div>
-                                        <div class="itemPlace">
-                                            <span>03</span>
-                                            <p>KHU VỰC ĂN UỐNG</p>
-                                        </div>
-                                        <div class="itemPlace">
-                                            <span>04</span>
-                                            <p>KHU VỰC GHẾ NGỒI KIỂU BẬC THANG</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- <img data-src="{{ asset('assets/images/demo/toa-b.png') }}" class="lazyload"/> -->
-                    </div>
-                    <div class="r">
-                        <div class="floorItem leftAl jsOpenFloor">
-                            <div class="floor">
-                                <img data-src="{{ asset('assets/images/demo/toa-a.png') }}" class="lazyload" />
-                                <h3>toà A</h3>
-                            </div>
-                            <div class="tooltipCard col2 left">
-                                <div class="closeTooltip">
-                                    <svg width="1em" height="1em" viewBox="0 0 21 20" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M10 0.120014V19.5" stroke="currentcolor" />
-                                        <path d="M0.879883 10L20.2599 10" stroke="currentcolor" />
-                                    </svg>
-                                </div>
-                                <div class="copyCard">
-                                    <div class="left">
-                                        <h2>toà a</h2>
-                                        <div class="listMasterPlanTool">
-                                            <div class="itemPlace">
-                                                <span>01</span>
-                                                <p>LỐI VÀO KHU VỰC HỒ BƠI</p>
-                                            </div>
-                                            <div class="itemPlace">
-                                                <span>02</span>
-                                                <p>KHU VỰC THƯ GIÃN NGOÀI TRỜI</p>
-                                            </div>
-                                            <div class="itemPlace">
-                                                <span>03</span>
-                                                <p>KHU VỰC TẮM NẮNG</p>
-                                            </div>
-                                            <div class="itemPlace">
-                                                <span>04</span>
-                                                <p>KHU VỰC NHÀ TẮM</p>
-                                            </div>
-                                            <div class="itemPlace">
-                                                <span>05</span>
-                                                <p>HỒ BƠI CẠN</p>
-                                            </div>
-                                            <div class="itemPlace">
-                                                <span>06</span>
-                                                <p>JACUZZI</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="right">
-                                        <div class="listMasterPlanTool">
-                                            <div class="itemPlace">
-                                                <span>07</span>
-                                                <p>KHU VỰC GHẾ NGỒI THƯ GIÃN DƯỚI NƯỚC</p>
-                                            </div>
-                                            <div class="itemPlace">
-                                                <span>08</span>
-                                                <p>HỒ BƠI VÔ CỰC</p>
-                                            </div>
-                                            <div class="itemPlace">
-                                                <span>09</span>
-                                                <p>KHU VUI CHƠI TRẺ EM</p>
-                                            </div>
-                                            <div class="itemPlace">
-                                                <span>10</span>
-                                                <p>ĐƯỜNG CHẠY BỘ</p>
-                                            </div>
-                                            <div class="itemPlace">
-                                                <span>11</span>
-                                                <p>KHU VỰC THỂ THAO NGOÀI TRỜI</p>
-                                            </div>
-                                            <div class="itemPlace">
-                                                <span>12</span>
-                                                <p>KHU VỰC GHẾ NGỒI THƯ GIÃN</p>
-                                            </div>
-                                            <div class="itemPlace">
-                                                <span>13</span>
-                                                <p>KHU VỰC CẢNH QUAN</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="rooftopMobile">
-                    <div class="sliderrooftop">
-                        <div class="item" style="background: url({{ asset('assets/images/demo/toa-a.png') }}) center no-repeat;">
-                            <h2>Toa A</h2>
-                        </div>
-                        <div class="item" style="background: url({{ asset('assets/images/demo/toa-b.png') }}) center no-repeat;">
-                            <h2>Toa B</h2>
-                        </div>
-                        <div class="item" style="background: url({{ asset('assets/images/demo/toa-c.png') }}) center no-repeat;">
-                            <h2>Toa C</h2>
-                        </div>
-
-
-                    </div>
-                    <div id="roof0" class="capRoof">
-                        <h2>Tòa c</h2>
-                        <div class="listMasterPlanTool">
-                            <div class="itemPlace">
-                                <span>01</span>
-                                <p>KHU VỰC THƯ GIÃN NGOÀI TRỜI</p>
-                            </div>
-                            <div class="itemPlace">
-                                <span>02</span>
-                                <p>VƯỜN NƯỚNG BBQ</p>
-                            </div>
-                            <div class="itemPlace">
-                                <span>03</span>
-                                <p>KHU VỰC ĂN UỐNG</p>
-                            </div>
-                            <div class="itemPlace">
-                                <span>04</span>
-                                <p>KHU VỰC NGHỈ CHÂN</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="roof1" class="capRoof">
-                        <h2>Tòa b</h2>
-                        <div class="listMasterPlanTool">
-                            <div class="itemPlace">
-                                <span>01</span>
-                                <p>KHU VỰC THƯ GIÃN NGOÀI TRỜI</p>
-                            </div>
-                            <div class="itemPlace">
-                                <span>02</span>
-                                <p>VƯỜN NƯỚNG BBQ</p>
-                            </div>
-                            <div class="itemPlace">
-                                <span>03</span>
-                                <p>KHU VỰC ĂN UỐNG</p>
-                            </div>
-                            <div class="itemPlace">
-                                <span>04</span>
-                                <p>KHU VỰC GHẾ NGỒI KIỂU BẬC THANG</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="roof2" class="capRoof checklenght">
-                        <h2>Tòa a</h2>
-                        <div class="listMasterPlanTool">
-                            <div index="1" class="itemPlace">
-                                <span>01</span>
-                                <p>LỐI VÀO KHU VỰC HỒ BƠI</p>
-                            </div>
-                            <div index="2" class="itemPlace">
-                                <span>02</span>
-                                <p>KHU VỰC THƯ GIÃN NGOÀI TRỜI</p>
-                            </div>
-                            <div index="3" class="itemPlace">
-                                <span>03</span>
-                                <p>KHU VỰC TẮM NẮNG</p>
-                            </div>
-                            <div index="4" class="itemPlace">
-                                <span>04</span>
-                                <p>KHU VỰC NHÀ TẮM</p>
-                            </div>
-                            <div index="5" class="itemPlace">
-                                <span>05</span>
-                                <p>HỒ BƠI CẠN</p>
-                            </div>
-                            <div index="6" class="itemPlace">
-                                <span>06</span>
-                                <p>JACUZZI</p>
-                            </div>
-                            <div index="7" class="itemPlace">
-                                <span>07</span>
-                                <p>KHU VỰC GHẾ NGỒI THƯ GIÃN DƯỚI NƯỚC</p>
-                            </div>
-                            <div index="8" class="itemPlace">
-                                <span>08</span>
-                                <p>HỒ BƠI VÔ CỰC</p>
-                            </div>
-                            <div index="9" class="itemPlace">
-                                <span>09</span>
-                                <p>KHU VUI CHƠI TRẺ EM</p>
-                            </div>
-                            <div index="10" class="itemPlace">
-                                <span>10</span>
-                                <p>ĐƯỜNG CHẠY BỘ</p>
-                            </div>
-                            <div index="11" class="itemPlace">
-                                <span>11</span>
-                                <p>KHU VỰC THỂ THAO NGOÀI TRỜI</p>
-                            </div>
-                            <div index="12" class="itemPlace">
-                                <span>12</span>
-                                <p>KHU VỰC GHẾ NGỒI THƯ GIÃN</p>
-                            </div>
-                            <div index="13" class="itemPlace">
-                                <span>13</span>
-                                <p>KHU VỰC CẢNH QUAN</p>
-                            </div>
-                        </div>
-                        <div class="btnWrap center">
-                            <div class="btn transBg ShowMore">
-                                <span>SEE MORE</span>
-                            </div>
-                            <div class="btn transBg ShowLess">
-                                <span>SEE LESS</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-        <div class="ovlCard"></div>
-    </section>
-
-    <!-- <div class="spaceH"></div> -->
-
-    <section class="towerFloorplanWrap">
+<section class="towerFloorplanWrap">
         <div class="leftT">
             <div class="towerWrap">
                 <img data-src="{{ asset('assets/images/demo/tower.jpg') }}" alt="" class="lazyload">
                 <svg width="630" height="850" viewBox="0 0 630 850" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <!-- Tower A -->
                     <path id="shapeTowA" class="mainLinkFl js-mainLinkFl" ovl="ovlTowA" tooltip="tooltipTowA"
-                        tower="Tòa A"
+                        tower="{{isset($arrText['towerA']) ? $arrText['towerA'] : 'Tòa A'}}"
                         d="M319.5 154.5L327 150L348.5 160.5L352 158L358.5 161.5L361 160.5L374.5 166L375.5 110L399.5 98L594.5 177L592.5 179L608 185.5V189.5L598 196L587.5 250L594.5 253L592.5 263L583.5 269.5L581.5 280L588.5 284L586.5 293.5L577.5 299.5L576.5 308.5L582.5 311L581 320.5L572 327.5L571 334.5L576.5 338L575.5 347L567 354L566 360.5L572 363.5L570 371.5L561 379V385L566 388.5V394.5L557 402.5L556 409L561 412V418.5L552.5 426.5L551.5 432L557 435.5L545 493L521.5 613L520 615L523 617.5V620.5L525 621.5L523 633L526.5 636L518 674.5L516 687L495 709L468 734.5C465.333 737.5 459.1 743.6 455.5 744C451.9 744.4 447.667 742.5 446 741.5L436.5 734L420.5 751V755L418 758.5C418.4 762.1 417.5 765 417 766L398.5 788L399.5 793.5L382 815C378.8 819.8 372.333 818 369.5 816.5L312.5 772.5C313.3 771.7 312.833 769.167 312.5 768C303.5 760.833 284.7 745.9 281.5 743.5C278.3 741.1 275.833 735.5 275 733C271.833 724.5 265.2 705.8 264 699C262.8 692.2 259.167 688.5 257.5 687.5L244 675.5L240 627.5L304 575L308 581L307.5 569L313.5 564L309.5 403.5L303 398.5L302 373L308 369L303 194.5L288 187V167L312.5 154.5V153L314.5 152L319.5 154.5Z"
                         fill="" />
                     <g class="ovlTowSvg ovlTowA" style="mix-blend-mode:color">
@@ -515,7 +22,7 @@
                     <!-- Tower C -->
 
                     <path id="shapeTowC" class="mainLinkFl js-mainLinkFl" ovl="ovlTowC" tooltip="tooltipTowC"
-                        tower="Tòa C"
+                        tower="{{isset($arrText['towerC']) ? $arrText['towerC'] : 'Tòa C'}}"
                         d="M307.5 569.5V576L295 569.5L272.5 123L254.5 114.5L252 71.5L360 25.5L383 35V40.5L393 44.5L400.5 40.5L425.5 50.5L422.5 103.5L426 105V109L399.5 98L376 110L374.5 147L373 147.5V156.5H374V159.5H373V165.5L361 159.5L358.5 161L352 157.5L347.5 159.5L326.5 150L319.5 154L314.5 152.5L312 155L287.5 167L288.5 187L303.5 194.5L307.5 369L302 373.5L303.5 399L309.5 404.5L313 564.5L307.5 569.5Z"
                         fill="" />
 
@@ -533,7 +40,7 @@
                     <!-- Tower B -->
 
                     <path id="shapeTowB" class="mainLinkFl js-mainLinkFl" ovl="ovlTowB" tooltip="tooltipTowB"
-                        tower="Tòa B"
+                        tower="{{isset($arrText['towerB']) ? $arrText['towerB'] : 'Tòa B'}}"
                         d="M293.5 568.5L271.5 126V124L247 111L240 114.5L237.5 78.5L215 70L45 139L142.5 579.5C136.9 583.5 136.167 587.5 136.5 589L151.5 649L214 694L243 669L236 614.5L293.5 568.5Z"
                         fill="" />
 
@@ -552,9 +59,9 @@
                 </svg>
 
                 <div class="ttTowWrap">
-                    <span class="ttTow js-mainLinkFl" ovl="ovlTowA" tooltip="tooltipTowA" tower="Tòa A">Tòa A</span>
-                    <span class="ttTow js-mainLinkFl" ovl="ovlTowB" tooltip="tooltipTowB" tower="Tòa B">Tòa B</span>
-                    <span class="ttTow js-mainLinkFl" ovl="ovlTowC" tooltip="tooltipTowC" tower="Tòa C">Tòa C</span>
+                    <span class="ttTow js-mainLinkFl" ovl="ovlTowA" tooltip="tooltipTowA" tower="{{isset($arrText['towerA']) ? $arrText['towerA'] : 'Tòa A'}}">{{isset($arrText['towerA']) ? $arrText['towerA'] : 'Tòa A'}}</span>
+                    <span class="ttTow js-mainLinkFl" ovl="ovlTowB" tooltip="tooltipTowB" tower="{{isset($arrText['towerB']) ? $arrText['towerB'] : 'Tòa B'}}">{{isset($arrText['towerB']) ? $arrText['towerB'] : 'Tòa B'}}</span>
+                    <span class="ttTow js-mainLinkFl" ovl="ovlTowC" tooltip="tooltipTowC" tower="{{isset($arrText['towerC']) ? $arrText['towerC'] : 'Tòa C'}}">{{isset($arrText['towerC']) ? $arrText['towerC'] : 'Tòa C'}}</span>
                 </div>
 
 
@@ -568,24 +75,18 @@
                         </svg>
                     </div>
                     <div class="copyCard">
-                        <h2>toà a</h2>
-                        <p>Tòa A sở hữu vị trí đẹp nhất cũng như hội tụ nhiều tiện ích đắt giá, độc nhất mà không có bất
-                            kỳ tòa tháp nào sở hữu, mang đến trải nghiệm sống độc quyền cho cư dân tương lai, khẳng định
-                            vị thế khác biệt cho gia chủ.</p>
+                        <h2>{{isset($arrText['towerA']) ? $arrText['towerA'] : 'Tòa A'}}</h2>
+                        <p>{{isset($arrText['buildingA_text']) ? $arrText['buildingA_text'] : ''}}</p>
                         <div class="listPlanTow">
-                            <a floorDetail="tow-a-1" floor="Tầng 8  -  16" href="#">Tầng 8 - 16</a>
-                            <a floorDetail="tow-a-2" floor="Tầng 17  -  18" href="#">Tầng 17 - 18</a>
-                            <a floorDetail="tow-a-3" floor="Tầng 21  -  25" href="#">Tầng 21 - 25</a>
-                            <a floorDetail="tow-a-4" floor="Tầng 26  -  27" href="#">Tầng 26 - 27</a>
-                            <a floorDetail="tow-a-5" floor="Tầng 30" href="#">Tầng 30</a>
+                            @foreach ($oFloorA as $i=>$f)
+                            <a floorDetail="tow-a-{{++$i}}" floor="{{ $f->head_title1 }}" href="#">{{ $f->head_title1 }}</a>
+                            @endforeach
                         </div>
                         <select class="listPlanTowSelect">
                             <option value="" hidden>chọn tầng</option>
-                            <option floorDetail="tow-a-1" floor="Tầng 8  -  16">Tầng 8 - 16</option>
-                            <option floorDetail="tow-a-2" floor="Tầng 17  -  18" href="#">Tầng 17 - 18</option>
-                            <option floorDetail="tow-a-3" floor="Tầng 21  -  25" href="#">Tầng 21 - 25</option>
-                            <option floorDetail="tow-a-4" floor="Tầng 26  -  27" href="#">Tầng 26 - 27</option>
-                            <option floorDetail="tow-a-5" floor="Tầng 30" href="#">Tầng 30</option>
+                            @foreach ($oFloorA as $i=>$f)
+                            <option floorDetail="tow-a-{{++$i}}" floor="{{ $f->head_title1 }}">{{ $f->head_title1 }}</option>
+                            @endforeach
                         </select>
                     </div>
                 </div>
@@ -599,24 +100,18 @@
                         </svg>
                     </div>
                     <div class="copyCard">
-                        <h2>toà C</h2>
-                        <p>Sở hữu tầm nhìn vòng cung 180 độ ôm trọn cảnh quan trải dài từ Quận 1 đến Quận 5, Tháp Trúc
-                            mang đến cho chủ nhân khung cảnh đầy thi vị và sắc màu của Sài Gòn, một góc độ khác của
-                            thành phố hơn 300 năm tuổi đầy bản sắc.</p>
+                        <h2>{{isset($arrText['towerC']) ? $arrText['towerC'] : 'Tòa C'}}</h2>
+                        <p>{{isset($arrText['buildingC_text']) ? $arrText['buildingC_text'] : ''}}</p>
                         <div class="listPlanTow">
-                            <a floorDetail="tow-c-1" floor="Tầng 8  -  10" href="#">Tầng 8 - 10</a>
-                            <a floorDetail="tow-c-2" floor="Tầng 11  -  13" href="#">Tầng 11 - 13</a>
-                            <a floorDetail="tow-c-3" floor="Tầng 12B  -  16" href="#">Tầng 12B - 16</a>
-                            <a floorDetail="tow-c-4" floor="Tầng 22  -  23" href="#">Tầng 22 - 23</a>
-                            <a floorDetail="tow-c-5" floor="Tầng 28" href="#">Tầng 28</a>
+                            @foreach ($oFloorC as $i=>$f)
+                            <a floorDetail="tow-a-{{++$i}}" floor="{{ $f->head_title1 }}" href="#">{{ $f->head_title1 }}</a>
+                            @endforeach
                         </div>
                         <select class="listPlanTowSelect">
                             <option value="" hidden>chọn tầng</option>
-                            <option floorDetail="tow-c-1" floor="Tầng 8  -  10" href="#">Tầng 8 - 10</option>
-                            <option floorDetail="tow-c-2" floor="Tầng 11  -  13" href="#">Tầng 11 - 13</option>
-                            <option floorDetail="tow-c-3" floor="Tầng 12B  -  16" href="#">Tầng 12B - 16</option>
-                            <option floorDetail="tow-c-4" floor="Tầng 22  -  23" href="#">Tầng 22 - 23</option>
-                            <option floorDetail="tow-c-5" floor="Tầng 28" href="#">Tầng 28</option>
+                            @foreach ($oFloorC as $i=>$f)
+                            <option floorDetail="tow-a-{{++$i}}" floor="{{ $f->head_title1 }}">{{ $f->head_title1 }}</option>
+                            @endforeach
                         </select>
                     </div>
                 </div>
@@ -630,24 +125,18 @@
                         </svg>
                     </div>
                     <div class="copyCard">
-                        <h2>toà B</h2>
-                        <p>Với mật độ căn hộ thấp nhất toàn khu và kiến trúc hiện đại với 4 thang máy thông minh, Tòa
-                            Tùng được kiến tạo để gia chủ tận hưởng sự yên tĩnh, thư thái trong chính tổ ấm đẳng cấp của
-                            mình.</p>
+                        <h2>{{isset($arrText['towerB']) ? $arrText['towerB'] : 'Tòa B'}}</h2>
+                        <p>{{isset($arrText['buildingB_text']) ? $arrText['buildingB_text'] : ''}}</p>
                         <div class="listPlanTow">
-                            <a floorDetail="tow-b-1" floor="Tầng 8  -  11" href="#">Tầng 8 - 11</a>
-                            <a floorDetail="tow-b-2" floor="Tầng 12  -  15" href="#">Tầng 12 - 15</a>
-                            <a floorDetail="tow-b-3" floor="Tầng 21  -  25" href="#">Tầng 21 - 25</a>
-                            <a floorDetail="tow-b-4" floor="Tầng 28  -  29" href="#">Tầng 28 - 29</a>
-                            <a floorDetail="tow-b-5" floor="Tầng 33  -  34" href="#">Tầng 33 - 34</a>
+                            @foreach ($oFloorB as $i=>$f)
+                            <a floorDetail="tow-a-{{++$i}}" floor="{{ $f->head_title1 }}" href="#">{{ $f->head_title1 }}</a>
+                            @endforeach
                         </div>
                         <select class="listPlanTowSelect">
                             <option value="" hidden>chọn tầng</option>
-                            <option floorDetail="tow-b-1" floor="Tầng 8  -  11" href="#">Tầng 8 - 11</option>
-                            <option floorDetail="tow-b-2" floor="Tầng 12  -  15" href="#">Tầng 12 - 15</option>
-                            <option floorDetail="tow-b-3" floor="Tầng 21  -  25" href="#">Tầng 21 - 25</option>
-                            <option floorDetail="tow-b-4" floor="Tầng 28  -  29" href="#">Tầng 28 - 29</option>
-                            <option floorDetail="tow-b-5" floor="Tầng 33  -  34" href="#">Tầng 33 - 34</option>
+                            @foreach ($oFloorB as $i=>$f)
+                            <option floorDetail="tow-a-{{++$i}}" floor="{{ $f->head_title1 }}">{{ $f->head_title1 }}</option>
+                            @endforeach
                         </select>
                     </div>
                 </div>
@@ -656,10 +145,8 @@
         <div class="rightT">
             <div class="mainInfoTw">
                 <div class="copy">
-                    <h2 class="mainTt">mặt bằng toà</h2>
-                    <p>Lancaster Legacy sở hữu 3 tòa tháp riêng biệt với công năng và hướng nhìn khác nhau, song tất cả
-                        đều sở hữu phong cách kiến trúc hiện đại, pha lẫn yếu tố “Zen”, với những hình khối mạnh mẽ, kết
-                        hợp cùng các gam màu tinh tế tạo nên sự vững chãi về mặt thị giác.</p>
+                    <h2 class="mainTt">{!! $oPage->mid_title1 !!}</h2>
+                    <p>{!! $oPage->mid_desc1 !!}</p>
                 </div>
             </div>
             <div class="floorplanDetail">
@@ -674,32 +161,35 @@
                         <h2 class="mainTt"></h2>
 
                         <select class="listPlanTowSelect">
-                            <option floorDetail="tow-a-1" floor="Tầng 8  -  16">Tầng 8 - 16</option>
-                            <option floorDetail="tow-a-2" floor="Tầng 17  -  18" href="#">Tầng 17 - 18</option>
-                            <option floorDetail="tow-a-3" floor="Tầng 21  -  25" href="#">Tầng 21 - 25</option>
-                            <option floorDetail="tow-a-4" floor="Tầng 26  -  27" href="#">Tầng 26 - 27</option>
-                            <option floorDetail="tow-a-5" floor="Tầng 30" href="#">Tầng 30</option>
+                            @php
+                                $i=1;
+                            @endphp
+                            @foreach ($oFloorA as $f)
+                            <option floorDetail="tow-a-{{$i++}}" floor="{{ $f->head_title1 }}">{{ $f->head_title1 }}</option>
+                            @endforeach
                         </select>
 
                         <select class="listPlanTowSelect">
-                            <option floorDetail="tow-c-1" floor="Tầng 8  -  10" href="#">Tầng 8 - 10</option>
-                            <option floorDetail="tow-c-2" floor="Tầng 11  -  13" href="#">Tầng 11 - 13</option>
-                            <option floorDetail="tow-c-3" floor="Tầng 12B  -  16" href="#">Tầng 12B - 16</option>
-                            <option floorDetail="tow-c-4" floor="Tầng 22  -  23" href="#">Tầng 22 - 23</option>
-                            <option floorDetail="tow-c-5" floor="Tầng 28" href="#">Tầng 28</option>
+                            @php
+                                $i=1;
+                            @endphp
+                            @foreach ($oFloorC as $f)
+                            <option floorDetail="tow-c-{{$i++}}" floor="{{ $f->head_title1 }}">{{ $f->head_title1 }}</option>
+                            @endforeach
                         </select>
 
                         <select class="listPlanTowSelect">
-                            <option floorDetail="tow-b-1" floor="Tầng 8  -  11" href="#">Tầng 8 - 11</option>
-                            <option floorDetail="tow-b-2" floor="Tầng 12  -  15" href="#">Tầng 12 - 15</option>
-                            <option floorDetail="tow-b-3" floor="Tầng 21  -  25" href="#">Tầng 21 - 25</option>
-                            <option floorDetail="tow-b-4" floor="Tầng 28  -  29" href="#">Tầng 28 - 29</option>
-                            <option floorDetail="tow-b-5" floor="Tầng 33  -  34" href="#">Tầng 33 - 34</option>
+                            @php
+                                $i=1;
+                            @endphp
+                            @foreach ($oFloorB as $f)
+                            <option floorDetail="tow-b-{{$i++}}" floor="{{ $f->head_title1 }}">{{ $f->head_title1 }}</option>
+                            @endforeach
                         </select>
                     </div>
                     <!----------------- Tower A -->
                     <div id="tow-a-1" class="floorplanImg towA">
-                        <img data-src="{{ asset('assets/images/demo/toa-a-1.jpg') }}" alt="" class="lazyload">
+                        <img data-src="{{ isset($oFloorA[0]) ? $oFloorA[0]->banner_url : ''  }}" alt="" class="lazyload">
                         <svg width="660" height="433" viewBox="0 0 660 433" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
                             <path id-floorplan="" class="js-floorplandetail" class="js-floorplandetail"
@@ -732,12 +222,15 @@
                     </div>
                     <div data-text="tow-a-1" class="copy mb">
                         <ul>
-                            <li>Diện tích thể hiện trong bản vẽ là diện tích tim tường (GSA)</li>
-                            <li>Bản vẽ này chỉ dùng cho mục đích tham khảo. Thông tin chính thức sẽ được căn cứ trên hợp
-                                đồng.</li>
-                            <li>Tên căn hộ và ký hiệu căn hộ chính thức sẽ được ghi rõ trong hợp đồng.</li>
-                            <li>Diện tích thể hiện trong bản vẽ có thể khác với thực tế. Diện tích sử dụng căn hộ sau
-                                cùng sẽ được xác nhận bởi đơn vị đo đạc.</li>
+                            @php
+                                $lines = [];
+                                print_r($oFloorA[0]->info1);
+                                if (isset($oFloorA[0]))
+                                    $lines = explode("\n", $oFloorA[0]->info1);
+                            @endphp
+                            @foreach ($lines as $line)
+                            <li>{{ $line }}</li>
+                            @endforeach
                         </ul>
                     </div>
                     <div rel="tow-a-1" class="hintFp">
@@ -763,7 +256,7 @@
                         </div>
                     </div>
                     <div id="tow-a-2" class="floorplanImg towA">
-                        <img data-src="{{ asset('assets/images/demo/toa-a-2.jpg') }}" alt="" class="lazyload">
+                        <img data-src="{{ isset($oFloorA[1]) ? $oFloorA[1]->banner_url : '' }}" alt="" class="lazyload">
                         <svg width="660" height="433" viewBox="0 0 660 433" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
                             <path id-floorplan="" class="js-floorplandetail" class="js-floorplandetail"
@@ -796,12 +289,14 @@
                     </div>
                     <div data-text="tow-a-2" class="copy mb">
                         <ul>
-                            <li>Diện tích thể hiện trong bản vẽ là diện tích tim tường (GSA)</li>
-                            <li>Bản vẽ này chỉ dùng cho mục đích tham khảo. Thông tin chính thức sẽ được căn cứ trên hợp
-                                đồng.</li>
-                            <li>Tên căn hộ và ký hiệu căn hộ chính thức sẽ được ghi rõ trong hợp đồng.</li>
-                            <li>Diện tích thể hiện trong bản vẽ có thể khác với thực tế. Diện tích sử dụng căn hộ sau
-                                cùng sẽ được xác nhận bởi đơn vị đo đạc.</li>
+                            @php
+                                $lines = [];
+                                if (isset($oFloorA[1]))
+                                    $lines = explode("\n", $oFloorA[1]->info1);
+                            @endphp
+                            @foreach ($lines as $line)
+                            <li>{{ $line }}</li>
+                            @endforeach
                         </ul>
                     </div>
                     <div rel="tow-a-2" class="hintFp">
@@ -827,7 +322,7 @@
                         </div>
                     </div>
                     <div id="tow-a-3" class="floorplanImg towA">
-                        <img data-src="{{ asset('assets/images/demo/toa-a-3.jpg') }}" alt="" class="lazyload">
+                        <img data-src="{{ isset($oFloorA[2]) ? $oFloorA[2]->banner_url : '' }}" alt="" class="lazyload">
                         <svg width="660" height="433" viewBox="0 0 660 433" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
                             <path id-floorplan="" class="js-floorplandetail"
@@ -859,12 +354,14 @@
                     </div>
                     <div data-text="tow-a-3" class="copy mb">
                         <ul>
-                            <li>Diện tích thể hiện trong bản vẽ là diện tích tim tường (GSA)</li>
-                            <li>Bản vẽ này chỉ dùng cho mục đích tham khảo. Thông tin chính thức sẽ được căn cứ trên hợp
-                                đồng.</li>
-                            <li>Tên căn hộ và ký hiệu căn hộ chính thức sẽ được ghi rõ trong hợp đồng.</li>
-                            <li>Diện tích thể hiện trong bản vẽ có thể khác với thực tế. Diện tích sử dụng căn hộ sau
-                                cùng sẽ được xác nhận bởi đơn vị đo đạc.</li>
+                            @php
+                                $lines = [];
+                                if (isset($oFloorA[2]))
+                                    $lines = explode("\n", $oFloorA[2]->info1);
+                            @endphp
+                            @foreach ($lines as $line)
+                            <li>{{ $line }}</li>
+                            @endforeach
                         </ul>
                     </div>
                     <div rel="tow-a-3" class="hintFp">
@@ -895,7 +392,7 @@
 
                     </div>
                     <div id="tow-a-4" class="floorplanImg towA">
-                        <img data-src="{{ asset('assets/images/demo/toa-a-4.jpg') }}" alt="" class="lazyload">
+                        <img data-src="{{ isset($oFloorA[3]) ? $oFloorA[3]->banner_url : '' }}" alt="" class="lazyload">
                         <svg width="660" height="433" viewBox="0 0 660 433" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
                             <path id-floorplan="" class="js-floorplandetail"
@@ -927,12 +424,14 @@
                     </div>
                     <div data-text="tow-a-4" class="copy mb">
                         <ul>
-                            <li>Diện tích thể hiện trong bản vẽ là diện tích tim tường (GSA)</li>
-                            <li>Bản vẽ này chỉ dùng cho mục đích tham khảo. Thông tin chính thức sẽ được căn cứ trên hợp
-                                đồng.</li>
-                            <li>Tên căn hộ và ký hiệu căn hộ chính thức sẽ được ghi rõ trong hợp đồng.</li>
-                            <li>Diện tích thể hiện trong bản vẽ có thể khác với thực tế. Diện tích sử dụng căn hộ sau
-                                cùng sẽ được xác nhận bởi đơn vị đo đạc.</li>
+                            @php
+                                $lines = [];
+                                if (isset($oFloorA[3]))
+                                    $lines = explode("\n", $oFloorA[3]->info1);
+                            @endphp
+                            @foreach ($lines as $line)
+                            <li>{{ $line }}</li>
+                            @endforeach
                         </ul>
                     </div>
                     <div rel="tow-a-4" class="hintFp">
@@ -963,7 +462,7 @@
 
                     </div>
                     <div id="tow-a-5" class="floorplanImg towA">
-                        <img data-src="{{ asset('assets/images/demo/toa-a-5.jpg') }}" alt="" class="lazyload">
+                        <img data-src="{{ isset($oFloorA[4]) ? $oFloorA[4]->banner_url : '' }}" alt="" class="lazyload">
                         <svg width="660" height="433" viewBox="0 0 660 433" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
                             <path id-floorplan="" class="js-floorplandetail"
@@ -995,12 +494,14 @@
                     </div>
                     <div data-text="tow-a-5" class="copy mb">
                         <ul>
-                            <li>Diện tích thể hiện trong bản vẽ là diện tích tim tường (GSA)</li>
-                            <li>Bản vẽ này chỉ dùng cho mục đích tham khảo. Thông tin chính thức sẽ được căn cứ trên hợp
-                                đồng.</li>
-                            <li>Tên căn hộ và ký hiệu căn hộ chính thức sẽ được ghi rõ trong hợp đồng.</li>
-                            <li>Diện tích thể hiện trong bản vẽ có thể khác với thực tế. Diện tích sử dụng căn hộ sau
-                                cùng sẽ được xác nhận bởi đơn vị đo đạc.</li>
+                            @php
+                                $lines = [];
+                                if (isset($oFloorA[4]))
+                                    $lines = explode("\n", $oFloorA[4]->info1);
+                            @endphp
+                            @foreach ($lines as $line)
+                            <li>{{ $line }}</li>
+                            @endforeach
                         </ul>
                     </div>
                     <div rel="tow-a-5" class="hintFp">
@@ -1034,7 +535,7 @@
                     <!----------------- Tower C  -->
 
                     <div id="tow-c-1" class="floorplanImg towC">
-                        <img data-src="{{ asset('assets/images/demo/toa-c-1.jpg') }}" alt="" class="lazyload">
+                        <img data-src="{{ isset($oFloorC[0]) ? $oFloorC[0]->banner_url : '' }}" alt="" class="lazyload">
                         <svg width="512" height="512" viewBox="0 0 512 512" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
                             <path id-floorplan="" class="js-floorplandetail"
@@ -1059,12 +560,14 @@
                     </div>
                     <div data-text="tow-c-1" class="copy mb">
                         <ul>
-                            <li>Diện tích thể hiện trong bản vẽ là diện tích tim tường (GSA)</li>
-                            <li>Bản vẽ này chỉ dùng cho mục đích tham khảo. Thông tin chính thức sẽ được căn cứ trên hợp
-                                đồng.</li>
-                            <li>Tên căn hộ và ký hiệu căn hộ chính thức sẽ được ghi rõ trong hợp đồng.</li>
-                            <li>Diện tích thể hiện trong bản vẽ có thể khác với thực tế. Diện tích sử dụng căn hộ sau
-                                cùng sẽ được xác nhận bởi đơn vị đo đạc.</li>
+                            @php
+                                $lines = [];
+                                if (isset($oFloorC[0]))
+                                    $lines = explode("\n", $oFloorC[0]->info1);
+                            @endphp
+                            @foreach ($lines as $line)
+                            <li>{{ $line }}</li>
+                            @endforeach
                         </ul>
                     </div>
                     <div rel="tow-c-1" class="hintFp">
@@ -1090,7 +593,7 @@
                         </div>
                     </div>
                     <div id="tow-c-2" class="floorplanImg towC">
-                        <img data-src="{{ asset('assets/images/demo/toa-c-2.jpg') }}" alt="" class="lazyload">
+                        <img data-src="{{ isset($oFloorC[1]) ? $oFloorC[1]->banner_url : '' }}" alt="" class="lazyload">
                         <svg width="512" height="512" viewBox="0 0 512 512" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
                             <path id-floorplan="" class="js-floorplandetail"
@@ -1111,12 +614,14 @@
                     </div>
                     <div data-text="tow-c-2" class="copy mb">
                         <ul>
-                            <li>Diện tích thể hiện trong bản vẽ là diện tích tim tường (GSA)</li>
-                            <li>Bản vẽ này chỉ dùng cho mục đích tham khảo. Thông tin chính thức sẽ được căn cứ trên hợp
-                                đồng.</li>
-                            <li>Tên căn hộ và ký hiệu căn hộ chính thức sẽ được ghi rõ trong hợp đồng.</li>
-                            <li>Diện tích thể hiện trong bản vẽ có thể khác với thực tế. Diện tích sử dụng căn hộ sau
-                                cùng sẽ được xác nhận bởi đơn vị đo đạc.</li>
+                            @php
+                                $lines = [];
+                                if (isset($oFloorC[1]))
+                                    $lines = explode("\n", $oFloorC[1]->info1);
+                            @endphp
+                            @foreach ($lines as $line)
+                            <li>{{ $line }}</li>
+                            @endforeach
                         </ul>
                     </div>
                     <div rel="tow-c-2" class="hintFp">
@@ -1138,7 +643,7 @@
                         </div>
                     </div>
                     <div id="tow-c-3" class="floorplanImg towC">
-                        <img data-src="{{ asset('assets/images/demo/toa-c-3.jpg') }}" alt="" class="lazyload">
+                        <img data-src="{{ isset($oFloorC[2]) ? $oFloorC[2]->banner_url : '' }}" alt="" class="lazyload">
                         <svg width="512" height="512" viewBox="0 0 512 512" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
                             <path id-floorplan="" class="js-floorplandetail"
@@ -1161,12 +666,14 @@
                     </div>
                     <div data-text="tow-c-3" class="copy mb">
                         <ul>
-                            <li>Diện tích thể hiện trong bản vẽ là diện tích tim tường (GSA)</li>
-                            <li>Bản vẽ này chỉ dùng cho mục đích tham khảo. Thông tin chính thức sẽ được căn cứ trên hợp
-                                đồng.</li>
-                            <li>Tên căn hộ và ký hiệu căn hộ chính thức sẽ được ghi rõ trong hợp đồng.</li>
-                            <li>Diện tích thể hiện trong bản vẽ có thể khác với thực tế. Diện tích sử dụng căn hộ sau
-                                cùng sẽ được xác nhận bởi đơn vị đo đạc.</li>
+                            @php
+                                $lines = [];
+                                if (isset($oFloorC[2]))
+                                    $lines = explode("\n", $oFloorC[2]->info1);
+                            @endphp
+                            @foreach ($lines as $line)
+                            <li>{{ $line }}</li>
+                            @endforeach
                         </ul>
                     </div>
                     <div rel="tow-c-3" class="hintFp">
@@ -1188,7 +695,7 @@
                         </div>
                     </div>
                     <div id="tow-c-4" class="floorplanImg towC">
-                        <img data-src="{{ asset('assets/images/demo/toa-c-4.jpg') }}" alt="" class="lazyload">
+                        <img data-src="{{ isset($oFloorC[3]) ? $oFloorC[3]->banner_url : '' }}" alt="" class="lazyload">
                         <svg width="512" height="512" viewBox="0 0 512 512" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
                             <path id-floorplan="" class="js-floorplandetail"
@@ -1211,12 +718,14 @@
                     </div>
                     <div data-text="tow-c-4" class="copy mb">
                         <ul>
-                            <li>Diện tích thể hiện trong bản vẽ là diện tích tim tường (GSA)</li>
-                            <li>Bản vẽ này chỉ dùng cho mục đích tham khảo. Thông tin chính thức sẽ được căn cứ trên hợp
-                                đồng.</li>
-                            <li>Tên căn hộ và ký hiệu căn hộ chính thức sẽ được ghi rõ trong hợp đồng.</li>
-                            <li>Diện tích thể hiện trong bản vẽ có thể khác với thực tế. Diện tích sử dụng căn hộ sau
-                                cùng sẽ được xác nhận bởi đơn vị đo đạc.</li>
+                            @php
+                                $lines = [];
+                                if (isset($oFloorC[3]))
+                                    $lines = explode("\n", $oFloorC[3]->info1);
+                            @endphp
+                            @foreach ($lines as $line)
+                            <li>{{ $line }}</li>
+                            @endforeach
                         </ul>
                     </div>
                     <div rel="tow-c-4" class="hintFp">
@@ -1238,7 +747,7 @@
                         </div>
                     </div>
                     <div id="tow-c-5" class="floorplanImg towC">
-                        <img data-src="{{ asset('assets/images/demo/toa-c-5.jpg') }}" alt="" class="lazyload">
+                        <img data-src="{{ isset($oFloorC[4]) ? $oFloorC[4]->banner_url : '' }}" alt="" class="lazyload">
                         <svg width="512" height="512" viewBox="0 0 512 512" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
                             <path id-floorplan="" class="js-floorplandetail"
@@ -1259,12 +768,14 @@
                     </div>
                     <div data-text="tow-c-5" class="copy mb">
                         <ul>
-                            <li>Diện tích thể hiện trong bản vẽ là diện tích tim tường (GSA)</li>
-                            <li>Bản vẽ này chỉ dùng cho mục đích tham khảo. Thông tin chính thức sẽ được căn cứ trên hợp
-                                đồng.</li>
-                            <li>Tên căn hộ và ký hiệu căn hộ chính thức sẽ được ghi rõ trong hợp đồng.</li>
-                            <li>Diện tích thể hiện trong bản vẽ có thể khác với thực tế. Diện tích sử dụng căn hộ sau
-                                cùng sẽ được xác nhận bởi đơn vị đo đạc.</li>
+                            @php
+                                $lines = [];
+                                if (isset($oFloorC[4]))
+                                    $lines = explode("\n", $oFloorC[4]->info1);
+                            @endphp
+                            @foreach ($lines as $line)
+                            <li>{{ $line }}</li>
+                            @endforeach
                         </ul>
                     </div>
                     <div rel="tow-c-5" class="hintFp">
@@ -1289,7 +800,7 @@
                     <!----------------- Tower B  -->
 
                     <div id="tow-b-1" class="floorplanImg towB">
-                        <img data-src="{{ asset('assets/images/demo/toa-b-1.jpg') }}" alt="" class="lazyload">
+                        <img data-src="{{ isset($oFloorB[0]) ? $oFloorB[0]->banner_url : '' }}" alt="" class="lazyload">
                         <svg width="540" height="512" viewBox="0 0 540 512" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
                             <path id-floorplan="" class="js-floorplandetail"
@@ -1316,12 +827,14 @@
                     </div>
                     <div data-text="tow-b-1" class="copy mb">
                         <ul>
-                            <li>Diện tích thể hiện trong bản vẽ là diện tích tim tường (GSA)</li>
-                            <li>Bản vẽ này chỉ dùng cho mục đích tham khảo. Thông tin chính thức sẽ được căn cứ trên hợp
-                                đồng.</li>
-                            <li>Tên căn hộ và ký hiệu căn hộ chính thức sẽ được ghi rõ trong hợp đồng.</li>
-                            <li>Diện tích thể hiện trong bản vẽ có thể khác với thực tế. Diện tích sử dụng căn hộ sau
-                                cùng sẽ được xác nhận bởi đơn vị đo đạc.</li>
+                            @php
+                                $lines = [];
+                                if (isset($oFloorB[0]))
+                                    $lines = explode("\n", $oFloorB[0]->info1);
+                            @endphp
+                            @foreach ($lines as $line)
+                            <li>{{ $line }}</li>
+                            @endforeach
                         </ul>
                     </div>
                     <div rel="tow-b-1" class="hintFp">
@@ -1340,7 +853,7 @@
                     </div>
 
                     <div id="tow-b-2" class="floorplanImg towB">
-                        <img data-src="{{ asset('assets/images/demo/toa-b-2.jpg') }}" alt="" class="lazyload">
+                        <img data-src="{{ isset($oFloorB[1]) ? $oFloorB[1]->banner_url : '' }}" alt="" class="lazyload">
                         <svg width="540" height="512" viewBox="0 0 540 512" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
                             <path id-floorplan="" class="js-floorplandetail"
@@ -1367,12 +880,14 @@
                     </div>
                     <div data-text="tow-b-2" class="copy mb">
                         <ul>
-                            <li>Diện tích thể hiện trong bản vẽ là diện tích tim tường (GSA)</li>
-                            <li>Bản vẽ này chỉ dùng cho mục đích tham khảo. Thông tin chính thức sẽ được căn cứ trên hợp
-                                đồng.</li>
-                            <li>Tên căn hộ và ký hiệu căn hộ chính thức sẽ được ghi rõ trong hợp đồng.</li>
-                            <li>Diện tích thể hiện trong bản vẽ có thể khác với thực tế. Diện tích sử dụng căn hộ sau
-                                cùng sẽ được xác nhận bởi đơn vị đo đạc.</li>
+                            @php
+                                $lines = [];
+                                if (isset($oFloorB[1]))
+                                    $lines = explode("\n", $oFloorB[1]->info1);
+                            @endphp
+                            @foreach ($lines as $line)
+                            <li>{{ $line }}</li>
+                            @endforeach
                         </ul>
                     </div>
                     <div rel="tow-b-2" class="hintFp">
@@ -1390,7 +905,7 @@
                         </div>
                     </div>
                     <div id="tow-b-3" class="floorplanImg towB">
-                        <img data-src="{{ asset('assets/images/demo/toa-b-3.jpg') }}" alt="" class="lazyload">
+                        <img data-src="{{ isset($oFloorB[2]) ? $oFloorB[2]->banner_url : '' }}" alt="" class="lazyload">
                         <svg width="540" height="512" viewBox="0 0 540 512" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
                             <path id-floorplan="" class="js-floorplandetail"
@@ -1418,12 +933,14 @@
                     </div>
                     <div data-text="tow-b-3" class="copy mb">
                         <ul>
-                            <li>Diện tích thể hiện trong bản vẽ là diện tích tim tường (GSA)</li>
-                            <li>Bản vẽ này chỉ dùng cho mục đích tham khảo. Thông tin chính thức sẽ được căn cứ trên hợp
-                                đồng.</li>
-                            <li>Tên căn hộ và ký hiệu căn hộ chính thức sẽ được ghi rõ trong hợp đồng.</li>
-                            <li>Diện tích thể hiện trong bản vẽ có thể khác với thực tế. Diện tích sử dụng căn hộ sau
-                                cùng sẽ được xác nhận bởi đơn vị đo đạc.</li>
+                            @php
+                                $lines = [];
+                                if (isset($oFloorB[2]))
+                                    $lines = explode("\n", $oFloorB[2]->info1);
+                            @endphp
+                            @foreach ($lines as $line)
+                            <li>{{ $line }}</li>
+                            @endforeach
                         </ul>
                     </div>
                     <div rel="tow-b-3" class="hintFp">
@@ -1451,7 +968,7 @@
 
 
                     <div id="tow-b-4" class="floorplanImg towB">
-                        <img data-src="{{ asset('assets/images/demo/toa-b-4.jpg') }}" alt="" class="lazyload">
+                        <img data-src="{{ isset($oFloorB[3]) ? $oFloorB[3]->banner_url : '' }}" alt="" class="lazyload">
                         <svg width="540" height="512" viewBox="0 0 540 512" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
                             <path id-floorplan="" class="js-floorplandetail"
@@ -1478,12 +995,14 @@
                     </div>
                     <div data-text="tow-b-4" class="copy mb">
                         <ul>
-                            <li>Diện tích thể hiện trong bản vẽ là diện tích tim tường (GSA)</li>
-                            <li>Bản vẽ này chỉ dùng cho mục đích tham khảo. Thông tin chính thức sẽ được căn cứ trên hợp
-                                đồng.</li>
-                            <li>Tên căn hộ và ký hiệu căn hộ chính thức sẽ được ghi rõ trong hợp đồng.</li>
-                            <li>Diện tích thể hiện trong bản vẽ có thể khác với thực tế. Diện tích sử dụng căn hộ sau
-                                cùng sẽ được xác nhận bởi đơn vị đo đạc.</li>
+                            @php
+                                $lines = [];
+                                if (isset($oFloorB[3]))
+                                    $lines = explode("\n", $oFloorB[3]->info1);
+                            @endphp
+                            @foreach ($lines as $line)
+                            <li>{{ $line }}</li>
+                            @endforeach
                         </ul>
                     </div>
                     <div rel="tow-b-4" class="hintFp">
@@ -1510,7 +1029,7 @@
                     </div>
 
                     <div id="tow-b-5" class="floorplanImg towB">
-                        <img data-src="{{ asset('assets/images/demo/toa-b-5.jpg') }}" alt="" class="lazyload">
+                        <img data-src="{{ isset($oFloorB[4]) ? $oFloorB[4]->banner_url : '' }}" alt="" class="lazyload">
                         <svg width="540" height="512" viewBox="0 0 540 512" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
                             <path id-floorplan="" class="js-floorplandetail"
@@ -1537,12 +1056,14 @@
                     </div>
                     <div data-text="tow-b-5" class="copy mb">
                         <ul>
-                            <li>Diện tích thể hiện trong bản vẽ là diện tích tim tường (GSA)</li>
-                            <li>Bản vẽ này chỉ dùng cho mục đích tham khảo. Thông tin chính thức sẽ được căn cứ trên hợp
-                                đồng.</li>
-                            <li>Tên căn hộ và ký hiệu căn hộ chính thức sẽ được ghi rõ trong hợp đồng.</li>
-                            <li>Diện tích thể hiện trong bản vẽ có thể khác với thực tế. Diện tích sử dụng căn hộ sau
-                                cùng sẽ được xác nhận bởi đơn vị đo đạc.</li>
+                            @php
+                                $lines = [];
+                                if (isset($oFloorB[4]))
+                                    $lines = explode("\n", $oFloorB[4]->info1);
+                            @endphp
+                            @foreach ($lines as $line)
+                            <li>{{ $line }}</li>
+                            @endforeach
                         </ul>
                     </div>
                     <div rel="tow-b-5" class="hintFp">
@@ -1566,12 +1087,15 @@
 
                     <div class="copy">
                         <ul>
-                            <li>Diện tích thể hiện trong bản vẽ là diện tích tim tường (GSA)</li>
-                            <li>Bản vẽ này chỉ dùng cho mục đích tham khảo. Thông tin chính thức sẽ được căn cứ trên hợp
-                                đồng.</li>
-                            <li>Tên căn hộ và ký hiệu căn hộ chính thức sẽ được ghi rõ trong hợp đồng.</li>
-                            <li>Diện tích thể hiện trong bản vẽ có thể khác với thực tế. Diện tích sử dụng căn hộ sau
-                                cùng sẽ được xác nhận bởi đơn vị đo đạc.</li>
+                            @php
+                                $lines = [];
+                                if (isset($oFloorB[4]))
+                                    $lines = explode("\n", $oFloorB[4]->info1);
+                            @endphp
+                            @foreach ($lines as $line)
+                            <li>{{ $line }}</li>
+                            @endforeach
+
                         </ul>
                     </div>
 
@@ -1581,7 +1105,3 @@
             </div>
         </div>
     </section>
-
-</main>
-
-@endsection

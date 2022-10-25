@@ -88,7 +88,7 @@ $(document).ready(function() {
     });
 
     $( "#tow-a-1, #tow-a-2, #tow-a-3, #tow-a-4, #tow-a-5" ).click(function(e) {
-        updateApartment('A12.01');
+        updateApartment('A08.01');
     });
 
     function updateApartment(code) {
@@ -110,9 +110,9 @@ $(document).ready(function() {
                 console.log('data sent');
                 $('#FloorPlanDetail').html(data.data);
                 //alert(data.data);
-                $('.js-floorplandetail').on("click",function(){
-                    $('#FloorPlanDetail').stop(true,true).fadeIn();
-                });
+                // $('.js-floorplandetail').on("click",function(){
+                //     $('#FloorPlanDetail').stop(true,true).fadeIn();
+                // });
                 $('.js-closefloorplandetail').on("click",function(){
                     $('#FloorPlanDetail').stop(true,true).fadeOut();
                 });

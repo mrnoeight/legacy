@@ -65,11 +65,11 @@
     <section id="floorplan" class="floorplanWrap pd1">
         <div class="container">
             <div class="ttPage animate">
-                <h2 class="mainTt">Mặt bằng tiện ích</h2>
+                <h2 class="mainTt">{{ $arrText['ground_utility'] }}</h2>
             </div>
             <div class="btnTabWrap animate">
-                <div data-tab="tab1" class="btnTab active">{{ $oFloor6->head_title1 }}</div>
-                <div data-tab="tab2" class="btnTab rooftopLink">Tiện ích tầng thượng</div>
+                <div data-tab="tab1" class="btnTab active">{{ $arrText['floor6_utility'] }}</div>
+                <div data-tab="tab2" class="btnTab rooftopLink">{{$arrText['roof_utility']}}</div>
             </div>
             <div id="tab1" class="ctTab">
                 <div class="row checklenght animate">
@@ -285,7 +285,7 @@
                 <svg width="630" height="850" viewBox="0 0 630 850" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <!-- Tower A -->
                     <path id="shapeTowA" class="mainLinkFl js-mainLinkFl" ovl="ovlTowA" tooltip="tooltipTowA"
-                        tower="Tòa A"
+                        tower="{{isset($arrText['towerA']) ? $arrText['towerA'] : 'Tòa A'}}"
                         d="M319.5 154.5L327 150L348.5 160.5L352 158L358.5 161.5L361 160.5L374.5 166L375.5 110L399.5 98L594.5 177L592.5 179L608 185.5V189.5L598 196L587.5 250L594.5 253L592.5 263L583.5 269.5L581.5 280L588.5 284L586.5 293.5L577.5 299.5L576.5 308.5L582.5 311L581 320.5L572 327.5L571 334.5L576.5 338L575.5 347L567 354L566 360.5L572 363.5L570 371.5L561 379V385L566 388.5V394.5L557 402.5L556 409L561 412V418.5L552.5 426.5L551.5 432L557 435.5L545 493L521.5 613L520 615L523 617.5V620.5L525 621.5L523 633L526.5 636L518 674.5L516 687L495 709L468 734.5C465.333 737.5 459.1 743.6 455.5 744C451.9 744.4 447.667 742.5 446 741.5L436.5 734L420.5 751V755L418 758.5C418.4 762.1 417.5 765 417 766L398.5 788L399.5 793.5L382 815C378.8 819.8 372.333 818 369.5 816.5L312.5 772.5C313.3 771.7 312.833 769.167 312.5 768C303.5 760.833 284.7 745.9 281.5 743.5C278.3 741.1 275.833 735.5 275 733C271.833 724.5 265.2 705.8 264 699C262.8 692.2 259.167 688.5 257.5 687.5L244 675.5L240 627.5L304 575L308 581L307.5 569L313.5 564L309.5 403.5L303 398.5L302 373L308 369L303 194.5L288 187V167L312.5 154.5V153L314.5 152L319.5 154.5Z"
                         fill="" />
                     <g class="ovlTowSvg ovlTowA" style="mix-blend-mode:color">
@@ -302,7 +302,7 @@
                     <!-- Tower C -->
 
                     <path id="shapeTowC" class="mainLinkFl js-mainLinkFl" ovl="ovlTowC" tooltip="tooltipTowC"
-                        tower="Tòa C"
+                        tower="{{isset($arrText['towerC']) ? $arrText['towerC'] : 'Tòa C'}}"
                         d="M307.5 569.5V576L295 569.5L272.5 123L254.5 114.5L252 71.5L360 25.5L383 35V40.5L393 44.5L400.5 40.5L425.5 50.5L422.5 103.5L426 105V109L399.5 98L376 110L374.5 147L373 147.5V156.5H374V159.5H373V165.5L361 159.5L358.5 161L352 157.5L347.5 159.5L326.5 150L319.5 154L314.5 152.5L312 155L287.5 167L288.5 187L303.5 194.5L307.5 369L302 373.5L303.5 399L309.5 404.5L313 564.5L307.5 569.5Z"
                         fill="" />
 
@@ -320,7 +320,7 @@
                     <!-- Tower B -->
 
                     <path id="shapeTowB" class="mainLinkFl js-mainLinkFl" ovl="ovlTowB" tooltip="tooltipTowB"
-                        tower="Tòa B"
+                        tower="{{isset($arrText['towerB']) ? $arrText['towerB'] : 'Tòa B'}}"
                         d="M293.5 568.5L271.5 126V124L247 111L240 114.5L237.5 78.5L215 70L45 139L142.5 579.5C136.9 583.5 136.167 587.5 136.5 589L151.5 649L214 694L243 669L236 614.5L293.5 568.5Z"
                         fill="" />
 
@@ -339,9 +339,9 @@
                 </svg>
 
                 <div class="ttTowWrap">
-                    <span class="ttTow js-mainLinkFl" ovl="ovlTowA" tooltip="tooltipTowA" tower="Tòa A">Tòa A</span>
-                    <span class="ttTow js-mainLinkFl" ovl="ovlTowB" tooltip="tooltipTowB" tower="Tòa B">Tòa B</span>
-                    <span class="ttTow js-mainLinkFl" ovl="ovlTowC" tooltip="tooltipTowC" tower="Tòa C">Tòa C</span>
+                    <span class="ttTow js-mainLinkFl" ovl="ovlTowA" tooltip="tooltipTowA" tower="{{isset($arrText['towerA']) ? $arrText['towerA'] : 'Tòa A'}}">{{isset($arrText['towerA']) ? $arrText['towerA'] : 'Tòa A'}}</span>
+                    <span class="ttTow js-mainLinkFl" ovl="ovlTowB" tooltip="tooltipTowB" tower="{{isset($arrText['towerB']) ? $arrText['towerB'] : 'Tòa B'}}">{{isset($arrText['towerB']) ? $arrText['towerB'] : 'Tòa B'}}</span>
+                    <span class="ttTow js-mainLinkFl" ovl="ovlTowC" tooltip="tooltipTowC" tower="{{isset($arrText['towerC']) ? $arrText['towerC'] : 'Tòa C'}}">{{isset($arrText['towerC']) ? $arrText['towerC'] : 'Tòa C'}}</span>
                 </div>
 
 
@@ -355,22 +355,18 @@
                         </svg>
                     </div>
                     <div class="copyCard">
-                        <h2>toà a</h2>
-                        <p>{!! $oPage->info1 !!}</p>
+                        <h2>{{isset($arrText['towerA']) ? $arrText['towerA'] : 'Tòa A'}}</h2>
+                        <p>{{isset($arrText['buildingA_text']) ? $arrText['buildingA_text'] : ''}}</p>
                         <div class="listPlanTow">
-                            <a floorDetail="tow-a-1" floor="Tầng 8  -  16" href="#">Tầng 8 - 16</a>
-                            <a floorDetail="tow-a-2" floor="Tầng 17  -  18" href="#">Tầng 17 - 18</a>
-                            <a floorDetail="tow-a-3" floor="Tầng 21  -  25" href="#">Tầng 21 - 25</a>
-                            <a floorDetail="tow-a-4" floor="Tầng 26  -  27" href="#">Tầng 26 - 27</a>
-                            <a floorDetail="tow-a-5" floor="Tầng 30" href="#">Tầng 30</a>
+                            @foreach ($oFloorA as $i=>$f)
+                            <a floorDetail="tow-a-{{++$i}}" floor="{{ $f->head_title1 }}" href="#">{{ $f->head_title1 }}</a>
+                            @endforeach
                         </div>
                         <select class="listPlanTowSelect">
                             <option value="" hidden>chọn tầng</option>
-                            <option floorDetail="tow-a-1" floor="Tầng 8  -  16">Tầng 8 - 16</option>
-                            <option floorDetail="tow-a-2" floor="Tầng 17  -  18" href="#">Tầng 17 - 18</option>
-                            <option floorDetail="tow-a-3" floor="Tầng 21  -  25" href="#">Tầng 21 - 25</option>
-                            <option floorDetail="tow-a-4" floor="Tầng 26  -  27" href="#">Tầng 26 - 27</option>
-                            <option floorDetail="tow-a-5" floor="Tầng 30" href="#">Tầng 30</option>
+                            @foreach ($oFloorA as $i=>$f)
+                            <option floorDetail="tow-a-{{++$i}}" floor="{{ $f->head_title1 }}">{{ $f->head_title1 }}</option>
+                            @endforeach
                         </select>
                     </div>
                 </div>
@@ -384,22 +380,18 @@
                         </svg>
                     </div>
                     <div class="copyCard">
-                        <h2>toà C</h2>
-                        <p>{!! $oPage->info3 !!}</p>
+                        <h2>{{isset($arrText['towerC']) ? $arrText['towerC'] : 'Tòa C'}}</h2>
+                        <p>{{isset($arrText['buildingC_text']) ? $arrText['buildingC_text'] : ''}}</p>
                         <div class="listPlanTow">
-                            <a floorDetail="tow-c-1" floor="Tầng 8  -  10" href="#">Tầng 8 - 10</a>
-                            <a floorDetail="tow-c-2" floor="Tầng 11  -  13" href="#">Tầng 11 - 13</a>
-                            <a floorDetail="tow-c-3" floor="Tầng 12B  -  16" href="#">Tầng 12B - 16</a>
-                            <a floorDetail="tow-c-4" floor="Tầng 22  -  23" href="#">Tầng 22 - 23</a>
-                            <a floorDetail="tow-c-5" floor="Tầng 28" href="#">Tầng 28</a>
+                            @foreach ($oFloorC as $i=>$f)
+                            <a floorDetail="tow-a-{{++$i}}" floor="{{ $f->head_title1 }}" href="#">{{ $f->head_title1 }}</a>
+                            @endforeach
                         </div>
                         <select class="listPlanTowSelect">
                             <option value="" hidden>chọn tầng</option>
-                            <option floorDetail="tow-c-1" floor="Tầng 8  -  10" href="#">Tầng 8 - 10</option>
-                            <option floorDetail="tow-c-2" floor="Tầng 11  -  13" href="#">Tầng 11 - 13</option>
-                            <option floorDetail="tow-c-3" floor="Tầng 12B  -  16" href="#">Tầng 12B - 16</option>
-                            <option floorDetail="tow-c-4" floor="Tầng 22  -  23" href="#">Tầng 22 - 23</option>
-                            <option floorDetail="tow-c-5" floor="Tầng 28" href="#">Tầng 28</option>
+                            @foreach ($oFloorC as $i=>$f)
+                            <option floorDetail="tow-a-{{++$i}}" floor="{{ $f->head_title1 }}">{{ $f->head_title1 }}</option>
+                            @endforeach
                         </select>
                     </div>
                 </div>
@@ -413,22 +405,18 @@
                         </svg>
                     </div>
                     <div class="copyCard">
-                        <h2>toà B</h2>
-                        <p>{!! $oPage->info2 !!}</p>
+                        <h2>{{isset($arrText['towerB']) ? $arrText['towerB'] : 'Tòa B'}}</h2>
+                        <p>{{isset($arrText['buildingB_text']) ? $arrText['buildingB_text'] : ''}}</p>
                         <div class="listPlanTow">
-                            <a floorDetail="tow-b-1" floor="Tầng 8  -  11" href="#">Tầng 8 - 11</a>
-                            <a floorDetail="tow-b-2" floor="Tầng 12  -  15" href="#">Tầng 12 - 15</a>
-                            <a floorDetail="tow-b-3" floor="Tầng 21  -  25" href="#">Tầng 21 - 25</a>
-                            <a floorDetail="tow-b-4" floor="Tầng 28  -  29" href="#">Tầng 28 - 29</a>
-                            <a floorDetail="tow-b-5" floor="Tầng 33  -  34" href="#">Tầng 33 - 34</a>
+                            @foreach ($oFloorB as $i=>$f)
+                            <a floorDetail="tow-a-{{++$i}}" floor="{{ $f->head_title1 }}" href="#">{{ $f->head_title1 }}</a>
+                            @endforeach
                         </div>
                         <select class="listPlanTowSelect">
                             <option value="" hidden>chọn tầng</option>
-                            <option floorDetail="tow-b-1" floor="Tầng 8  -  11" href="#">Tầng 8 - 11</option>
-                            <option floorDetail="tow-b-2" floor="Tầng 12  -  15" href="#">Tầng 12 - 15</option>
-                            <option floorDetail="tow-b-3" floor="Tầng 21  -  25" href="#">Tầng 21 - 25</option>
-                            <option floorDetail="tow-b-4" floor="Tầng 28  -  29" href="#">Tầng 28 - 29</option>
-                            <option floorDetail="tow-b-5" floor="Tầng 33  -  34" href="#">Tầng 33 - 34</option>
+                            @foreach ($oFloorB as $i=>$f)
+                            <option floorDetail="tow-a-{{++$i}}" floor="{{ $f->head_title1 }}">{{ $f->head_title1 }}</option>
+                            @endforeach
                         </select>
                     </div>
                 </div>
@@ -447,7 +435,7 @@
                         <div>
                             <img class="lazyload btnBackAr js-closefloorplandetailMb"
                                 data-src="{{ asset('assets/images/btn-back.png') }}" alt="">
-                            <p> Mặt bằng toà / <span></span></p>
+                            <p> {{isset($arrText['floor_plan']) ? $arrText['floor_plan'] :'Mặt bằng toà'}} / <span></span></p>
                         </div>
 
                         <h2 class="mainTt"></h2>
@@ -512,10 +500,11 @@
                                 fill="" />
                         </svg>
                     </div>
-                    <div data-text="tow-a-1" class="copy mb">
+                    <!-- <div data-text="tow-a-1" class="copy mb">
                         <ul>
                             @php
                                 $lines = [];
+                                print_r($oFloorA[0]->info1);
                                 if (isset($oFloorA[0]))
                                     $lines = explode("\n", $oFloorA[0]->info1);
                             @endphp
@@ -523,7 +512,7 @@
                             <li>{{ $line }}</li>
                             @endforeach
                         </ul>
-                    </div>
+                    </div> -->
                     <div rel="tow-a-1" class="hintFp">
                         <div id-floorplan="" class="item js-floorplandetail">
                             <span style="background-color: #FCAB61;"></span>
@@ -578,7 +567,7 @@
                                 fill="" />
                         </svg>
                     </div>
-                    <div data-text="tow-a-2" class="copy mb">
+                    <!-- <div data-text="tow-a-2" class="copy mb">
                         <ul>
                             @php
                                 $lines = [];
@@ -589,7 +578,7 @@
                             <li>{{ $line }}</li>
                             @endforeach
                         </ul>
-                    </div>
+                    </div> -->
                     <div rel="tow-a-2" class="hintFp">
                         <div id-floorplan="" class="item js-floorplandetail">
                             <span style="background-color: #FCAB61;"></span>
@@ -643,7 +632,7 @@
                                 fill="" />
                         </svg>
                     </div>
-                    <div data-text="tow-a-3" class="copy mb">
+                    <!-- <div data-text="tow-a-3" class="copy mb">
                         <ul>
                             @php
                                 $lines = [];
@@ -654,7 +643,7 @@
                             <li>{{ $line }}</li>
                             @endforeach
                         </ul>
-                    </div>
+                    </div> -->
                     <div rel="tow-a-3" class="hintFp">
                         <div id-floorplan="" class="item js-floorplandetail">
                             <span style="background-color: #DDFCE2;"></span>
@@ -713,7 +702,7 @@
                                 fill="" />
                         </svg>
                     </div>
-                    <div data-text="tow-a-4" class="copy mb">
+                    <!-- <div data-text="tow-a-4" class="copy mb">
                         <ul>
                             @php
                                 $lines = [];
@@ -724,7 +713,7 @@
                             <li>{{ $line }}</li>
                             @endforeach
                         </ul>
-                    </div>
+                    </div> -->
                     <div rel="tow-a-4" class="hintFp">
                         <div id-floorplan="" class="item js-floorplandetail">
                             <span style="background-color: #DDFCE2;"></span>
@@ -783,7 +772,7 @@
                                 fill="" />
                         </svg>
                     </div>
-                    <div data-text="tow-a-5" class="copy mb">
+                    <!-- <div data-text="tow-a-5" class="copy mb">
                         <ul>
                             @php
                                 $lines = [];
@@ -794,7 +783,7 @@
                             <li>{{ $line }}</li>
                             @endforeach
                         </ul>
-                    </div>
+                    </div> -->
                     <div rel="tow-a-5" class="hintFp">
                         <div id-floorplan="" class="item js-floorplandetail">
                             <span style="background-color: #DDFCE2;"></span>
@@ -849,7 +838,7 @@
                                 d="M359 278.5H241.5V346.5H344.5V280H359V278.5Z" fill="" />
                         </svg>
                     </div>
-                    <div data-text="tow-c-1" class="copy mb">
+                    <!-- <div data-text="tow-c-1" class="copy mb">
                         <ul>
                             @php
                                 $lines = [];
@@ -860,7 +849,7 @@
                             <li>{{ $line }}</li>
                             @endforeach
                         </ul>
-                    </div>
+                    </div> -->
                     <div rel="tow-c-1" class="hintFp">
                         <div id-floorplan="" class="item js-floorplandetail">
                             <span style="background-color: #FCAB61;"></span>
@@ -903,7 +892,7 @@
                                 d="M359.5 54H218.5V83H218V176H243V135H278.5V193H279.5V210.5L359.5 211V54Z" fill="" />
                         </svg>
                     </div>
-                    <div data-text="tow-c-2" class="copy mb">
+                    <!-- <div data-text="tow-c-2" class="copy mb">
                         <ul>
                             @php
                                 $lines = [];
@@ -914,7 +903,7 @@
                             <li>{{ $line }}</li>
                             @endforeach
                         </ul>
-                    </div>
+                    </div> -->
                     <div rel="tow-c-2" class="hintFp">
                         <div id-floorplan="" class="item js-floorplandetail">
                             <span style="background-color: #DEFADA;"></span>
@@ -955,7 +944,7 @@
                                 d="M359 278.5H241.5V346.5H344.5V280H359V278.5Z" fill="" />
                         </svg>
                     </div>
-                    <div data-text="tow-c-3" class="copy mb">
+                    <!-- <div data-text="tow-c-3" class="copy mb">
                         <ul>
                             @php
                                 $lines = [];
@@ -966,7 +955,7 @@
                             <li>{{ $line }}</li>
                             @endforeach
                         </ul>
-                    </div>
+                    </div> -->
                     <div rel="tow-c-3" class="hintFp">
                         <div id-floorplan="" class="item js-floorplandetail">
                             <span style="background-color: #FDE3DC;"></span>
@@ -1007,7 +996,7 @@
                                 d="M359 278.5H241.5V346.5H344.5V280H359V278.5Z" fill="" />
                         </svg>
                     </div>
-                    <div data-text="tow-c-4" class="copy mb">
+                    <!-- <div data-text="tow-c-4" class="copy mb">
                         <ul>
                             @php
                                 $lines = [];
@@ -1018,7 +1007,7 @@
                             <li>{{ $line }}</li>
                             @endforeach
                         </ul>
-                    </div>
+                    </div> -->
                     <div rel="tow-c-4" class="hintFp">
                         <div id-floorplan="" class="item js-floorplandetail">
                             <span style="background-color: #FDE3DC;"></span>
@@ -1057,7 +1046,7 @@
                                 d="M359 210.5H241V346.5H344.5V280H359V210.5Z" fill="" />
                         </svg>
                     </div>
-                    <div data-text="tow-c-5" class="copy mb">
+                    <!-- <div data-text="tow-c-5" class="copy mb">
                         <ul>
                             @php
                                 $lines = [];
@@ -1068,7 +1057,7 @@
                             <li>{{ $line }}</li>
                             @endforeach
                         </ul>
-                    </div>
+                    </div> -->
                     <div rel="tow-c-5" class="hintFp">
                         <div id-floorplan="" class="item js-floorplandetail">
                             <span style="background-color: #FDE3DC;"></span>
@@ -1116,7 +1105,7 @@
                                 d="M409.5 265.5H315.5V326H317V351H425.5V349H409.5V265.5Z" fill="" />
                         </svg>
                     </div>
-                    <div data-text="tow-b-1" class="copy mb">
+                    <!-- <div data-text="tow-b-1" class="copy mb">
                         <ul>
                             @php
                                 $lines = [];
@@ -1127,7 +1116,7 @@
                             <li>{{ $line }}</li>
                             @endforeach
                         </ul>
-                    </div>
+                    </div> -->
                     <div rel="tow-b-1" class="hintFp">
                         <div id-floorplan="" class="item js-floorplandetail">
                             <span style="background-color: #FDE3DC;"></span>
@@ -1169,7 +1158,7 @@
                                 d="M409.5 265.5H315.5V326H317V351H425.5V349H409.5V265.5Z" fill="" />
                         </svg>
                     </div>
-                    <div data-text="tow-b-2" class="copy mb">
+                    <!-- <div data-text="tow-b-2" class="copy mb">
                         <ul>
                             @php
                                 $lines = [];
@@ -1180,7 +1169,7 @@
                             <li>{{ $line }}</li>
                             @endforeach
                         </ul>
-                    </div>
+                    </div> -->
                     <div rel="tow-b-2" class="hintFp">
                         <div id-floorplan="" class="item js-floorplandetail">
                             <span style="background-color: #FDE3DC;"></span>
@@ -1222,7 +1211,7 @@
                         </svg>
 
                     </div>
-                    <div data-text="tow-b-3" class="copy mb">
+                    <!-- <div data-text="tow-b-3" class="copy mb">
                         <ul>
                             @php
                                 $lines = [];
@@ -1233,7 +1222,7 @@
                             <li>{{ $line }}</li>
                             @endforeach
                         </ul>
-                    </div>
+                    </div> -->
                     <div rel="tow-b-3" class="hintFp">
                         <div id-floorplan="" class="item js-floorplandetail">
                             <span style="background-color: #DDFCE2;"></span>
@@ -1284,7 +1273,7 @@
                                 fill="" />
                         </svg>
                     </div>
-                    <div data-text="tow-b-4" class="copy mb">
+                    <!-- <div data-text="tow-b-4" class="copy mb">
                         <ul>
                             @php
                                 $lines = [];
@@ -1295,7 +1284,7 @@
                             <li>{{ $line }}</li>
                             @endforeach
                         </ul>
-                    </div>
+                    </div> -->
                     <div rel="tow-b-4" class="hintFp">
                         <div id-floorplan="" class="item js-floorplandetail">
                             <span style="background-color: #DDFCE2;"></span>
@@ -1345,7 +1334,7 @@
                                 d="M213 273H119V344.5H103V346.5H211.5V338H213V273Z" fill="" />
                         </svg>
                     </div>
-                    <div data-text="tow-b-5" class="copy mb">
+                    <!-- <div data-text="tow-b-5" class="copy mb">
                         <ul>
                             @php
                                 $lines = [];
@@ -1356,7 +1345,7 @@
                             <li>{{ $line }}</li>
                             @endforeach
                         </ul>
-                    </div>
+                    </div> -->
                     <div rel="tow-b-5" class="hintFp">
                         <div id-floorplan="" class="item js-floorplandetail">
                             <span style="background-color: #D9EEFB;"></span>
@@ -1376,7 +1365,7 @@
                         </div>
                     </div>
 
-                    <div class="copy">
+                    <!-- <div class="copy">
                         <ul>
                             @php
                                 $lines = [];
@@ -1388,7 +1377,7 @@
                             @endforeach
 
                         </ul>
-                    </div>
+                    </div> -->
 
 
 

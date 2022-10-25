@@ -12,13 +12,9 @@
         <img class="lazyload pc" data-src="{{ asset('assets/images/demo/banner-page-1.jpg') }}" alt="">
         <img class="lazyload mb" data-src="{{ asset('assets/images/demo/banner-page-1.jpg') }}" alt="">
         <div class="container stagger-down">
-            <h2 class="mainTt">đặc quyền <br>tiện ích</h2>
+            <h2 class="mainTt">{!! nl2br($oPage->head_title1) !!}</h2>
             <div class="copy">
-                <p>Trải nghiệm không gian mở thoáng đãng trên tầng
-                    thượng với hồ bơi vô cực và một chuỗi các tiểu
-                    cảnh, đường chạy bộ, hồ cảnh quan, khu vui chơi
-                    trẻ em khiến tòa tháp như một ốc đảo xanh nổi
-                    bật giữa nền trời thành phố.
+                <p>{!! nl2br($oPage->head_desc1) !!}
                 </p>
             </div>
         </div>

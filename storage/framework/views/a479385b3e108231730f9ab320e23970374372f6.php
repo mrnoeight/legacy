@@ -241,7 +241,7 @@
                 <div class="item">
                     <div class="itemText">
                         <p><strong><?php echo e(isset($arrFooterText['footer_address']) ? $arrFooterText['footer_address'] :  'ĐỊA CHỈ DỰ ÁN'); ?></strong></p>
-                        <p><?php echo e(isset($arrFooterText['footer_address_con']) ? $arrFooterText['footer_address_con'] : '230 Nguyễn Trãi, P. Nguyễn Cư Trinh, Quận 1, Tp. Hồ Chí Minh'); ?></p>
+                        <p><?php echo e(isset($arrFooterText['footer_add_con']) ? $arrFooterText['footer_add_con'] : '230 Nguyễn Trãi, P. Nguyễn Cư Trinh, Quận 1, Tp. Hồ Chí Minh'); ?></p>
                     </div>
                     <div class="itemText">
                         <p><strong><?php echo e(isset($arrFooterText['footer_address_sam']) ? $arrFooterText['footer_address_sam'] : 'ĐỊA CHỈ NHÀ MẪU'); ?></strong></p>
@@ -271,7 +271,7 @@
                     </div>
                     <div class="item">
                         <p>
-                            <?php echo e(isset($arrFooterText['footer_notice']) ? $arrFooterText['footer_notice'] : '<strong>Lưu ý:</strong>'); ?> <?php echo e(isset($arrFooterText['footer_text']) ? $arrFooterText['footer_text'] : 'Tài liệu chỉ dùng với mục đích tham khảo. Hình ảnh, sơ đồ kỹ thuật,
+                            <?php echo isset($arrFooterText['footer_notice']) ?  nl2br($arrFooterText['footer_notice']) : ''; ?> <?php echo e(isset($arrFooterText['footer_text']) ? $arrFooterText['footer_text'] : 'Tài liệu chỉ dùng với mục đích tham khảo. Hình ảnh, sơ đồ kỹ thuật,
                             bố trí nội ngoại thất hay thông tin mô tả chỉ nhằm mục đích minh hoạ, không phải là thông
                             tin hiện thực hay cam kết pháp lý. Thông tin chính thức căn cứ trên hợp đồng.'); ?>
 
@@ -1146,8 +1146,8 @@
 
     <script type="text/javascript" async src="<?php echo e(asset('assets/js/digitop/lazyloadCustom.js')); ?>"></script>
     <script type="text/javascript" async src="<?php echo e(asset('assets/js/main.js')); ?>" async></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script type="text/javascript" async src="<?php echo e(asset('assets/js/function.js')); ?>" async></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> -->
+    <!-- <script type="text/javascript" async src="<?php echo e(asset('assets/js/function.js')); ?>" async></script> -->
 
 </body>
 
