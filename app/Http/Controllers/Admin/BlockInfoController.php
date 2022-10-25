@@ -41,7 +41,7 @@ class BlockInfoController extends Controller
             $request,
 
             // set columns to query
-            ['id', 'head_tag1', 'head_title1', 'head_desc1', 'info1', 'block_name', 'block_type'],
+            ['id', 'head_tag1', 'head_title1', 'head_desc1', 'info1', 'block_name', 'block_type', 'block_date'],
 
             // set columns to searchIn
             ['id', 'head_tag1', 'head_title1', 'head_desc1', 'info1', 'block_name', 'block_type'],
@@ -55,6 +55,7 @@ class BlockInfoController extends Controller
             }
         );
 
+
         if ($request->ajax()) {
             if ($request->has('bulk')) {
                 return [
@@ -63,8 +64,10 @@ class BlockInfoController extends Controller
             }
             return ['data' => $data];
         }
-
-        return view('admin.block-info.index', ['data' => $data]);
+        if ($_GET['block_type'] == 'progress')
+            return view('admin.block-info.progress', ['data' => $data]);
+        else
+            return view('admin.block-info.index', ['data' => $data]);
     }
 
     /**
