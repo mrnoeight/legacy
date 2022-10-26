@@ -228,8 +228,7 @@
         </div>
     </section>
 
-    <section id="ConsultingTeam" class="teamPageWrap pd1" data-image-src="{{ asset('assets/images/demo/bg-team.jpg') }}"
-        data-parallax="scroll" data-bleed="0" data-speed="0.4">
+    <section id="ConsultingTeam" class="teamPageWrap pd1" style="background: url({{ asset('assets/images/demo/bg-team.jpg') }}) center no-repeat" >
         <img class="lazyload bgClubMb" data-src="{{ asset('assets/images/demo/bg-team.jpg') }}" alt="">
         <div class="container">
             <div class="copy">
