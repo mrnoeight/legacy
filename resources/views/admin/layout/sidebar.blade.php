@@ -29,12 +29,12 @@
             <li class="nav-item panel2"><a class="nav-link" href="{{ url('admin/block-infos?block_type=health_utilities') }}"><i class="nav-icon"></i> Health Amenities</a></li>
             <li class="nav-item panel2"><a class="nav-link" href="{{ url('admin/block-infos?block_type=entertainment') }}"><i class="nav-icon"></i> Entertainment</a></li>
             <li class="nav-item panel2"><a class="nav-link" href="{{ url('admin/block-infos?block_type=business') }}"><i class="nav-icon"></i> Business</a></li>
-            <li class="nav-item panel2"><a class="nav-link" href="{{ url('admin/block-infos?block_type=f_pool') }}"><i class="nav-icon"></i> Swimming Pool</a></li>
+            <!-- <li class="nav-item panel2"><a class="nav-link" href="{{ url('admin/block-infos?block_type=f_pool') }}"><i class="nav-icon"></i> Swimming Pool</a></li>
             <li class="nav-item panel2"><a class="nav-link" href="{{ url('admin/block-infos?block_type=f_gym') }}"><i class="nav-icon"></i> Gym</a></li>
             <li class="nav-item panel2"><a class="nav-link" href="{{ url('admin/block-infos?block_type=f_sauna') }}"><i class="nav-icon"></i> Sauna</a></li>
             <li class="nav-item panel2"><a class="nav-link" href="{{ url('admin/block-infos?block_type=f_playground') }}"><i class="nav-icon"></i> Playground</a></li>
             <li class="nav-item panel2"><a class="nav-link" href="{{ url('admin/block-infos?block_type=f_yoga') }}"><i class="nav-icon"></i> Yoga</a></li>
-            <li class="nav-item panel2"><a class="nav-link" href="{{ url('admin/block-infos?block_type=f_park') }}"><i class="nav-icon"></i> Park</a></li>
+            <li class="nav-item panel2"><a class="nav-link" href="{{ url('admin/block-infos?block_type=f_park') }}"><i class="nav-icon"></i> Park</a></li> -->
             <!-- <li class="nav-item"><a class="nav-link" href="{{ url('admin/block-infos?block_type=f_park') }}"><i class="nav-icon"></i> Park</a></li>
             <li class="nav-item"><a class="nav-link" href="{{ url('admin/block-infos?block_type=e_restaurant') }}"><i class="nav-icon"></i> Restaurant</a></li>
             <li class="nav-item"><a class="nav-link" href="{{ url('admin/block-infos?block_type=e_bbq') }}"><i class="nav-icon"></i> BBQ</a></li>

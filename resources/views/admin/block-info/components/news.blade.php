@@ -51,7 +51,7 @@
                 <label for="head_desc1_{{ $locale }}" class="col-md-2 col-form-label text-md-right">Content</label>
                 <div class="col-md-9" :class="{'col-xl-8': !isFormLocalized }">
                     <textarea v-model="form.head_desc1.{{ $locale }}" v-validate="'required'" class="hidden-xs-up" id="{{ $locale }}_head_desc1" name="{{ $locale }}_head_desc1"></textarea>
-                    <quill-editor v-model="form.head_desc1.{{ $locale }}" :options="wysiwygConfig" />
+                    <quill-editor v-model="form.head_desc1.{{ $locale }}" :options="mediaWysiwygConfig" />
                     <div v-if="errors.has('head_desc1_{{ $locale }}')" class="form-control-feedback form-text" v-cloak>{{'{{'}} errors.first('head_desc1_{{ $locale }}') }}</div>
                 </div>
             </div>

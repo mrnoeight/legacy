@@ -384,13 +384,13 @@
                         <p>{{isset($arrText['buildingC_text']) ? $arrText['buildingC_text'] : ''}}</p>
                         <div class="listPlanTow">
                             @foreach ($oFloorC as $i=>$f)
-                            <a floorDetail="tow-a-{{++$i}}" floor="{{ $f->head_title1 }}" href="#">{{ $f->head_title1 }}</a>
+                            <a floorDetail="tow-c-{{++$i}}" floor="{{ $f->head_title1 }}" href="#">{{ $f->head_title1 }}</a>
                             @endforeach
                         </div>
                         <select class="listPlanTowSelect">
                             <option value="" hidden>chọn tầng</option>
                             @foreach ($oFloorC as $i=>$f)
-                            <option floorDetail="tow-a-{{++$i}}" floor="{{ $f->head_title1 }}">{{ $f->head_title1 }}</option>
+                            <option floorDetail="tow-c-{{++$i}}" floor="{{ $f->head_title1 }}">{{ $f->head_title1 }}</option>
                             @endforeach
                         </select>
                     </div>
@@ -409,13 +409,13 @@
                         <p>{{isset($arrText['buildingB_text']) ? $arrText['buildingB_text'] : ''}}</p>
                         <div class="listPlanTow">
                             @foreach ($oFloorB as $i=>$f)
-                            <a floorDetail="tow-a-{{++$i}}" floor="{{ $f->head_title1 }}" href="#">{{ $f->head_title1 }}</a>
+                            <a floorDetail="tow-b-{{++$i}}" floor="{{ $f->head_title1 }}" href="#">{{ $f->head_title1 }}</a>
                             @endforeach
                         </div>
                         <select class="listPlanTowSelect">
                             <option value="" hidden>chọn tầng</option>
                             @foreach ($oFloorB as $i=>$f)
-                            <option floorDetail="tow-a-{{++$i}}" floor="{{ $f->head_title1 }}">{{ $f->head_title1 }}</option>
+                            <option floorDetail="tow-b-{{++$i}}" floor="{{ $f->head_title1 }}">{{ $f->head_title1 }}</option>
                             @endforeach
                         </select>
                     </div>

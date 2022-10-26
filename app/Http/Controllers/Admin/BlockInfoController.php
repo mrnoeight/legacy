@@ -66,6 +66,8 @@ class BlockInfoController extends Controller
         }
         if ($_GET['block_type'] == 'progress')
             return view('admin.block-info.progress', ['data' => $data]);
+        else if ($_GET['block_type'] == 'health_utilities')
+            return view('admin.block-info.health_utilities', ['data' => $data]);
         else
             return view('admin.block-info.index', ['data' => $data]);
     }

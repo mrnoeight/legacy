@@ -9,7 +9,7 @@
 <!-- MAIN PAGE -->
 <main id="pNewsDetail">
     <div class="bannerSubPage">
-        <img data-src="{{ asset('assets/images/demo/banner-page-3.jpg') }}" alt="" class="lazyload">
+        <img data-src="{{ $news->banner_url }}" alt="" class="lazyload">
     </div>
     <section class="section newsDetailWrap">
         <div class="container">

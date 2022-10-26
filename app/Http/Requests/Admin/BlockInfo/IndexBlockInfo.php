@@ -25,7 +25,7 @@ class IndexBlockInfo extends FormRequest
     public function rules(): array
     {
         return [
-            'orderBy' => 'in:id,block_name,block_type|nullable',
+            'orderBy' => 'in:id,block_name,block_type,block_date|nullable',
             'orderDirection' => 'in:asc,desc|nullable',
             'search' => 'string|nullable',
             'page' => 'integer|nullable',

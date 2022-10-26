@@ -28,7 +28,8 @@ class NewsController extends Controller
     {
         $id = intval($id);
 
-        $news = BlockInfo::where('id', $id)->first();
+        $news = BlockInfo::findOrFail($id);
+        $news->head_desc1 = str_replace("<p><br></p>", "", $news->head_desc1);
         $oNews = BlockInfo::where('block_type', 'news')->where('id', '<>', $id)->get()->take(3);
 
         $menu_active = ['home'=>'', 'location'=>'', 'apartment'=>'', 'utilities'=>'', 'progress'=>'', 'gallery'=>'', 'news'=>' class=active', 'lancaster'=>'', 'about'=>''];

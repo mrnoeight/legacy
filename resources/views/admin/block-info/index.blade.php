@@ -13,7 +13,11 @@
             <div class="col">
                 <div class="card">
                     <div class="card-header">
+                    @if (isset($_GET['parent']) && $_GET['parent'] == 'health_utilities')
+                        <i class="fa fa-align-justify"></i> <a href="{{ url('admin/block-infos?block_type=health_utilities') }}">Return to Health Amenities</a>
+                    @else
                         <i class="fa fa-align-justify"></i> {{ trans('admin.block-info.actions.index') }}
+                    @endif
                         <a class="btn btn-primary btn-spinner btn-sm pull-right m-b-0" href="{{ url('admin/block-infos/create?block_type='.$_GET['block_type']) }}" role="button"><i class="fa fa-plus"></i>&nbsp; {{ trans('admin.block-info.actions.create') }}</a>
                     </div>
                     <div class="card-body" v-cloak>
