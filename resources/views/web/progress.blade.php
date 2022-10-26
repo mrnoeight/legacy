@@ -24,7 +24,7 @@
             <div class="progresslist">
                 @foreach ($arr as $p)
                 <div data-popup="idProHere{{ $p->id }}" class="item animate">
-                    <h3>{{__('Tháng')}} {{ \Carbon\Carbon::parse($p->block_date)->formatLocalized('%m - %Y')  }}</h3>
+                    <h3>{{tk1FormatDateLocal($p->block_date)}}</h3>
                     <div class="imgPage">
                         <div style="background: url({{ $p->gallery_url }}) center no-repeat">
                         </div>

@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Str;
 use Carbon\Carbon;
+use Illuminate\Support\Facades\Session;
 use App\Models\Homepage;
 use App\Models\BlockInfo;
 
@@ -49,6 +50,22 @@ if (!function_exists('tk1GetFooter')) {
         }
 
         return $arrMenuText;
+    }
+}
+
+if (!function_exists('tk1FormatDateLocal')) {
+    function tk1FormatDateLocal($date)
+    {
+        if ($date == '' || $date == null)
+            return null;
+        
+        $language = Session::get('language', config('app.locale'));
+
+        if ($language == 'en')
+            return Carbon::parse($date)->format('F Y');
+        else
+            return 'Tháng '.Carbon::parse($date)->format('m - Y');
+            
     }
 }
 
