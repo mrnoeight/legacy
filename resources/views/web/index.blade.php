@@ -78,7 +78,8 @@
 				</div>
 				
 			</div>
-			<img class="map" src="assets/images/demo/map.jpg" />
+			<img class="map pc" src="assets/images/demo/map.jpg" />
+            <img class="map mb" src="assets/images/demo/map.jpg" />
 		</section>
     <!-- <section class="section locationWrap">
         <div class="container mb">
