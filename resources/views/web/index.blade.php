@@ -13,16 +13,20 @@
         <div class="imgMb" style="background: url({{ $oPage->banner_mb_url }}) bottom no-repeat"
             data-paroller-factor="-0.2" data-paroller-type="background" data-paroller-direction="vertical"></div>
 
-        <div class="container">
+        <!-- <div class="container">
             <div class="titleBanner stagger-down">
                 <h3 class="subTt">{{ $oPage->head_tag1 }}</h3>
                 <h2 class="mainTt">{!! nl2br($oPage->head_title1) !!}</h2>
             </div>
 
-        </div>
+        </div> -->
     </section>
     <section class="bannerText stagger-down">
         <div class="container">
+            <div class="titleBanner stagger-down">
+                <h3 class="subTt">{{ $oPage->head_tag1 }}</h3>
+                <h2 class="mainTt">{!! nl2br($oPage->head_title1) !!}</h2>
+            </div>
             <div class="copy">
                 <p>{{ $oPage->head_desc1 }} </p>
             </div>
