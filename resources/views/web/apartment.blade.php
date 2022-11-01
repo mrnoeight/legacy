@@ -845,19 +845,19 @@
                             <span style="background-color: #FCAB61;"></span>
                             <p>Căn hộ 3 phòng ngủ + 1</p>
                         </div>
-                        <div id-floorplan="" class="item js-floorplandetail">
+                        <div id-floorplan="C08.02" class="item js-floorplandetail">
                             <span style="background-color: #FDE3DC;"></span>
                             <p>Căn hộ 3 phòng ngủ</p>
                         </div>
-                        <div id-floorplan="" class="item js-floorplandetail">
+                        <div id-floorplan="C08.04" class="item js-floorplandetail">
                             <span style="background-color: #D9EEFB;"></span>
                             <p>Căn hộ 2 phòng ngủ</p>
                         </div>
-                        <div id-floorplan="" class="item js-floorplandetail">
+                        <div id-floorplan="C08.06" class="item js-floorplandetail">
                             <span style="background-color: #DCFDF5;"></span>
                             <p>Căn hộ Officetel</p>
                         </div>
-                        <div id-floorplan="" class="item js-floorplandetail">
+                        <div id-floorplan="C08.07" class="item js-floorplandetail">
                             <span style="background-color: #FAFDC7;"></span>
                             <p>Căn hộ Officetel</p>
                         </div>
@@ -866,20 +866,16 @@
                         <img data-src="{{ isset($oFloorC[1]) ? $oFloorC[1]->banner_url : '' }}" alt="" class="lazyload">
                         <svg width="512" height="512" viewBox="0 0 512 512" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
-                            <path id-floorplan="" class="js-floorplandetail"
+                            <path id-floorplan="C11.04" class="js-floorplandetail"
                                 d="M218.5 54H114.5V58H117L116.5 135.812H102V197H99.5V199H219L219.5 110H218V83H218.5V54Z"
                                 fill="" />
-                            <path id-floorplan="" class="js-floorplandetail"
-                                d="M219.5 336H99.5V338H102L101.5 379.5H116.5V451H114.5V455H243.5V433H219.5V336Z"
-                                fill="" />
-                            <path id-floorplan="" class="js-floorplandetail" d="M359 210.5H241.5V278.5H359V210.5Z"
-                                fill="" />
-                            <path id-floorplan="" class="js-floorplandetail"
-                                d="M359 278.5H241.5V346.5H344.5V280H359V278.5Z" fill="" />
-                            <path id-floorplan="" class="js-floorplandetail"
-                                d="M212.5 199H99.5V201H116.5V334H99.5V336H219.5V208H212.5V199Z" fill="" />
-                            <path id-floorplan="" class="js-floorplandetail"
+                            <path id-floorplan="C11.05" class="js-floorplandetail"
                                 d="M359.5 54H218.5V83H218V176H243V135H278.5V193H279.5V210.5L359.5 211V54Z" fill="" />
+                            <path id-floorplan="C11.06" class="js-floorplandetail" d="M359 210.5H241.5V278.5H359V210.5Z" fill=""></path>
+                            <path id-floorplan="C11.07" class="js-floorplandetail" d="M359 278.5H241.5V346.5H344.5V280H359V278.5Z" fill=""></path>    
+                            <path id-floorplan="C11.01" class="js-floorplandetail" d="M219.5 336H99.5V338H102L101.5 379.5H116.5V451H114.5V455H243.5V433H219.5V336Z" fill=""></path>
+                            <path id-floorplan="C11.02" class="js-floorplandetail" d="M212.5 199H99.5V201H116.5V334H99.5V336H219.5V208H212.5V199Z" fill=""></path>
+                            
                         </svg>
                     </div>
                     <!-- <div data-text="tow-c-2" class="copy mb">
@@ -895,19 +891,19 @@
                         </ul>
                     </div> -->
                     <div rel="tow-c-2" class="hintFp">
-                        <div id-floorplan="" class="item js-floorplandetail">
+                        <div id-floorplan="C11.02" class="item js-floorplandetail">
                             <span style="background-color: #DEFADA;"></span>
                             <p>Căn hộ 3 phòng ngủ + 1</p>
                         </div>
-                        <div id-floorplan="" class="item js-floorplandetail">
+                        <div id-floorplan="C11.05" class="item js-floorplandetail">
                             <span style="background-color: #FDE3DC;"></span>
                             <p>Căn hộ 3BS</p>
                         </div>
-                        <div id-floorplan="" class="item js-floorplandetail">
+                        <div id-floorplan="C11.01" class="item js-floorplandetail">
                             <span style="background-color: #D9EEFB;"></span>
                             <p>Căn hộ 2B</p>
                         </div>
-                        <div id-floorplan="" class="item js-floorplandetail">
+                        <div id-floorplan="C11.06" class="item js-floorplandetail">
                             <span style="background-color: #AAB3A1;"></span>
                             <p>Căn hộ 1B+1</p>
                         </div>
@@ -916,22 +912,17 @@
                         <img data-src="{{ isset($oFloorC[2]) ? $oFloorC[2]->banner_url : '' }}" alt="" class="lazyload">
                         <svg width="512" height="512" viewBox="0 0 512 512" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
-                            <path id-floorplan="" class="js-floorplandetail"
+                            <path id-floorplan="C12B.04" class="js-floorplandetail"
                                 d="M218.5 54H114.5V58H117L116.5 135.812H102V197H99.5V199H219L219.5 110H218V83H218.5V54Z"
                                 fill="" />
-                            <path id-floorplan="" class="js-floorplandetail"
+                            <path id-floorplan="C12B.05" class="js-floorplandetail"
                                 d="M359.5 54H218.5V83H218V176H243V135H278.5V193H279.5V210.5L359.5 211V54Z" fill="" />
-                            <path id-floorplan="" class="js-floorplandetail"
-                                d="M219.5 336H99.5V338H102L101.5 379.5H116.5V451H114.5V455H243.5V433H219.5V336Z"
-                                fill="" />
-                            <path id-floorplan="" class="js-floorplandetail" d="M359 210.5H241.5V278.5H359V210.5Z"
-                                fill="" />
-                            <path id-floorplan="" class="js-floorplandetail"
-                                d="M219.5 199H99.5V201H116.5V267.5H219.5V199Z" fill="" />
-                            <path id-floorplan="" class="js-floorplandetail"
-                                d="M219.5 267.5H117V334H99.5V336H219.5V267.5Z" fill="" />
-                            <path id-floorplan="" class="js-floorplandetail"
-                                d="M359 278.5H241.5V346.5H344.5V280H359V278.5Z" fill="" />
+                            <path id-floorplan="C12B.06" class="js-floorplandetail" d="M359 210.5H241.5V278.5H359V210.5Z" fill=""></path>    
+                            <path id-floorplan="C12B.07" class="js-floorplandetail" d="M359 278.5H241.5V346.5H344.5V280H359V278.5Z" fill=""></path>   
+                            <path id-floorplan="C12B.01" class="js-floorplandetail" d="M219.5 336H99.5V338H102L101.5 379.5H116.5V451H114.5V455H243.5V433H219.5V336Z" fill=""></path>
+                            <path id-floorplan="C12B.02" class="js-floorplandetail" d="M219.5 267.5H117V334H99.5V336H219.5V267.5Z" fill=""></path>
+                            <path id-floorplan="C12B.03" class="js-floorplandetail" d="M219.5 199H99.5V201H116.5V267.5H219.5V199Z" fill=""></path>
+                               
                         </svg>
                     </div>
                     <!-- <div data-text="tow-c-3" class="copy mb">
@@ -947,43 +938,40 @@
                         </ul>
                     </div> -->
                     <div rel="tow-c-3" class="hintFp">
-                        <div id-floorplan="" class="item js-floorplandetail">
+                        <div id-floorplan="C12B.05" class="item js-floorplandetail">
                             <span style="background-color: #FDE3DC;"></span>
                             <p>Căn hộ 3 phòng ngủ</p>
                         </div>
-                        <div id-floorplan="" class="item js-floorplandetail">
+                        <div id-floorplan="C12B.01" class="item js-floorplandetail">
                             <span style="background-color: #D9EEFB;"></span>
                             <p>Căn hộ 2 phòng ngủ</p>
                         </div>
-                        <div id-floorplan="" class="item js-floorplandetail">
+                        <div id-floorplan="C12B.06" class="item js-floorplandetail">
                             <span style="background-color: #AAB3A1;"></span>
                             <p>Căn hộ 1 phòng ngủ + 1</p>
                         </div>
-                        <div id-floorplan="" class="item js-floorplandetail">
+                        <div id-floorplan="C12B.02" class="item js-floorplandetail">
                             <span style="background-color: #E3E1E1;"></span>
                             <p>Căn hộ STUDIO</p>
                         </div>
                     </div>
+                    
                     <div id="tow-c-4" class="floorplanImg towC">
                         <img data-src="{{ isset($oFloorC[3]) ? $oFloorC[3]->banner_url : '' }}" alt="" class="lazyload">
                         <svg width="512" height="512" viewBox="0 0 512 512" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
-                            <path id-floorplan="" class="js-floorplandetail"
+                            <path id-floorplan="C22.04" class="js-floorplandetail"
                                 d="M218.5 54H114.5V58H117L116.5 135.812H102V197H99.5V199H219L219.5 110H218V83H218.5V54Z"
                                 fill="" />
-                            <path id-floorplan="" class="js-floorplandetail"
+                            <path id-floorplan="C22.05" class="js-floorplandetail"
                                 d="M359.5 54H218.5V83H218V176H243V135H278.5V193H279.5V210.5L359.5 211V54Z" fill="" />
-                            <path id-floorplan="" class="js-floorplandetail"
-                                d="M219.5 336H99.5V338H102L101.5 379.5H116.5V451H114.5V455H243.5V433H219.5V336Z"
-                                fill="" />
-                            <path id-floorplan="" class="js-floorplandetail" d="M359 210.5H241.5V278.5H359V210.5Z"
-                                fill="" />
-                            <path id-floorplan="" class="js-floorplandetail"
-                                d="M219.5 199H99.5V201H116.5V267.5H219.5V199Z" fill="" />
-                            <path id-floorplan="" class="js-floorplandetail"
-                                d="M219.5 267.5H117V334H99.5V336H219.5V267.5Z" fill="" />
-                            <path id-floorplan="" class="js-floorplandetail"
-                                d="M359 278.5H241.5V346.5H344.5V280H359V278.5Z" fill="" />
+                            <path id-floorplan="C22.06" class="js-floorplandetail" d="M359 210.5H241.5V278.5H359V210.5Z" fill=""></path>
+                            <path id-floorplan="C22.07" class="js-floorplandetail" d="M359 278.5H241.5V346.5H344.5V280H359V278.5Z" fill=""></path>
+                            <path id-floorplan="C22.01" class="js-floorplandetail" d="M219.5 336H99.5V338H102L101.5 379.5H116.5V451H114.5V455H243.5V433H219.5V336Z" fill=""></path>
+                            <path id-floorplan="C22.02" class="js-floorplandetail" d="M219.5 267.5H117V334H99.5V336H219.5V267.5Z" fill=""></path>
+                            <path id-floorplan="C22.03" class="js-floorplandetail" d="M219.5 199H99.5V201H116.5V267.5H219.5V199Z" fill=""></path>
+                            
+
                         </svg>
                     </div>
                     <!-- <div data-text="tow-c-4" class="copy mb">
@@ -999,41 +987,39 @@
                         </ul>
                     </div> -->
                     <div rel="tow-c-4" class="hintFp">
-                        <div id-floorplan="" class="item js-floorplandetail">
+                        <div id-floorplan="C22.05" class="item js-floorplandetail">
                             <span style="background-color: #FDE3DC;"></span>
                             <p>Căn hộ 3 phòng ngủ</p>
                         </div>
-                        <div id-floorplan="" class="item js-floorplandetail">
+                        <div id-floorplan="C22.01" class="item js-floorplandetail">
                             <span style="background-color: #D9EEFB;"></span>
                             <p>Căn hộ 2 phòng ngủ</p>
                         </div>
-                        <div id-floorplan="" class="item js-floorplandetail">
+                        <div id-floorplan="C22.06" class="item js-floorplandetail">
                             <span style="background-color: #AAB3A1;"></span>
                             <p>Căn hộ 1 phòng ngủ + 1</p>
                         </div>
-                        <div id-floorplan="" class="item js-floorplandetail">
+                        <div id-floorplan="C22.02" class="item js-floorplandetail">
                             <span style="background-color: #E3E1E1;"></span>
                             <p>Căn hộ STUDIO</p>
                         </div>
                     </div>
+                    
+                    
                     <div id="tow-c-5" class="floorplanImg towC">
                         <img data-src="{{ isset($oFloorC[4]) ? $oFloorC[4]->banner_url : '' }}" alt="" class="lazyload">
                         <svg width="512" height="512" viewBox="0 0 512 512" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
-                            <path id-floorplan="" class="js-floorplandetail"
+                            <path id-floorplan="C28.04 - DUPLEX" class="js-floorplandetail"
                                 d="M218.5 54H114.5V58H117L116.5 135.812H102V197H99.5V199H219L219.5 110H218V83H218.5V54Z"
                                 fill="" />
-                            <path id-floorplan="" class="js-floorplandetail"
+                            <path id-floorplan="C28.05 - DUPLEX" class="js-floorplandetail"
                                 d="M359.5 54H218.5V83H218V176H243V135H278.5V193H279.5V210.5L359.5 211V54Z" fill="" />
-                            <path id-floorplan="" class="js-floorplandetail"
-                                d="M219.5 336H99.5V338H102L101.5 379.5H116.5V451H114.5V455H243.5V433H219.5V336Z"
-                                fill="" />
-                            <path id-floorplan="" class="js-floorplandetail"
-                                d="M219.5 199H99.5V201H116.5V267.5H219.5V199Z" fill="" />
-                            <path id-floorplan="" class="js-floorplandetail"
-                                d="M219.5 267.5H117V334H99.5V336H219.5V267.5Z" fill="" />
-                            <path id-floorplan="" class="js-floorplandetail"
-                                d="M359 210.5H241V346.5H344.5V280H359V210.5Z" fill="" />
+                            <path id-floorplan="C28.06" class="js-floorplandetail" d="M359 210.5H241V346.5H344.5V280H359V210.5Z" fill=""></path>
+                            <path id-floorplan="C28.01 - DUPLEX" class="js-floorplandetail" d="M219.5 336H99.5V338H102L101.5 379.5H116.5V451H114.5V455H243.5V433H219.5V336Z" fill=""></path>
+                            <path id-floorplan="C28.02" class="js-floorplandetail" d="M219.5 267.5H117V334H99.5V336H219.5V267.5Z" fill=""></path>
+                            <path id-floorplan="C28.03" class="js-floorplandetail" d="M219.5 199H99.5V201H116.5V267.5H219.5V199Z" fill=""></path>
+
                         </svg>
                     </div>
                     <!-- <div data-text="tow-c-5" class="copy mb">
@@ -1049,19 +1035,19 @@
                         </ul>
                     </div> -->
                     <div rel="tow-c-5" class="hintFp">
-                        <div id-floorplan="" class="item js-floorplandetail">
+                        <div id-floorplan="C28.05 - DUPLEX" class="item js-floorplandetail">
                             <span style="background-color: #FDE3DC;"></span>
                             <p>Căn hộ 3 phòng ngủ</p>
                         </div>
-                        <div id-floorplan="" class="item js-floorplandetail">
+                        <div id-floorplan="C28.01 - DUPLEX" class="item js-floorplandetail">
                             <span style="background-color: #D9EEFB;"></span>
                             <p>Căn hộ 2 phòng ngủ</p>
                         </div>
-                        <div id-floorplan="" class="item js-floorplandetail">
+                        <div id-floorplan="C28.06" class="item js-floorplandetail">
                             <span style="background-color: #DEFADA;"></span>
                             <p>Căn hộ 1 phòng ngủ + 1</p>
                         </div>
-                        <div id-floorplan="" class="item js-floorplandetail">
+                        <div id-floorplan="C28.02" class="item js-floorplandetail">
                             <span style="background-color: #E3E1E1;"></span>
                             <p>Căn hộ STUDIO</p>
                         </div>
@@ -1073,26 +1059,15 @@
                         <img data-src="{{ isset($oFloorB[0]) ? $oFloorB[0]->banner_url : '' }}" alt="" class="lazyload">
                         <svg width="540" height="512" viewBox="0 0 540 512" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
-                            <path id-floorplan="" class="js-floorplandetail"
-                                d="M317 326H294V353H268V374H315.5V430H335.5V459.5H334V492.5H409.5V386.5H423V353.5H425.5V351H317V326Z"
-                                fill="" />
-                            <path id-floorplan="" class="js-floorplandetail"
-                                d="M194.5 17.5H119L119.5 89.5H105.5V124.5H103V126.5H211.5V148H213H233.5V129H235V106H213.5V55H194.5V54H193.5V21.5H194.5V17.5Z"
-                                fill="" />
-                            <path id-floorplan="" class="js-floorplandetail"
-                                d="M233.5 374.5V354H232V338.5H211.5V346.5H103V348H105.5V386H119V493H195V460H193.5V430H213V374.5H233.5Z"
-                                fill="" />
-                            <path id-floorplan="" class="js-floorplandetail"
-                                d="M211.5 126.5H103V128H119V199.5H213V148H211.5V126.5Z" fill="" />
-                            <path id-floorplan="" class="js-floorplandetail" d="M213 199.5H119V273H213V199.5Z"
-                                fill="" />
-                            <path id-floorplan="" class="js-floorplandetail"
-                                d="M213 273H119V344.5H103V346.5H212V338.5H213V273Z" fill="" />
-                            <path id-floorplan="" class="js-floorplandetail"
-                                d="M409.5 118.5H334V122.5H335V153H282.5V185H296.5V202H315.5V265.5H409.5V231H425.5V227H423V191.5H409.5V118.5Z"
-                                fill="" />
-                            <path id-floorplan="" class="js-floorplandetail"
-                                d="M409.5 265.5H315.5V326H317V351H425.5V349H409.5V265.5Z" fill="" />
+                            <path id-floorplan="B08.05" class="js-floorplandetail" d="M194.5 17.5H119L119.5 89.5H105.5V124.5H103V126.5H211.5V148H213H233.5V129H235V106H213.5V55H194.5V54H193.5V21.5H194.5V17.5Z" fill=""></path>
+                            <path id-floorplan="B08.06" class="js-floorplandetail" d="M409.5 118.5H334V122.5H335V153H282.5V185H296.5V202H315.5V265.5H409.5V231H425.5V227H423V191.5H409.5V118.5Z" fill=""></path>
+                            <path id-floorplan="B08.07" class="js-floorplandetail" d="M409.5 265.5H315.5V326H317V351H425.5V349H409.5V265.5Z" fill=""></path>
+                            <path id-floorplan="B08.08" class="js-floorplandetail" d="M317 326H294V353H268V374H315.5V430H335.5V459.5H334V492.5H409.5V386.5H423V353.5H425.5V351H317V326Z" fill=""></path>
+                            <path id-floorplan="B08.01" class="js-floorplandetail" d="M233.5 374.5V354H232V338.5H211.5V346.5H103V348H105.5V386H119V493H195V460H193.5V430H213V374.5H233.5Z" fill=""></path>
+                            <path id-floorplan="B08.02" class="js-floorplandetail" d="M213 273H119V344.5H103V346.5H212V338.5H213V273Z" fill=""></path>
+                            <path id-floorplan="B08.03" class="js-floorplandetail" d="M213 199.5H119V273H213V199.5Z" fill=""></path>
+                            <path id-floorplan="B08.04" class="js-floorplandetail" d="M211.5 126.5H103V128H119V199.5H213V148H211.5V126.5Z" fill=""></path>
+                            
                         </svg>
                     </div>
                     <!-- <div data-text="tow-b-1" class="copy mb">
@@ -1108,15 +1083,15 @@
                         </ul>
                     </div> -->
                     <div rel="tow-b-1" class="hintFp">
-                        <div id-floorplan="" class="item js-floorplandetail">
+                        <div id-floorplan="B08.01" class="item js-floorplandetail">
                             <span style="background-color: #FDE3DC;"></span>
                             <p>Căn hộ 3 phòng ngủ</p>
                         </div>
-                        <div id-floorplan="" class="item js-floorplandetail">
+                        <div id-floorplan="B08.05" class="item js-floorplandetail">
                             <span style="background-color: #D9EEFB;"></span>
                             <p>Căn hộ 2 phòng ngủ</p>
                         </div>
-                        <div id-floorplan="" class="item js-floorplandetail">
+                        <div id-floorplan="B08.02" class="item js-floorplandetail">
                             <span style="background-color: #AAB3A1;"></span>
                             <p>Căn hộ 1 phòng ngủ + 1</p>
                         </div>
@@ -1126,26 +1101,14 @@
                         <img data-src="{{ isset($oFloorB[1]) ? $oFloorB[1]->banner_url : '' }}" alt="" class="lazyload">
                         <svg width="540" height="512" viewBox="0 0 540 512" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
-                            <path id-floorplan="" class="js-floorplandetail"
-                                d="M317 326H294V353H268V374H315.5V430H335.5V459.5H334V492.5H409.5V386.5H423V353.5H425.5V351H317V326Z"
-                                fill="" />
-                            <path id-floorplan="" class="js-floorplandetail"
-                                d="M194.5 17.5H119L119.5 89.5H105.5V124.5H103V126.5H211.5V148H213H233.5V129H235V106H213.5V55H194.5V54H193.5V21.5H194.5V17.5Z"
-                                fill="" />
-                            <path id-floorplan="" class="js-floorplandetail"
-                                d="M233.5 374.5V354H232V338.5H211.5V346.5H103V348H105.5V386H119V493H195V460H193.5V430H213V374.5H233.5Z"
-                                fill="" />
-                            <path id-floorplan="" class="js-floorplandetail"
-                                d="M211.5 126.5H103V128H119V199.5H213V148H211.5V126.5Z" fill="" />
-                            <path id-floorplan="" class="js-floorplandetail" d="M213 199.5H119V273H213V199.5Z"
-                                fill="" />
-                            <path id-floorplan="" class="js-floorplandetail"
-                                d="M213 273H119V344.5H103V346.5H212V338.5H213V273Z" fill="" />
-                            <path id-floorplan="" class="js-floorplandetail"
-                                d="M409.5 118.5H334V122.5H335V153H282.5V185H296.5V202H315.5V265.5H409.5V231H425.5V227H423V191.5H409.5V118.5Z"
-                                fill="" />
-                            <path id-floorplan="" class="js-floorplandetail"
-                                d="M409.5 265.5H315.5V326H317V351H425.5V349H409.5V265.5Z" fill="" />
+                            <path id-floorplan="B12.05" class="js-floorplandetail" d="M194.5 17.5H119L119.5 89.5H105.5V124.5H103V126.5H211.5V148H213H233.5V129H235V106H213.5V55H194.5V54H193.5V21.5H194.5V17.5Z" fill=""></path>
+                            <path id-floorplan="B12.06" class="js-floorplandetail" d="M409.5 118.5H334V122.5H335V153H282.5V185H296.5V202H315.5V265.5H409.5V231H425.5V227H423V191.5H409.5V118.5Z" fill=""></path>
+                            <path id-floorplan="B12.07" class="js-floorplandetail" d="M409.5 265.5H315.5V326H317V351H425.5V349H409.5V265.5Z" fill=""></path>
+                            <path id-floorplan="B12.08" class="js-floorplandetail" d="M317 326H294V353H268V374H315.5V430H335.5V459.5H334V492.5H409.5V386.5H423V353.5H425.5V351H317V326Z" fill=""></path>
+                            <path id-floorplan="B12.01" class="js-floorplandetail" d="M233.5 374.5V354H232V338.5H211.5V346.5H103V348H105.5V386H119V493H195V460H193.5V430H213V374.5H233.5Z" fill=""></path>
+                            <path id-floorplan="B12.02" class="js-floorplandetail" d="M213 273H119V344.5H103V346.5H212V338.5H213V273Z" fill=""></path>
+                            <path id-floorplan="B12.03" class="js-floorplandetail" d="M213 199.5H119V273H213V199.5Z" fill=""></path>
+                            <path id-floorplan="B12.04" class="js-floorplandetail" d="M211.5 126.5H103V128H119V199.5H213V148H211.5V126.5Z" fill=""></path>
                         </svg>
                     </div>
                     <!-- <div data-text="tow-b-2" class="copy mb">
@@ -1161,43 +1124,36 @@
                         </ul>
                     </div> -->
                     <div rel="tow-b-2" class="hintFp">
-                        <div id-floorplan="" class="item js-floorplandetail">
+                        <div id-floorplan="B12.01" class="item js-floorplandetail">
                             <span style="background-color: #FDE3DC;"></span>
                             <p>Căn hộ 3 phòng ngủ</p>
                         </div>
-                        <div id-floorplan="" class="item js-floorplandetail">
+                        <div id-floorplan="B12.05" class="item js-floorplandetail">
                             <span style="background-color: #D9EEFB;"></span>
                             <p>Căn hộ 2 phòng ngủ</p>
                         </div>
-                        <div id-floorplan="" class="item js-floorplandetail">
+                        <div id-floorplan="B12.02" class="item js-floorplandetail">
                             <span style="background-color: #AAB3A1;"></span>
                             <p>Căn hộ 1 phòng ngủ + 1</p>
                         </div>
                     </div>
+                    
+                    
                     <div id="tow-b-3" class="floorplanImg towB">
                         <img data-src="{{ isset($oFloorB[2]) ? $oFloorB[2]->banner_url : '' }}" alt="" class="lazyload">
                         <svg width="540" height="512" viewBox="0 0 540 512" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
-                            <path id-floorplan="" class="js-floorplandetail"
+                            <path id-floorplan="B21.04" class="js-floorplandetail"
                                 d="M194.5 17.5H119.5L119 89.5H106V125H103.5V128.5H119L119.5 163H213.5V148H233.5V129H235V106H213.5V55H195V54H193.5V21.5H194.5V17.5Z"
                                 fill="" />
-                            <path id-floorplan="" class="js-floorplandetail" d="M213.5 163H119V236.5H213.5V163Z"
-                                fill="" />
-                            <path id-floorplan="" class="js-floorplandetail" d="M213.5 236.5H119V310.5H213.5V236.5Z"
-                                fill="" />
-                            <path id-floorplan="" class="js-floorplandetail"
-                                d="M213 310H119V345.5H103V349H106L105.5 387H119.5V494H195V460.5H193.5V430.5H213.5V374.5H233.5V354.5H232.5V339H213V310Z"
-                                fill="" />
-                            <path id-floorplan="" class="js-floorplandetail"
-                                d="M410 119H334V123H336V153.5H283.5V185H296.5V203H316V229.5H426V227H423.5V192H410V119Z"
-                                fill="" />
-                            <path id-floorplan="" class="js-floorplandetail"
-                                d="M426.5 229.5H316V267.5H324V278.5H316V290.5H410V231H426.5V229.5Z" fill="" />
-                            <path id-floorplan="" class="js-floorplandetail"
-                                d="M410 291H316V327H318V352H426V350H410V291Z" fill="" />
-                            <path id-floorplan="" class="js-floorplandetail"
-                                d="M317.5 326.5H294.5V354H269V374.5H315.5V430.5H336V460.5H334.5V494H410.5V387H424V354H426.5V352H317.5V326.5Z"
-                                fill="" />
+                            <path id-floorplan="B21.05" class="js-floorplandetail" d="M410 119H334V123H336V153.5H283.5V185H296.5V203H316V229.5H426V227H423.5V192H410V119Z" fill=""></path>
+                            <path id-floorplan="B21.06" class="js-floorplandetail" d="M426.5 229.5H316V267.5H324V278.5H316V290.5H410V231H426.5V229.5Z" fill=""></path>
+                            <path id-floorplan="B21.07" class="js-floorplandetail" d="M410 291H316V327H318V352H426V350H410V291Z" fill=""></path>
+                            <path id-floorplan="B21.08" class="js-floorplandetail" d="M317.5 326.5H294.5V354H269V374.5H315.5V430.5H336V460.5H334.5V494H410.5V387H424V354H426.5V352H317.5V326.5Z" fill=""></path>
+                            <path id-floorplan="B21.01" class="js-floorplandetail" d="M213 310H119V345.5H103V349H106L105.5 387H119.5V494H195V460.5H193.5V430.5H213.5V374.5H233.5V354.5H232.5V339H213V310Z" fill=""></path>
+                            <path id-floorplan="B21.02" class="js-floorplandetail" d="M213.5 236.5H119V310.5H213.5V236.5Z" fill=""></path>
+                            <path id-floorplan="B21.03" class="js-floorplandetail" d="M213.5 163H119V236.5H213.5V163Z" fill=""></path>
+                                
                         </svg>
 
                     </div>
@@ -1214,23 +1170,23 @@
                         </ul>
                     </div> -->
                     <div rel="tow-b-3" class="hintFp">
-                        <div id-floorplan="" class="item js-floorplandetail">
+                        <div id-floorplan="B21.01" class="item js-floorplandetail">
                             <span style="background-color: #DDFCE2;"></span>
                             <p>Căn hộ 4 phòng ngủ</p>
                         </div>
-                        <div id-floorplan="" class="item js-floorplandetail">
+                        <div id-floorplan="B21.05" class="item js-floorplandetail">
                             <span style="background-color: #D9EEFB;"></span>
                             <p>Căn hộ 2 phòng ngủ</p>
                         </div>
-                        <div id-floorplan="" class="item js-floorplandetail">
+                        <div id-floorplan="B21.04" class="item js-floorplandetail">
                             <span style="background-color: #FDE3DC;"></span>
                             <p>Căn hộ 3 phòng ngủ</p>
                         </div>
-                        <div id-floorplan="" class="item js-floorplandetail">
+                        <div id-floorplan="B21.02" class="item js-floorplandetail">
                             <span style="background-color: #AAB3A1;"></span>
                             <p>Căn hộ 1 phòng ngủ + 1</p>
                         </div>
-                        <div id-floorplan="" class="item js-floorplandetail">
+                        <div id-floorplan="B21.06" class="item js-floorplandetail">
                             <span style="background-color: #E3E1E1;"></span>
                             <p>Căn hộ STUDIO</p>
                         </div>
@@ -1241,26 +1197,17 @@
                         <img data-src="{{ isset($oFloorB[3]) ? $oFloorB[3]->banner_url : '' }}" alt="" class="lazyload">
                         <svg width="540" height="512" viewBox="0 0 540 512" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
-                            <path id-floorplan="" class="js-floorplandetail"
+                            <path id-floorplan="B28.04" class="js-floorplandetail"
                                 d="M194.5 17.5H119.5L119 89.5H106V125H103.5V128.5H119L119.5 163H213.5V148H233.5V129H235V106H213.5V55H195V54H193.5V21.5H194.5V17.5Z"
                                 fill="" />
-                            <path id-floorplan="" class="js-floorplandetail" d="M213.5 163H119V236.5H213.5V163Z"
-                                fill="" />
-                            <path id-floorplan="" class="js-floorplandetail" d="M213.5 236.5H119V310.5H213.5V236.5Z"
-                                fill="" />
-                            <path id-floorplan="" class="js-floorplandetail"
-                                d="M213 310H119V345.5H103V349H106L105.5 387H119.5V494H195V460.5H193.5V430.5H213.5V374.5H233.5V354.5H232.5V339H213V310Z"
-                                fill="" />
-                            <path id-floorplan="" class="js-floorplandetail"
-                                d="M410 119H334V123H336V153.5H283.5V185H296.5V203H316V229.5H426V227H423.5V192H410V119Z"
-                                fill="" />
-                            <path id-floorplan="" class="js-floorplandetail"
-                                d="M426.5 229.5H316V267.5H324V278.5H316V290.5H410V231H426.5V229.5Z" fill="" />
-                            <path id-floorplan="" class="js-floorplandetail"
-                                d="M410 291H316V327H318V352H426V350H410V291Z" fill="" />
-                            <path id-floorplan="" class="js-floorplandetail"
-                                d="M317.5 326.5H294.5V354H269V374.5H315.5V430.5H336V460.5H334.5V494H410.5V387H424V354H426.5V352H317.5V326.5Z"
-                                fill="" />
+                            <path id-floorplan="B28.05" class="js-floorplandetail" d="M410 119H334V123H336V153.5H283.5V185H296.5V203H316V229.5H426V227H423.5V192H410V119Z" fill=""></path>
+                            <path id-floorplan="B28.06" class="js-floorplandetail" d="M426.5 229.5H316V267.5H324V278.5H316V290.5H410V231H426.5V229.5Z" fill=""></path>
+                            <path id-floorplan="B28.07" class="js-floorplandetail" d="M410 291H316V327H318V352H426V350H410V291Z" fill=""></path>
+                            <path id-floorplan="B28.08" class="js-floorplandetail" d="M317.5 326.5H294.5V354H269V374.5H315.5V430.5H336V460.5H334.5V494H410.5V387H424V354H426.5V352H317.5V326.5Z" fill=""></path>
+                            <path id-floorplan="B28.01" class="js-floorplandetail" d="M213 310H119V345.5H103V349H106L105.5 387H119.5V494H195V460.5H193.5V430.5H213.5V374.5H233.5V354.5H232.5V339H213V310Z" fill=""></path>
+                            <path id-floorplan="B28.02" class="js-floorplandetail" d="M213.5 236.5H119V310.5H213.5V236.5Z" fill=""></path>
+                            <path id-floorplan="B28.03" class="js-floorplandetail" d="M213.5 163H119V236.5H213.5V163Z" fill=""></path>
+                            
                         </svg>
                     </div>
                     <!-- <div data-text="tow-b-4" class="copy mb">
@@ -1276,23 +1223,23 @@
                         </ul>
                     </div> -->
                     <div rel="tow-b-4" class="hintFp">
-                        <div id-floorplan="" class="item js-floorplandetail">
+                        <div id-floorplan="B28.01" class="item js-floorplandetail">
                             <span style="background-color: #DDFCE2;"></span>
                             <p>Căn hộ 4 phòng ngủ</p>
                         </div>
-                        <div id-floorplan="" class="item js-floorplandetail">
+                        <div id-floorplan="B28.05" class="item js-floorplandetail">
                             <span style="background-color: #D9EEFB;"></span>
                             <p>Căn hộ 2 phòng ngủ</p>
                         </div>
-                        <div id-floorplan="" class="item js-floorplandetail">
+                        <div id-floorplan="B28.04" class="item js-floorplandetail">
                             <span style="background-color: #FDE3DC;"></span>
                             <p>Căn hộ 3 phòng ngủ</p>
                         </div>
-                        <div id-floorplan="" class="item js-floorplandetail">
+                        <div id-floorplan="B28.02" class="item js-floorplandetail">
                             <span style="background-color: #AAB3A1;"></span>
                             <p>Căn hộ 1 phòng ngủ + 1</p>
                         </div>
-                        <div id-floorplan="" class="item js-floorplandetail">
+                        <div id-floorplan="B28.06" class="item js-floorplandetail">
                             <span style="background-color: #E3E1E1;"></span>
                             <p>Căn hộ STUDIO</p>
                         </div>
@@ -1302,26 +1249,14 @@
                         <img data-src="{{ isset($oFloorB[4]) ? $oFloorB[4]->banner_url : '' }}" alt="" class="lazyload">
                         <svg width="540" height="512" viewBox="0 0 540 512" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
-                            <path id-floorplan="" class="js-floorplandetail"
-                                d="M317 326H294V353H268V374H315.5V430H335.5V459.5H334V492.5H409.5V386.5H423V353.5H425.5V351H317V326Z"
-                                fill="" />
-                            <path id-floorplan="" class="js-floorplandetail"
-                                d="M194.5 17.5H119L119.5 89.5H105.5V124.5H103V128.5H119V163H213V148H233.5V129H235V106H213.5V55H194.5V54H193.5V21.5H194.5V17.5Z"
-                                fill="" />
-                            <path id-floorplan="" class="js-floorplandetail"
-                                d="M410 119H334.5V122.5H335.5V153H283V185H296.5V202.5H316V229H426.5V227H423.5V192H410V119Z"
-                                fill="" />
-                            <path id-floorplan="" class="js-floorplandetail"
-                                d="M426.5 229.5H316V267.5H324V278.5H316V290.5H410V231H426.5V229.5Z" fill="" />
-                            <path id-floorplan="" class="js-floorplandetail"
-                                d="M410 291H316V327H318V352H426V350H410V291Z" fill="" />
-                            <path id-floorplan="" class="js-floorplandetail"
-                                d="M211.5 346.5H103V348.5H105.5V386.5H119V492.5H194.5V459.5H193.5V430H213V374H233.5V353.5H232V338.5H211.5V346.5Z"
-                                fill="" />
-                            <path id-floorplan="" class="js-floorplandetail" d="M213 162.5H119V273H213V162.5Z"
-                                fill="" />
-                            <path id-floorplan="" class="js-floorplandetail"
-                                d="M213 273H119V344.5H103V346.5H211.5V338H213V273Z" fill="" />
+                            <path id-floorplan="B33.04 - DUPLEX" class="js-floorplandetail" d="M194.5 17.5H119L119.5 89.5H105.5V124.5H103V128.5H119V163H213V148H233.5V129H235V106H213.5V55H194.5V54H193.5V21.5H194.5V17.5Z" fill=""></path>
+                            <path id-floorplan="B33.05 - DUPLEX" class="js-floorplandetail" d="M410 119H334.5V122.5H335.5V153H283V185H296.5V202.5H316V229H426.5V227H423.5V192H410V119Z" fill=""></path>
+                            <path id-floorplan="B33.06 - DUPLEX" class="js-floorplandetail" d="M426.5 229.5H316V267.5H324V278.5H316V290.5H410V231H426.5V229.5Z" fill=""></path>
+                            <path id-floorplan="B33.07 - DUPLEX" class="js-floorplandetail" d="M410 291H316V327H318V352H426V350H410V291Z" fill=""></path>
+                            <path id-floorplan="B33.08 - DUPLEX" class="js-floorplandetail" d="M317 326H294V353H268V374H315.5V430H335.5V459.5H334V492.5H409.5V386.5H423V353.5H425.5V351H317V326Z" fill=""></path>
+                            <path id-floorplan="B33.01 - DUPLEX" class="js-floorplandetail" d="M211.5 346.5H103V348.5H105.5V386.5H119V492.5H194.5V459.5H193.5V430H213V374H233.5V353.5H232V338.5H211.5V346.5Z" fill=""></path>
+                            <path id-floorplan="B33.02 - DUPLEX" class="js-floorplandetail" d="M213 273H119V344.5H103V346.5H211.5V338H213V273Z" fill=""></path>
+                            <path id-floorplan="B33.03 - DUPLEX" class="js-floorplandetail" d="M213 162.5H119V273H213V162.5Z" fill=""></path>
                         </svg>
                     </div>
                     <!-- <div data-text="tow-b-5" class="copy mb">
@@ -1337,19 +1272,19 @@
                         </ul>
                     </div> -->
                     <div rel="tow-b-5" class="hintFp">
-                        <div id-floorplan="" class="item js-floorplandetail">
+                        <div id-floorplan="B33.03 - DUPLEX" class="item js-floorplandetail">
                             <span style="background-color: #D9EEFB;"></span>
                             <p>Căn hộ 2 phòng ngủ</p>
                         </div>
-                        <div id-floorplan="" class="item js-floorplandetail">
+                        <div id-floorplan="B33.01 - DUPLEX" class="item js-floorplandetail">
                             <span style="background-color: #FDE3DC;"></span>
                             <p>Căn hộ 3 phòng ngủ</p>
                         </div>
-                        <div id-floorplan="" class="item js-floorplandetail">
+                        <div id-floorplan="B33.02 - DUPLEX" class="item js-floorplandetail">
                             <span style="background-color: #AAB3A1;"></span>
                             <p>Căn hộ 1 phòng ngủ + 1</p>
                         </div>
-                        <div id-floorplan="" class="item js-floorplandetail">
+                        <div id-floorplan="B33.06 - DUPLEX" class="item js-floorplandetail">
                             <span style="background-color: #E3E1E1;"></span>
                             <p>Căn hộ STUDIO</p>
                         </div>
