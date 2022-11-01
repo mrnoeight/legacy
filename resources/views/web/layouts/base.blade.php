@@ -414,9 +414,10 @@
 
     <!-- Sử dụng 1 trong 2 lazyload bên dưới -->
     <!-- <script type="text/javascript" async src="{{ asset('assets/js/vendor/lazysizes/lazysizes.min.js') }}"></script>-->
-
+    <script type="text/javascript" async src="{{ asset('assets/js/vendor/jquery/jquery.min.js') }}"></script>
     <script type="text/javascript" async src="{{ asset('assets/js/digitop/lazyloadCustom.js') }}"></script>
     <script type="text/javascript" async src="{{ asset('assets/js/main.js') }}" async></script>
+    <!-- <script type="text/javascript" async src="{{ asset('assets/js/function.js') }}" async></script> -->
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> -->
     <!-- <script type="text/javascript" async src="{{ asset('assets/js/function.js') }}" async></script> -->
 
