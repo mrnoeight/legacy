@@ -5,12 +5,12 @@
         @include('brackets/admin-ui::admin.includes.media-uploader', [
             'mediaCollection' => $homepage->getMediaCollection('banner'),
             'media' => $homepage->getThumbs200ForCollection('banner'),
-            'label' => 'Footer Logo'
+            'label' => 'Image / Logo'
         ])
     @else
         @include('brackets/admin-ui::admin.includes.media-uploader', [
             'mediaCollection' => app(App\Models\Homepage::class)->getMediaCollection('banner'),
-            'label' => 'Footer Logo'
+            'label' => 'Image / Logo'
         ])
     @endif
 </div>

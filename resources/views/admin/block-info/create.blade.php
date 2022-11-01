@@ -35,7 +35,7 @@
                     @include('admin.block-info.components.member')
                 @elseif ($_GET['block_type'] == 'consultant')
                     @include('admin.block-info.components.consultant')
-                @elseif (in_array($_GET['block_type'], array('home_text', 'apartment_text', 'menu_text', 'footer_text')))
+                @elseif (in_array($_GET['block_type'], array('home_text', 'apartment_text', 'menu_text', 'footer_text', 'sidebar_text')))
                     @include('admin.block-info.components.text')
                 @elseif (in_array($_GET['block_type'], array('lancaster_text'))) 
                     @include('admin.block-info.components.text_lancaster')

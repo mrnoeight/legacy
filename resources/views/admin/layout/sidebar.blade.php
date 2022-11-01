@@ -59,6 +59,7 @@
             <li class="nav-item panel5"><a class="nav-link" href="{{ url('admin/block-infos?block_type=butler_service') }}"><i class="nav-icon"></i> Butler Service</a></li>
             <li class="nav-item panel5"><a class="nav-link" href="{{ url('admin/block-infos?block_type=member_card') }}"><i class="nav-icon"></i> Member Card</a></li>
             <li class="nav-item panel5"><a class="nav-link" href="{{ url('admin/block-infos?block_type=consultant') }}"><i class="nav-icon"></i> Consultants</a></li>
+            <li class="nav-item panel5"><a class="nav-link" href="{{ url('admin/homepages/14/edit?pg=consultant-image') }}"><i class="nav-icon"></i> Consultant Image Edit</a></li>
             <li class="nav-item panel5"><a class="nav-link" href="{{ url('admin/block-infos?block_type=lancaster_text') }}"><i class="nav-icon"></i> Lancaster Text</a></li>
 
             <li class="nav-title accordion" data-id="6">Progress Page</li>
@@ -70,6 +71,7 @@
             <li class="nav-item panel7"><a class="nav-link" href="{{ url('admin/block-infos?block_type=menu_text') }}"><i class="nav-icon"></i> Menu Text</a></li>
             <li class="nav-item panel7"><a class="nav-link" href="{{ url('admin/homepages/13/edit?pg=footer') }}"><i class="nav-icon"></i> Footer Logo Edit</a></li>
             <li class="nav-item panel7"><a class="nav-link" href="{{ url('admin/block-infos?block_type=footer_text') }}"><i class="nav-icon"></i> Footer Text</a></li>
+            <li class="nav-item panel7"><a class="nav-link" href="{{ url('admin/block-infos?block_type=sidebar_text') }}"><i class="nav-icon"></i> Right Sidebar Text</a></li>
             
            
            {{-- Do not delete me :) I'm used for auto-generation menu items --}}

@@ -53,6 +53,21 @@ if (!function_exists('tk1GetFooter')) {
     }
 }
 
+if (!function_exists('tk1GetSidebar')) {
+    function tk1GetSidebar()
+    {
+        $oText = BlockInfo::where('block_type', 'sidebar_text')->get();
+
+        $arrMenuText = [];
+        foreach ($oText as $t) {
+            $arrMenuText[$t->block_name] = $t->head_title1;
+        }
+
+        return $arrMenuText;
+    }
+}
+
+
 if (!function_exists('tk1FormatDateLocal')) {
     function tk1FormatDateLocal($date)
     {

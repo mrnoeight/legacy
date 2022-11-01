@@ -46,7 +46,13 @@ class HomeController extends Controller
     public function getApartmentInfo() 
     {
         $apartment = BlockInfo::where('block_name', $_POST['code'])->first();
-        $data = view('web.apartment_info', compact('apartment'))->render();
+        $oText = BlockInfo::where('block_type', 'apartment_text')->get();
+
+        $arrText = [];
+        foreach ($oText as $text)
+            $arrText[$text->block_name] = $text->head_title1;
+//print_r($arrText);exit;
+        $data = view('web.apartment_info', compact('apartment', 'arrText'))->render();
 
         return \response()->json(['status' => 1, 
                                     'data' => $data,

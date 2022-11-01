@@ -15,6 +15,7 @@ class LancasterController extends Controller
     public function index()
     {
         $oPage = Homepage::where('page_name', 'lancaster-by-trung-thuy')->first();
+        $oPCon = Homepage::where('page_name', 'consultant-image')->first();
         $oMaster = BlockInfo::where('block_type', 'master_gallery')->get();  
         $oBasic = BlockInfo::where('block_type', 'basic_service')->get();        
         $oEnhance = BlockInfo::where('block_type', 'enhance_service')->get();        
@@ -52,6 +53,6 @@ class LancasterController extends Controller
 
         $menu_active = ['home'=>'', 'location'=>'', 'apartment'=>'', 'utilities'=>'', 'progress'=>'', 'gallery'=>'', 'news'=>'', 'lancaster'=>' class=active', 'about'=>''];
         
-        return view('web.lancaster', compact('menu_active', 'oPage', 'oMaster', 'oBasic', 'oEnhance', 'oButler', 'goldCard', 'diamondCard', 'platinumCard', 'arrConsultants', 'arrText'));
+        return view('web.lancaster', compact('menu_active', 'oPage', 'oMaster', 'oBasic', 'oEnhance', 'oButler', 'goldCard', 'diamondCard', 'platinumCard', 'arrConsultants', 'arrText', 'oPCon'));
     }
 }

@@ -35,7 +35,7 @@
                         @include('admin.homepage.components.news')
                     @elseif ($_GET['pg'] == 'website')
                         @include('admin.homepage.components.website')
-                    @elseif ($_GET['pg'] == 'footer')
+                    @elseif ($_GET['pg'] == 'footer' || $_GET['pg'] == 'consultant-image')
                         @include('admin.homepage.components.footer')
                     @else
                         @include('admin.homepage.components.form-elements')

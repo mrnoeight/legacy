@@ -228,7 +228,7 @@
         </div>
     </section>
 
-    <section id="ConsultingTeam" class="teamPageWrap pd1" style="background: url({{ asset('assets/images/demo/bg-team.jpg') }}) center no-repeat" >
+    <section id="ConsultingTeam" class="teamPageWrap pd1" style="background: url({{ $oPCon->banner_url }}) center no-repeat" >
         <img class="lazyload bgClubMb" data-src="{{ asset('assets/images/demo/bg-team.jpg') }}" alt="">
         <div class="container">
             <div class="copy">

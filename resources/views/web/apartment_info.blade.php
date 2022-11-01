@@ -3,21 +3,21 @@
             <div class="btnBack js-closefloorplandetail"><span></span></div>
             <div class="top">
                 <p><img class="lazyload btnBackAr js-closefloorplandetail"
-                        data-src="{{ asset('assets/images/btn-back.png') }}" alt=""> Mặt bằng tòa / tòa {{ str_replace('building','',$apartment->block_type) }} / tầng {{ $apartment->info2 }}</p>
+                        data-src="{{ asset('assets/images/btn-back.png') }}" alt=""> {{ isset($arrText['floor_plan']) ? $arrText['floor_plan'] : 'TOWER FLOOR PLAN' }} / {{ isset($arrText['tower']) ? $arrText['tower'] : 'Tower' }} {{ str_replace('building','',$apartment->block_type) }} / {{ isset($arrText['floor']) ? $arrText['floor'] : 'Floor' }} {{ $apartment->info2 }}</p>
                 <h2 class="mainTt">{{ $apartment->head_title1}}</h2>
             </div>
             <div class="bottom">
                 <div class="item">
-                    <p>Mã căn hộ: <strong>{{ $apartment->block_name }}</strong></p>
+                    <p>{{ $arrText['unit'] }}: <strong>{{ $apartment->block_name }}</strong></p>
                 </div>
                 <div class="item">
-                    <p>Diện tích thông thủy: <strong>{{ $apartment->info4 }} m<sup>2</sup></strong></p>
+                    <p>{{ $arrText['gfa'] }}: <strong>{{ $apartment->info4 }} m<sup>2</sup></strong></p>
                 </div>
                 <div class="item">
-                    <p>Sàn thép: <strong>{{ $apartment->info7 }}</strong></p>
+                    <p>{{ $arrText['steel'] }}: <strong>{{ $apartment->info7 }}</strong></p>
                 </div>
                 <div class="item">
-                    <p>Diện tích tim tường: <strong>{{ $apartment->info5 }} m<sup>2</sup></strong></p>
+                    <p>{{ $arrText['nsa'] }}: <strong>{{ $apartment->info5 }} m<sup>2</sup></strong></p>
                 </div>
             </div>
         </div>
@@ -44,7 +44,7 @@
                 </div>
             </div>
             <div class="locaImgFP">
-                <p>Vị trí căn hộ <img data-src="{{ asset('assets/images/lb.png') }}" class="lazyload" /></p>
+                <p>{{ $arrText['unit_key'] }} <img data-src="{{ asset('assets/images/lb.png') }}" class="lazyload" /></p>
                 <img data-src="{{ $apartment->banner_mb_url }}" class="lazyload" />
             </div>
 
