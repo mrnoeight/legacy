@@ -813,7 +813,7 @@
                     </div>
 
                     <!----------------- Tower C  -->
-
+                    <div class="row">
                     <div id="tow-c-1" class="floorplanImg towC">
                         <img data-src="{{ isset($oFloorC[0]) ? $oFloorC[0]->banner_url : '' }}" alt="" class="lazyload">
                         <svg width="512" height="512" viewBox="0 0 512 512" fill="none"
@@ -1304,7 +1304,7 @@
                         </ul>
                     </div> -->
 
-
+                    <div>
 
                 </div>
             </div>
