@@ -840,7 +840,7 @@
                             @endforeach
                         </ul>
                     </div> -->
-                    <div rel="tow-c-1" class="hintFp">
+                    <div rel="tow-c-1" class="hintFp sideHint">
                         <div id-floorplan="C08.05" class="item js-floorplandetail">
                             <span style="background-color: #FCAB61;"></span>
                             <p>Căn hộ 3 phòng ngủ + 1</p>
@@ -890,7 +890,7 @@
                             @endforeach
                         </ul>
                     </div> -->
-                    <div rel="tow-c-2" class="hintFp">
+                    <div rel="tow-c-2" class="hintFp sideHint">
                         <div id-floorplan="C11.02" class="item js-floorplandetail">
                             <span style="background-color: #DEFADA;"></span>
                             <p>Căn hộ 3 phòng ngủ + 1</p>
@@ -937,7 +937,7 @@
                             @endforeach
                         </ul>
                     </div> -->
-                    <div rel="tow-c-3" class="hintFp">
+                    <div rel="tow-c-3" class="hintFp sideHint">
                         <div id-floorplan="C12B.05" class="item js-floorplandetail">
                             <span style="background-color: #FDE3DC;"></span>
                             <p>Căn hộ 3 phòng ngủ</p>
@@ -986,7 +986,7 @@
                             @endforeach
                         </ul>
                     </div> -->
-                    <div rel="tow-c-4" class="hintFp">
+                    <div rel="tow-c-4" class="hintFp sideHint">
                         <div id-floorplan="C22.05" class="item js-floorplandetail">
                             <span style="background-color: #FDE3DC;"></span>
                             <p>Căn hộ 3 phòng ngủ</p>
@@ -1034,7 +1034,7 @@
                             @endforeach
                         </ul>
                     </div> -->
-                    <div rel="tow-c-5" class="hintFp">
+                    <div rel="tow-c-5" class="hintFp sideHint">
                         <div id-floorplan="C28.05 - DUPLEX" class="item js-floorplandetail">
                             <span style="background-color: #FDE3DC;"></span>
                             <p>Căn hộ 3 phòng ngủ</p>
@@ -1082,7 +1082,7 @@
                             @endforeach
                         </ul>
                     </div> -->
-                    <div rel="tow-b-1" class="hintFp">
+                    <div rel="tow-b-1" class="hintFp sideHint">
                         <div id-floorplan="B08.01" class="item js-floorplandetail">
                             <span style="background-color: #FDE3DC;"></span>
                             <p>Căn hộ 3 phòng ngủ</p>
@@ -1123,7 +1123,7 @@
                             @endforeach
                         </ul>
                     </div> -->
-                    <div rel="tow-b-2" class="hintFp">
+                    <div rel="tow-b-2" class="hintFp sideHint">
                         <div id-floorplan="B12.01" class="item js-floorplandetail">
                             <span style="background-color: #FDE3DC;"></span>
                             <p>Căn hộ 3 phòng ngủ</p>
@@ -1169,7 +1169,7 @@
                             @endforeach
                         </ul>
                     </div> -->
-                    <div rel="tow-b-3" class="hintFp">
+                    <div rel="tow-b-3" class="hintFp sideHint">
                         <div id-floorplan="B21.01" class="item js-floorplandetail">
                             <span style="background-color: #DDFCE2;"></span>
                             <p>Căn hộ 4 phòng ngủ</p>
@@ -1222,7 +1222,7 @@
                             @endforeach
                         </ul>
                     </div> -->
-                    <div rel="tow-b-4" class="hintFp">
+                    <div rel="tow-b-4" class="hintFp sideHint">
                         <div id-floorplan="B28.01" class="item js-floorplandetail">
                             <span style="background-color: #DDFCE2;"></span>
                             <p>Căn hộ 4 phòng ngủ</p>
@@ -1271,7 +1271,7 @@
                             @endforeach
                         </ul>
                     </div> -->
-                    <div rel="tow-b-5" class="hintFp">
+                    <div rel="tow-b-5" class="hintFp sideHint">
                         <div id-floorplan="B33.03 - DUPLEX" class="item js-floorplandetail">
                             <span style="background-color: #D9EEFB;"></span>
                             <p>Căn hộ 2 phòng ngủ</p>
