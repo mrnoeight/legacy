@@ -13,16 +13,20 @@
         <div class="imgMb" style="background: url({{ $oPage->banner_mb_url }}) bottom no-repeat"
             data-paroller-factor="-0.2" data-paroller-type="background" data-paroller-direction="vertical"></div>
 
-        <div class="container">
+        <!-- <div class="container">
             <div class="titleBanner stagger-down">
                 <h3 class="subTt">{{ $oPage->head_tag1 }}</h3>
                 <h2 class="mainTt">{!! nl2br($oPage->head_title1) !!}</h2>
             </div>
 
-        </div>
+        </div> -->
     </section>
     <section class="bannerText stagger-down">
         <div class="container">
+            <div class="titleBanner stagger-down">
+                <h3 class="subTt">{{ $oPage->head_tag1 }}</h3>
+                <h2 class="mainTt">{!! nl2br($oPage->head_title1) !!}</h2>
+            </div>
             <div class="copy">
                 <p>{{ $oPage->head_desc1 }} </p>
             </div>
@@ -63,103 +67,21 @@
         </div>
     </section>
 
-    <!-- Về dự án --------------------------------------------------------------------------------->
-
-    <section id="aboutUsWrap" class="section aboutUsWrap">
-        <div class="slideAbout">
-            @foreach ($oSliders as $slider)
-            <div class="item" style="background: url({{ $slider->banner_url }}) center no-repeat"
-                data-paroller-factor="0.4" data-paroller-type="background" data-paroller-direction="vertical">
-                <img data-src="{{ $slider->banner_mb_url }}" class="lazyload" />
-                <div class="container first">
-                    <div class="copy">
-                        <h3 class="subTt">{{ $slider->head_tag1 }}</h3>
-                        <h2 class="mainTt">{!! nl2br($slider->head_title1) !!}</h2>
-                        <p>{{ $slider->head_desc1 }}</p>
-                    </div>
-                </div>
-            </div>
-            @endforeach
-            
-        </div>
-        <div class="optionSlider">
-
-            <div id="prevAbout" class="btnSlider btnSliderPrev">
-                <svg width="100%" height="100%" viewBox="0 0 100 100" preserveAspectRatio="none">
-                    <circle class=" circle" cx="50" cy="50" r="48" stroke="#a3815f" stroke-width="2" fill="none" />
-                </svg>
-
-            </div>
-            <div id="nextAbout" class="btnSlider btnSliderNext">
-                <svg width="100%" height="100%" viewBox="0 0 100 100" preserveAspectRatio="none">
-                    <circle class="circle" cx="50" cy="50" r="48" stroke="#a3815f" stroke-width="2" fill="none" />
-                </svg>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- Hình ảnh dự án --------------------------------------------------------------------------------->
-
-    <section id="galleryWrap" class="section galleryWrap pd1">
-        <div class="container">
-            <div class="ttPage">
-                <h2 class="mainTt animate">{!! nl2br($arrText['photo']) !!}</h2>
-            </div>
-        </div>
-        <div class="slideGalleryWrap animate">
-            <div class="slideGallery lightgallery">
-                @foreach ($oGalleries as $gallery)
-                <div>
-                    <div class="item" style="background: url({{ $gallery->banner_url }}) center no-repeat">
-                        <img data-src="{{ asset('assets/images/thumb1.gif') }}" class="lazyload" />
-                        <span class="linkLg" data-src="{{ $gallery->banner_url }}"
-                            data-sub-html="<p>{{ $gallery->head_title1 }}</p>"></span>
-                    </div>
-                </div>
-                @endforeach
-            </div>
-            <div class="opSlideGallery">
-                <div id="prevGallery" class="btnSlider btnSliderPrev">
-                    <svg width="100%" height="100%" viewBox="0 0 100 100" preserveAspectRatio="none">
-                        <circle class=" circle" cx="50" cy="50" r="48" stroke="#a3815f" stroke-width="2" fill="none" />
-                    </svg>
-
-                </div>
-                <div id="nextGallery" class="btnSlider btnSliderNext">
-                    <svg width="100%" height="100%" viewBox="0 0 100 100" preserveAspectRatio="none">
-                        <circle class="circle" cx="50" cy="50" r="48" stroke="#a3815f" stroke-width="2" fill="none" />
-                    </svg>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-    <!-- Đối tác --------------------------------------------------------------------------------->
-
-    <section id="partnerWrap" class="section partnerWrap pd1">
-        <div class="container">
-            <div class="ttPage animate">
-                <h2 class="mainTt">{!! nl2br($arrText['partner']) !!}</h2>
-            </div>
-            <div class="partnerList">
-                @foreach ($oPartners as $partner)
-                <div class="item">
-                    <img data-src="{{ $partner->banner_url }}" class="lazyload" />
-                    <p>{{ $partner->head_title1 }}</p>
-                </div>
-                @endforeach
-            </div>
-        </div>
-    </section>
+    
 
     <!-- vị trí dự án --------------------------------------------------------------------------------->
     <span id="locationWrap"></span>
-    <section class="section locationWrap">
+		<section  class="section locationWrap">
+			<div class="container">
+				<div class="ttPage animate">
+					<h2 class="mainTt">{!! nl2br($arrText['location']) !!}</h2>
+				</div>
+				
+			</div>
+			<img class="map pc" src="assets/images/demo/map.jpg" />
+            <img class="map mb" src="assets/images/demo/map.jpg" />
+		</section>
+    <!-- <section class="section locationWrap">
         <div class="container mb">
             <div class="ttPage animate">
                 <h2 class="mainTt">{!! nl2br($arrText['location']) !!}</h2>
@@ -215,7 +137,106 @@
                 
             </div>
         </div>
+    </section> -->
+
+    <!-- Hình ảnh dự án --------------------------------------------------------------------------------->
+
+    <section id="galleryWrap" class="section galleryWrap pd1">
+        <div class="container">
+            <div class="ttPage">
+                <h2 class="mainTt animate">{!! nl2br($arrText['photo']) !!}</h2>
+            </div>
+        </div>
+        <div class="slideGalleryWrap animate">
+            <div class="slideGallery lightgallery">
+                @foreach ($oGalleries as $gallery)
+                <div>
+                    <div class="item" style="background: url({{ $gallery->banner_url }}) center no-repeat">
+                        <img data-src="{{ asset('assets/images/thumb1.gif') }}" class="lazyload" />
+                        <span class="linkLg" data-src="{{ $gallery->banner_url }}"
+                            data-sub-html="<p>{{ $gallery->head_title1 }}</p>"></span>
+                    </div>
+                </div>
+                @endforeach
+            </div>
+            <div class="opSlideGallery">
+                <div id="prevGallery" class="btnSlider btnSliderPrev">
+                    <svg width="100%" height="100%" viewBox="0 0 100 100" preserveAspectRatio="none">
+                        <circle class=" circle" cx="50" cy="50" r="48" stroke="#a3815f" stroke-width="2" fill="none" />
+                    </svg>
+
+                </div>
+                <div id="nextGallery" class="btnSlider btnSliderNext">
+                    <svg width="100%" height="100%" viewBox="0 0 100 100" preserveAspectRatio="none">
+                        <circle class="circle" cx="50" cy="50" r="48" stroke="#a3815f" stroke-width="2" fill="none" />
+                    </svg>
+
+                </div>
+
+            </div>
+
+        </div>
+
     </section>
+
+
+    <!-- Về dự án --------------------------------------------------------------------------------->
+
+    <section id="aboutUsWrap" class="section aboutUsWrap">
+        <div class="slideAbout">
+            @foreach ($oSliders as $slider)
+            <div class="item" style="background: url({{ $slider->banner_url }}) center no-repeat"
+                data-paroller-factor="0.4" data-paroller-type="background" data-paroller-direction="vertical">
+                <img data-src="{{ $slider->banner_mb_url }}" class="lazyload" />
+                <div class="container first">
+                    <div class="copy">
+                        <h3 class="subTt">{{ $slider->head_tag1 }}</h3>
+                        <h2 class="mainTt">{!! nl2br($slider->head_title1) !!}</h2>
+                        <p>{{ $slider->head_desc1 }}</p>
+                    </div>
+                </div>
+            </div>
+            @endforeach
+            
+        </div>
+        <div class="optionSlider">
+
+            <div id="prevAbout" class="btnSlider btnSliderPrev">
+                <svg width="100%" height="100%" viewBox="0 0 100 100" preserveAspectRatio="none">
+                    <circle class=" circle" cx="50" cy="50" r="48" stroke="#a3815f" stroke-width="2" fill="none" />
+                </svg>
+
+            </div>
+            <div id="nextAbout" class="btnSlider btnSliderNext">
+                <svg width="100%" height="100%" viewBox="0 0 100 100" preserveAspectRatio="none">
+                    <circle class="circle" cx="50" cy="50" r="48" stroke="#a3815f" stroke-width="2" fill="none" />
+                </svg>
+
+            </div>
+        </div>
+    </section>
+
+    
+
+    <!-- Đối tác --------------------------------------------------------------------------------->
+
+    <section id="partnerWrap" class="section partnerWrap pd1">
+        <div class="container">
+            <div class="ttPage animate">
+                <h2 class="mainTt">{!! nl2br($arrText['partner']) !!}</h2>
+            </div>
+            <div class="partnerList">
+                @foreach ($oPartners as $partner)
+                <div class="item">
+                    <img data-src="{{ $partner->banner_url }}" class="lazyload" />
+                    <p>{{ $partner->head_title1 }}</p>
+                </div>
+                @endforeach
+            </div>
+        </div>
+    </section>
+
+    
 
 
 

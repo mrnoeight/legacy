@@ -91,35 +91,37 @@ $(document).ready(function() {
         updateApartment('A08.01');
     });
 
-    function updateApartment(code) {
-        var type = "POST";
-        
-        var ajaxurl = host_url + '/apartment-info';
-        var formData = {
-            code: code,
-        };
-        $.ajax({
-            type: type,
-            url: ajaxurl,
-            data: formData,
-            dataType: 'json',
-            headers: {
-                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-            },
-            success: function (data) {
-                console.log('data sent');
-                $('#FloorPlanDetail').html(data.data);
-                //alert(data.data);
-                // $('.js-floorplandetail').on("click",function(){
-                //     $('#FloorPlanDetail').stop(true,true).fadeIn();
-                // });
-                $('.js-closefloorplandetail').on("click",function(){
-                    $('#FloorPlanDetail').stop(true,true).fadeOut();
-                });
-            },
-            error: function (data) {
-                console.log(data);
-            }
-        });
-    }
+    
 });
+
+function updateApartment(code) {
+    var type = "POST";
+    
+    var ajaxurl = host_url + '/apartment-info';
+    var formData = {
+        code: code,
+    };
+    $.ajax({
+        type: type,
+        url: ajaxurl,
+        data: formData,
+        dataType: 'json',
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        },
+        success: function (data) {
+            console.log('data sent');
+            $('#FloorPlanDetail').html(data.data);
+            //alert(data.data);
+            // $('.js-floorplandetail').on("click",function(){
+            //     $('#FloorPlanDetail').stop(true,true).fadeIn();
+            // });
+            $('.js-closefloorplandetail').on("click",function(){
+                $('#FloorPlanDetail').stop(true,true).fadeOut();
+            });
+        },
+        error: function (data) {
+            console.log(data);
+        }
+    });
+}
