@@ -87,9 +87,9 @@ $(document).ready(function() {
         return false;
     });
 
-    $( "#tow-a-1, #tow-a-2, #tow-a-3, #tow-a-4, #tow-a-5" ).click(function(e) {
-        updateApartment('A08.01');
-    });
+    // $( "#tow-a-1, #tow-a-2, #tow-a-3, #tow-a-4, #tow-a-5" ).click(function(e) {
+    //     updateApartment('A08.01');
+    // });
 
     
 });
@@ -101,6 +101,8 @@ function updateApartment(code) {
     var formData = {
         code: code,
     };
+    
+    //console.log('data code',code);
     $.ajax({
         type: type,
         url: ajaxurl,
@@ -110,7 +112,8 @@ function updateApartment(code) {
             'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
         },
         success: function (data) {
-            console.log('data sent');
+            
+            //console.log('data sent',data);
             $('#FloorPlanDetail').html(data.data);
             //alert(data.data);
             // $('.js-floorplandetail').on("click",function(){

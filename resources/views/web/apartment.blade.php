@@ -472,7 +472,7 @@
                         <img data-src="{{ isset($oFloorA[0]) ? $oFloorA[0]->banner_url : ''  }}" alt="" class="lazyload">
                         <svg width="660" height="433" viewBox="0 0 660 433" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
-                            <path id-floorplan="A08.01" class="js-floorplandetail" class="js-floorplandetail"
+                            <path id-floorplan="A08.01" class="js-floorplandetail"
                                 d="M30.5 155V80H34.5V82.5H129V69.5H164.5V68.5H166.5V170.5H199V191.5H143V193H89V153.5H68V155H30.5Z"
                                 fill="" />
                             <path id-floorplan="A08.02" class="js-floorplandetail"
@@ -495,7 +495,7 @@
                                 d="M350.5 269.5H256.5V359H317V371.5H349V374H350.5V269.5Z" fill="" />
                             <path id-floorplan="A08.10" class="js-floorplandetail"
                                 d="M199 271H162V374H164V372H195.5V359H256.5V269.5H199V271Z" fill="" />
-                            <path id-floorplan="A08.01" class="js-floorplandetail"
+                            <path id-floorplan="A08.11" class="js-floorplandetail"
                                 d="M50 287H18.5L19 359H123.5V371.5H160V374H162V271H199V250.5H168V249H89V287H79.5V288.5H50V287Z"
                                 fill="" />
                         </svg>
