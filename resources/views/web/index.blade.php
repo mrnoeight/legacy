@@ -76,7 +76,6 @@
 				<div class="ttPage animate">
 					<h2 class="mainTt">{!! nl2br($arrText['location']) !!}</h2>
 				</div>
-				
 			</div>
 			<img class="map pc" src="assets/images/demo/map.jpg" />
             <img class="map mb" src="assets/images/demo/map.jpg" />
