@@ -278,7 +278,7 @@
 
     <!-- <div class="spaceH"></div> -->
 
-    <section class="towerFloorplanWrap">
+    <section id="towerFloorplan" class="towerFloorplanWrap">
         <div class="leftT">
             <div class="towerWrap">
                 <img data-src="{{ asset('assets/images/demo/tower.jpg') }}" alt="" class="lazyload">
@@ -481,7 +481,7 @@
                                 fill="" />
                             <path id-floorplan="A08.04" class="js-floorplandetail" d="M358.5 82.5H299.5V172H358.5V82.5Z"
                                 fill="" />
-                            <path id-floorplan="A08.04" class="js-floorplandetail"
+                            <path id-floorplan="A08.05" class="js-floorplandetail"
                                 d="M417.5 82.5H358.5V172H406.5V171H417.5V82.5Z" fill="" />
                             <path id-floorplan="A08.06" class="js-floorplandetail"
                                 d="M511 82.5H417.5V170.5H406.5L407 221H447.5V210H511V221H532V191.5H554.5V187.5H552V93H514.5V80H511V82.5Z"
@@ -539,7 +539,7 @@
                         <img data-src="{{ isset($oFloorA[1]) ? $oFloorA[1]->banner_url : '' }}" alt="" class="lazyload">
                         <svg width="660" height="433" viewBox="0 0 660 433" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
-                            <path id-floorplan="" class="js-floorplandetail" class="js-floorplandetail"
+                            <path id-floorplan="A17.01 - DUPLEX" class="js-floorplandetail" class="js-floorplandetail"
                                 d="M30.5 155V80H34.5V82.5H129V69.5H164.5V68.5H166.5V170.5H199V191.5H143V193H89V153.5H68V155H30.5Z"
                                 fill="" />
                             <path id-floorplan="A17.02 - DUPLEX" class="js-floorplandetail"
@@ -755,10 +755,10 @@
                                 fill="" />
                             <path id-floorplan="A30.05" class="js-floorplandetail"
                                 d="M418.5 83H359.5V172.5H407.5V171H418.5V83Z" fill="" />
-                            <path id-floorplan="A30.06" class="js-floorplandetail"
+                            <path id-floorplan="A30.06 - DUPLEX" class="js-floorplandetail"
                                 d="M512 83H418.5V171H408V221.5H448.5V210.5H512.5V221.5H533.5V192H556V188H553.5V93.5H516V80.5H512V83Z"
                                 fill="" />
-                            <path id-floorplan="A30.07" class="js-floorplandetail"
+                            <path id-floorplan="A30.07 - DUPLEX" class="js-floorplandetail"
                                 d="M407.5 219.5H402V245H407.5V271H418.5V359H512V361H515.5V348.5H553V254H555.5V250.5H533V221H512V231.5H448V221H407.5V219.5Z"
                                 fill="" />
                             <path id-floorplan="A30.08" class="js-floorplandetail"
@@ -767,7 +767,7 @@
                                 d="M351.5 270.5H257V360H318V373H349.5V375H351.5V270.5Z" fill="" />
                             <path id-floorplan="A30.10" class="js-floorplandetail"
                                 d="M257 270.5H199.5V272H198.5V360H257V270.5Z" fill="" />
-                            <path id-floorplan="A30.11" class="js-floorplandetail"
+                            <path id-floorplan="A30.11 - DUPLEX" class="js-floorplandetail"
                                 d="M50 288H19V360H124V373H160.5V375.5H164.5V373H196V360H198.5V271.5H199.5V251H168.5V249.5H89.5V288H79.5V289H50V288Z"
                                 fill="" />
                         </svg>

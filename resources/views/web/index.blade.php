@@ -10,8 +10,11 @@
     <section id="bannerPage" class="bannerPage  go-up">
         <div class="img" style="background: url({{ $oPage->banner_url }}) bottom no-repeat"
             data-paroller-factor="0.4" data-paroller-type="background" data-paroller-direction="vertical"></div>
-        <div class="imgMb" style="background: url({{ $oPage->banner_mb_url }}) bottom no-repeat"
-            data-paroller-factor="-0.2" data-paroller-type="background" data-paroller-direction="vertical"></div>
+        <!-- <div class="imgMb" style="background: url({{ $oPage->banner_mb_url }}) bottom no-repeat"
+            data-paroller-factor="-0.2" data-paroller-type="background" data-paroller-direction="vertical"></div> -->
+        <div  class="imgMb" >
+            <img src="{{ $oPage->banner_mb_url }}" />
+        </div>
 
         <!-- <div class="container">
             <div class="titleBanner stagger-down">

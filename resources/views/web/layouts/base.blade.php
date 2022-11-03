@@ -190,7 +190,7 @@
                         <div class="submenu">
                             <a href="{{ route('apartment') }}#masterplan">Masterplan</a>
                             <a href="{{ route('apartment') }}#floorplan">Mặt bằng tiện ích</a>
-                            <a href="{{ route('apartment') }}#rooftop">Mặt bằng toà</a>
+                            <a href="{{ route('apartment') }}#towerFloorplan">Mặt bằng toà</a>
                         </div>
                     </li>
                     <li>
