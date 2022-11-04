@@ -227,7 +227,7 @@
                         <span class="subMb js-subMenuMb"><img data-src="{{ asset('assets/images/ar-1.png') }}"
                                 class="lazyload"></span>
                         <div class="submenu">
-                            <a href="{{ route('tienich') }}#PrivateLegacyclub">{{__('Private Legacy club')}}</a>
+                            <a href="{{ route('tienich') }}#PrivateLegacyclub">{{__('Phong vị thượng lưu')}}</a>
                             <a href="{{ route('tienich') }}#ShoppingCenter">{{__('Xu hướng thời thượng')}}</a>
                             <a href="{{ route('tienich') }}#HealthUtility">{{__('Sức khỏe')}}</a>
                             <a href="{{ route('tienich') }}#Entertainment">{{__('Giải trí')}} </a>

@@ -516,23 +516,23 @@
                     <div rel="tow-a-1" class="hintFp">
                         <div id-floorplan="A08.06" class="item js-floorplandetail">
                             <span style="background-color: #FCAB61;"></span>
-                            <p>Căn hộ 3 phòng ngủ + 1</p>
+                            <p>{{__('Căn hộ 3 phòng ngủ + 1')}}</p>
                         </div>
                         <div id-floorplan="A08.01" class="item js-floorplandetail">
                             <span style="background-color: #FDE3DC;"></span>
-                            <p>Căn hộ 3 phòng ngủ</p>
+                            <p>{{__('Căn hộ 3 phòng ngủ')}}</p>
                         </div>
                         <div id-floorplan="A08.09" class="item js-floorplandetail">
                             <span style="background-color: #D9EEFB;"></span>
-                            <p>Căn hộ 2 phòng ngủ</p>
+                            <p>{{__('Căn hộ 2 phòng ngủ')}}</p>
                         </div>
                         <div id-floorplan="A08.02" class="item js-floorplandetail">
                             <span style="background-color: #AAB3A1;"></span>
-                            <p>Căn hộ 1 phòng ngủ + 1</p>
+                            <p>{{__('Căn hộ 1 phòng ngủ + 1')}}</p>
                         </div>
                         <div id-floorplan="A08.04" class="item js-floorplandetail">
                             <span style="background-color: #E3E1E1;"></span>
-                            <p>Căn hộ STUDIO</p>
+                            <p>{{__('Căn hộ STUDIO')}}</p>
                         </div>
                     </div>
                     <div id="tow-a-2" class="floorplanImg towA">
@@ -582,23 +582,23 @@
                     <div rel="tow-a-2" class="hintFp">
                         <div id-floorplan="A17.06 - DUPLEX" class="item js-floorplandetail">
                             <span style="background-color: #FCAB61;"></span>
-                            <p>Căn hộ 3 phòng ngủ + 1</p>
+                            <p>{{__('Căn hộ 3 phòng ngủ + 1')}}</p>
                         </div>
                         <div id-floorplan="A17.01 - DUPLEX" class="item js-floorplandetail">
                             <span style="background-color: #FDE3DC;"></span>
-                            <p>Căn hộ 3 phòng ngủ</p>
+                            <p>{{__('Căn hộ 3 phòng ngủ')}}</p>
                         </div>
                         <div id-floorplan="A17.09 - DUPLEX" class="item js-floorplandetail">
                             <span style="background-color: #D9EEFB;"></span>
-                            <p>Căn hộ 2 phòng ngủ</p>
+                            <p>{{__('Căn hộ 2 phòng ngủ')}}</p>
                         </div>
                         <div id-floorplan="A17.02 - DUPLEX" class="item js-floorplandetail">
                             <span style="background-color: #AAB3A1;"></span>
-                            <p>Căn hộ 1 phòng ngủ + 1</p>
+                            <p>{{__('Căn hộ 1 phòng ngủ + 1')}}</p>
                         </div>
                         <div id-floorplan="A17.04 - DUPLEX" class="item js-floorplandetail">
                             <span style="background-color: #E3E1E1;"></span>
-                            <p>Căn hộ STUDIO</p>
+                            <p>{{__('Căn hộ STUDIO')}}</p>
                         </div>
                     </div>
                     <div id="tow-a-3" class="floorplanImg towA">
@@ -647,27 +647,27 @@
                     <div rel="tow-a-3" class="hintFp">
                         <div id-floorplan="A21.11" class="item js-floorplandetail">
                             <span style="background-color: #DDFCE2;"></span>
-                            <p>Căn hộ 4 phòng ngủ</p>
+                            <p>{{__('Căn hộ 4 phòng ngủ')}}</p>
                         </div>
                         <div id-floorplan="A21.06" class="item js-floorplandetail">
                             <span style="background-color: #FCAB61;"></span>
-                            <p>Căn hộ 3 phòng ngủ + 1</p>
+                            <p>{{__('Căn hộ 3 phòng ngủ + 1')}}</p>
                         </div>
                         <div id-floorplan="A21.01" class="item js-floorplandetail">
                             <span style="background-color: #FDE3DC;"></span>
-                            <p>Căn hộ 3 phòng ngủ</p>
+                            <p>{{__('Căn hộ 3 phòng ngủ')}}</p>
                         </div>
                         <div id-floorplan="A21.09" class="item js-floorplandetail">
                             <span style="background-color: #D9EEFB;"></span>
-                            <p>Căn hộ 2 phòng ngủ</p>
+                            <p>{{__('Căn hộ 2 phòng ngủ')}}</p>
                         </div>
                         <div id-floorplan="A21.03" class="item js-floorplandetail">
                             <span style="background-color: #AAB3A1;"></span>
-                            <p>Căn hộ 1 phòng ngủ + 1</p>
+                            <p>{{__('Căn hộ 1 phòng ngủ + 1')}}</p>
                         </div>
                         <div id-floorplan="A21.02" class="item js-floorplandetail">
                             <span style="background-color: #E3E1E1;"></span>
-                            <p>Căn hộ STUDIO</p>
+                            <p>{{__('Căn hộ STUDIO')}}</p>
                         </div>
 
                     </div>
@@ -717,27 +717,27 @@
                     <div rel="tow-a-4" class="hintFp">
                         <div id-floorplan="A26.11 - DUPLEX" class="item js-floorplandetail">
                             <span style="background-color: #DDFCE2;"></span>
-                            <p>Căn hộ 4 phòng ngủ</p>
+                            <p>{{__('Căn hộ 4 phòng ngủ')}}</p>
                         </div>
                         <div id-floorplan="A26.06 - DUPLEX" class="item js-floorplandetail">
                             <span style="background-color: #FCAB61;"></span>
-                            <p>Căn hộ 3 phòng ngủ + 1</p>
+                            <p>{{__('Căn hộ 3 phòng ngủ + 1')}}</p>
                         </div>
                         <div id-floorplan="A26.01 - DUPLEX" class="item js-floorplandetail">
                             <span style="background-color: #FDE3DC;"></span>
-                            <p>Căn hộ 3 phòng ngủ</p>
+                            <p>{{__('Căn hộ 3 phòng ngủ')}}</p>
                         </div>
                         <div id-floorplan="A26.09 - DUPLEX" class="item js-floorplandetail">
                             <span style="background-color: #D9EEFB;"></span>
-                            <p>Căn hộ 2 phòng ngủ</p>
+                            <p>{{__('Căn hộ 2 phòng ngủ')}}</p>
                         </div>
                         <div id-floorplan="A26.03 - DUPLEX" class="item js-floorplandetail">
                             <span style="background-color: #AAB3A1;"></span>
-                            <p>Căn hộ 1 phòng ngủ + 1</p>
+                            <p>{{__('Căn hộ 1 phòng ngủ + 1')}}</p>
                         </div>
                         <div id-floorplan="A26.02 - DUPLEX" class="item js-floorplandetail">
                             <span style="background-color: #E3E1E1;"></span>
-                            <p>Căn hộ STUDIO</p>
+                            <p>{{__('Căn hộ STUDIO')}}</p>
                         </div>
 
                     </div>
@@ -787,27 +787,27 @@
                     <div rel="tow-a-5" class="hintFp">
                         <div id-floorplan="A30.11" class="item js-floorplandetail">
                             <span style="background-color: #DDFCE2;"></span>
-                            <p>Căn hộ 4 phòng ngủ</p>
+                            <p>{{__('Căn hộ 4 phòng ngủ')}}</p>
                         </div>
                         <div id-floorplan="A30.06" class="item js-floorplandetail">
                             <span style="background-color: #FCAB61;"></span>
-                            <p>Căn hộ 3 phòng ngủ + 1</p>
+                            <p>{{__('Căn hộ 3 phòng ngủ + 1')}}</p>
                         </div>
                         <div id-floorplan="A30.01" class="item js-floorplandetail">
                             <span style="background-color: #FDE3DC;"></span>
-                            <p>Căn hộ 3 phòng ngủ</p>
+                            <p>{{__('Căn hộ 3 phòng ngủ')}}</p>
                         </div>
                         <div id-floorplan="A30.09" class="item js-floorplandetail">
                             <span style="background-color: #D9EEFB;"></span>
-                            <p>Căn hộ 2 phòng ngủ</p>
+                            <p>{{__('Căn hộ 2 phòng ngủ')}}</p>
                         </div>
                         <div id-floorplan="A30.03" class="item js-floorplandetail">
                             <span style="background-color: #AAB3A1;"></span>
-                            <p>Căn hộ 1 phòng ngủ + 1</p>
+                            <p>{{__('Căn hộ 1 phòng ngủ + 1')}}</p>
                         </div>
                         <div id-floorplan="A30.02" class="item js-floorplandetail">
                             <span style="background-color: #E3E1E1;"></span>
-                            <p>Căn hộ STUDIO</p>
+                            <p>{{__('Căn hộ STUDIO')}}</p>
                         </div>
 
                     </div>
@@ -843,23 +843,23 @@
                     <div rel="tow-c-1" class="hintFp sideHint">
                         <div id-floorplan="C08.05" class="item js-floorplandetail">
                             <span style="background-color: #FCAB61;"></span>
-                            <p>Căn hộ 3 phòng ngủ + 1</p>
+                            <p>{{__('Căn hộ 3 phòng ngủ + 1')}}</p>
                         </div>
                         <div id-floorplan="C08.02" class="item js-floorplandetail">
                             <span style="background-color: #FDE3DC;"></span>
-                            <p>Căn hộ 3 phòng ngủ</p>
+                            <p>{{__('Căn hộ 3 phòng ngủ')}}</p>
                         </div>
                         <div id-floorplan="C08.04" class="item js-floorplandetail">
                             <span style="background-color: #D9EEFB;"></span>
-                            <p>Căn hộ 2 phòng ngủ</p>
+                            <p>{{__('Căn hộ 2 phòng ngủ')}}</p>
                         </div>
                         <div id-floorplan="C08.06" class="item js-floorplandetail">
                             <span style="background-color: #DCFDF5;"></span>
-                            <p>Căn hộ Officetel</p>
+                            <p>{{__('Căn hộ Officetel')}}</p>
                         </div>
                         <div id-floorplan="C08.07" class="item js-floorplandetail">
                             <span style="background-color: #FAFDC7;"></span>
-                            <p>Căn hộ Officetel</p>
+                            <p>{{__('Căn hộ Officetel')}}</p>
                         </div>
                     </div>
                     <div id="tow-c-2" class="floorplanImg towC">
@@ -893,7 +893,7 @@
                     <div rel="tow-c-2" class="hintFp sideHint">
                         <div id-floorplan="C11.02" class="item js-floorplandetail">
                             <span style="background-color: #DEFADA;"></span>
-                            <p>Căn hộ 3 phòng ngủ + 1</p>
+                            <p>{{__('Căn hộ 3 phòng ngủ + 1')}}</p>
                         </div>
                         <div id-floorplan="C11.05" class="item js-floorplandetail">
                             <span style="background-color: #FDE3DC;"></span>
@@ -940,19 +940,19 @@
                     <div rel="tow-c-3" class="hintFp sideHint">
                         <div id-floorplan="C12B.05" class="item js-floorplandetail">
                             <span style="background-color: #FDE3DC;"></span>
-                            <p>Căn hộ 3 phòng ngủ</p>
+                            <p>{{__('Căn hộ 3 phòng ngủ')}}</p>
                         </div>
                         <div id-floorplan="C12B.01" class="item js-floorplandetail">
                             <span style="background-color: #D9EEFB;"></span>
-                            <p>Căn hộ 2 phòng ngủ</p>
+                            <p>{{__('Căn hộ 2 phòng ngủ')}}</p>
                         </div>
                         <div id-floorplan="C12B.06" class="item js-floorplandetail">
                             <span style="background-color: #AAB3A1;"></span>
-                            <p>Căn hộ 1 phòng ngủ + 1</p>
+                            <p>{{__('Căn hộ 1 phòng ngủ + 1')}}</p>
                         </div>
                         <div id-floorplan="C12B.02" class="item js-floorplandetail">
                             <span style="background-color: #E3E1E1;"></span>
-                            <p>Căn hộ STUDIO</p>
+                            <p>{{__('Căn hộ STUDIO')}}</p>
                         </div>
                     </div>
                     
@@ -989,19 +989,19 @@
                     <div rel="tow-c-4" class="hintFp sideHint">
                         <div id-floorplan="C22.05" class="item js-floorplandetail">
                             <span style="background-color: #FDE3DC;"></span>
-                            <p>Căn hộ 3 phòng ngủ</p>
+                            <p>{{__('Căn hộ 3 phòng ngủ')}}</p>
                         </div>
                         <div id-floorplan="C22.01" class="item js-floorplandetail">
                             <span style="background-color: #D9EEFB;"></span>
-                            <p>Căn hộ 2 phòng ngủ</p>
+                            <p>{{__('Căn hộ 2 phòng ngủ')}}</p>
                         </div>
                         <div id-floorplan="C22.06" class="item js-floorplandetail">
                             <span style="background-color: #AAB3A1;"></span>
-                            <p>Căn hộ 1 phòng ngủ + 1</p>
+                            <p>{{__('Căn hộ 1 phòng ngủ + 1')}}</p>
                         </div>
                         <div id-floorplan="C22.02" class="item js-floorplandetail">
                             <span style="background-color: #E3E1E1;"></span>
-                            <p>Căn hộ STUDIO</p>
+                            <p>{{__('Căn hộ STUDIO')}}</p>
                         </div>
                     </div>
                     
@@ -1037,19 +1037,19 @@
                     <div rel="tow-c-5" class="hintFp sideHint">
                         <div id-floorplan="C28.05 - DUPLEX" class="item js-floorplandetail">
                             <span style="background-color: #FDE3DC;"></span>
-                            <p>Căn hộ 3 phòng ngủ</p>
+                            <p>{{__('Căn hộ 3 phòng ngủ')}}</p>
                         </div>
                         <div id-floorplan="C28.01 - DUPLEX" class="item js-floorplandetail">
                             <span style="background-color: #D9EEFB;"></span>
-                            <p>Căn hộ 2 phòng ngủ</p>
+                            <p>{{__('Căn hộ 2 phòng ngủ')}}</p>
                         </div>
                         <div id-floorplan="C28.06" class="item js-floorplandetail">
                             <span style="background-color: #DEFADA;"></span>
-                            <p>Căn hộ 1 phòng ngủ + 1</p>
+                            <p>{{__('Căn hộ 1 phòng ngủ + 1')}}</p>
                         </div>
                         <div id-floorplan="C28.02" class="item js-floorplandetail">
                             <span style="background-color: #E3E1E1;"></span>
-                            <p>Căn hộ STUDIO</p>
+                            <p>{{__('Căn hộ STUDIO')}}</p>
                         </div>
                     </div>
 
@@ -1085,15 +1085,15 @@
                     <div rel="tow-b-1" class="hintFp sideHint">
                         <div id-floorplan="B08.01" class="item js-floorplandetail">
                             <span style="background-color: #FDE3DC;"></span>
-                            <p>Căn hộ 3 phòng ngủ</p>
+                            <p>{{__('Căn hộ 3 phòng ngủ')}}</p>
                         </div>
                         <div id-floorplan="B08.05" class="item js-floorplandetail">
                             <span style="background-color: #D9EEFB;"></span>
-                            <p>Căn hộ 2 phòng ngủ</p>
+                            <p>{{__('Căn hộ 2 phòng ngủ')}}</p>
                         </div>
                         <div id-floorplan="B08.02" class="item js-floorplandetail">
                             <span style="background-color: #AAB3A1;"></span>
-                            <p>Căn hộ 1 phòng ngủ + 1</p>
+                            <p>{{__('Căn hộ 1 phòng ngủ + 1')}}</p>
                         </div>
                     </div>
 
@@ -1126,15 +1126,15 @@
                     <div rel="tow-b-2" class="hintFp sideHint">
                         <div id-floorplan="B12.01" class="item js-floorplandetail">
                             <span style="background-color: #FDE3DC;"></span>
-                            <p>Căn hộ 3 phòng ngủ</p>
+                            <p>{{__('Căn hộ 3 phòng ngủ')}}</p>
                         </div>
                         <div id-floorplan="B12.05" class="item js-floorplandetail">
                             <span style="background-color: #D9EEFB;"></span>
-                            <p>Căn hộ 2 phòng ngủ</p>
+                            <p>{{__('Căn hộ 2 phòng ngủ')}}</p>
                         </div>
                         <div id-floorplan="B12.02" class="item js-floorplandetail">
                             <span style="background-color: #AAB3A1;"></span>
-                            <p>Căn hộ 1 phòng ngủ + 1</p>
+                            <p>{{__('Căn hộ 1 phòng ngủ + 1')}}</p>
                         </div>
                     </div>
                     
@@ -1172,23 +1172,23 @@
                     <div rel="tow-b-3" class="hintFp sideHint">
                         <div id-floorplan="B21.01" class="item js-floorplandetail">
                             <span style="background-color: #DDFCE2;"></span>
-                            <p>Căn hộ 4 phòng ngủ</p>
+                            <p>{{__('Căn hộ 4 phòng ngủ')}}</p>
                         </div>
                         <div id-floorplan="B21.05" class="item js-floorplandetail">
                             <span style="background-color: #D9EEFB;"></span>
-                            <p>Căn hộ 2 phòng ngủ</p>
+                            <p>{{__('Căn hộ 2 phòng ngủ')}}</p>
                         </div>
                         <div id-floorplan="B21.04" class="item js-floorplandetail">
                             <span style="background-color: #FDE3DC;"></span>
-                            <p>Căn hộ 3 phòng ngủ</p>
+                            <p>{{__('Căn hộ 3 phòng ngủ')}}</p>
                         </div>
                         <div id-floorplan="B21.02" class="item js-floorplandetail">
                             <span style="background-color: #AAB3A1;"></span>
-                            <p>Căn hộ 1 phòng ngủ + 1</p>
+                            <p>{{__('Căn hộ 1 phòng ngủ + 1')}}</p>
                         </div>
                         <div id-floorplan="B21.06" class="item js-floorplandetail">
                             <span style="background-color: #E3E1E1;"></span>
-                            <p>Căn hộ STUDIO</p>
+                            <p>{{__('Căn hộ STUDIO')}}</p>
                         </div>
                     </div>
 
@@ -1225,23 +1225,23 @@
                     <div rel="tow-b-4" class="hintFp sideHint">
                         <div id-floorplan="B28.01" class="item js-floorplandetail">
                             <span style="background-color: #DDFCE2;"></span>
-                            <p>Căn hộ 4 phòng ngủ</p>
+                            <p>{{__('Căn hộ 4 phòng ngủ')}}</p>
                         </div>
                         <div id-floorplan="B28.05" class="item js-floorplandetail">
                             <span style="background-color: #D9EEFB;"></span>
-                            <p>Căn hộ 2 phòng ngủ</p>
+                            <p>{{__('Căn hộ 2 phòng ngủ')}}</p>
                         </div>
                         <div id-floorplan="B28.04" class="item js-floorplandetail">
                             <span style="background-color: #FDE3DC;"></span>
-                            <p>Căn hộ 3 phòng ngủ</p>
+                            <p>{{__('Căn hộ 3 phòng ngủ')}}</p>
                         </div>
                         <div id-floorplan="B28.02" class="item js-floorplandetail">
                             <span style="background-color: #AAB3A1;"></span>
-                            <p>Căn hộ 1 phòng ngủ + 1</p>
+                            <p>{{__('Căn hộ 1 phòng ngủ + 1')}}</p>
                         </div>
                         <div id-floorplan="B28.06" class="item js-floorplandetail">
                             <span style="background-color: #E3E1E1;"></span>
-                            <p>Căn hộ STUDIO</p>
+                            <p>{{__('Căn hộ STUDIO')}}</p>
                         </div>
                     </div>
 
@@ -1274,19 +1274,19 @@
                     <div rel="tow-b-5" class="hintFp sideHint">
                         <div id-floorplan="B33.03 - DUPLEX" class="item js-floorplandetail">
                             <span style="background-color: #D9EEFB;"></span>
-                            <p>Căn hộ 2 phòng ngủ</p>
+                            <p>{{__('Căn hộ 2 phòng ngủ')}}</p>
                         </div>
                         <div id-floorplan="B33.01 - DUPLEX" class="item js-floorplandetail">
                             <span style="background-color: #FDE3DC;"></span>
-                            <p>Căn hộ 3 phòng ngủ</p>
+                            <p>{{__('Căn hộ 3 phòng ngủ')}}</p>
                         </div>
                         <div id-floorplan="B33.02 - DUPLEX" class="item js-floorplandetail">
                             <span style="background-color: #AAB3A1;"></span>
-                            <p>Căn hộ 1 phòng ngủ + 1</p>
+                            <p>{{__('Căn hộ 1 phòng ngủ + 1')}}</p>
                         </div>
                         <div id-floorplan="B33.06 - DUPLEX" class="item js-floorplandetail">
                             <span style="background-color: #E3E1E1;"></span>
-                            <p>Căn hộ STUDIO</p>
+                            <p>{{__('Căn hộ STUDIO')}}</p>
                         </div>
                     </div>
 
