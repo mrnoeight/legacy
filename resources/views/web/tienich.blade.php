@@ -1,8 +1,8 @@
 @extends('web.layouts.base')
 
-@section('title', 'Tien ich')
+@section('title') {{ $oPage->seo_title }} @endsection
 
-@section('hidden_page', 'Tien ich')
+@section('description') {{ $oPage->seo_description }} @endsection
 
 @section('content')
 
@@ -216,7 +216,7 @@
         <div class="slideAboutPopup">
             @foreach ($pool as $s)
             <div class="item" style="background: url({{ $s->banner_url }}) center no-repeat">
-                <img data-src="{{ $s->banner_mb_url }}" class="lazyload" />
+                <img data-src="{{ $s->banner_url }}" class="lazyload" />
                 <div class="container">
                     <div class="copy">
                         <h2 class="mainTt">{!! nl2br($s->head_title1) !!}</h2>
@@ -233,7 +233,7 @@
         <div class="slideAboutPopup">
             @foreach ($gym as $s)
             <div class="item" style="background: url({{ $s->banner_url }}) center no-repeat">
-                <img data-src="{{ $s->banner_mb_url }}" class="lazyload" />
+                <img data-src="{{ $s->banner_url }}" class="lazyload" />
                 <div class="container">
                     <div class="copy">
                         <h2 class="mainTt">{!! nl2br($s->head_title1) !!}</h2>
@@ -250,7 +250,7 @@
         <div class="slideAboutPopup">
             @foreach ($sauna as $s)
             <div class="item" style="background: url({{ $s->banner_url }}) center no-repeat">
-                <img data-src="{{ $s->banner_mb_url }}" class="lazyload" />
+                <img data-src="{{ $s->banner_url }}" class="lazyload" />
                 <div class="container">
                     <div class="copy">
                         <h2 class="mainTt">{!! nl2br($s->head_title1) !!}</h2>
@@ -267,7 +267,7 @@
         <div class="slideAboutPopup">
             @foreach ($playground as $s)
             <div class="item" style="background: url({{ $s->banner_url }}) center no-repeat">
-                <img data-src="{{ $s->banner_mb_url }}" class="lazyload" />
+                <img data-src="{{ $s->banner_url }}" class="lazyload" />
                 <div class="container">
                     <div class="copy">
                         <h2 class="mainTt">{!! nl2br($s->head_title1) !!}</h2>
@@ -284,7 +284,7 @@
         <div class="slideAboutPopup">
             @foreach ($yoga as $s)
             <div class="item" style="background: url({{ $s->banner_url }}) center no-repeat">
-                <img data-src="{{ $s->banner_mb_url }}" class="lazyload" />
+                <img data-src="{{ $s->banner_url }}" class="lazyload" />
                 <div class="container">
                     <div class="copy">
                         <h2 class="mainTt">{!! nl2br($s->head_title1) !!}</h2>
@@ -301,7 +301,7 @@
         <div class="slideAboutPopup">
             @foreach ($park as $s)
             <div class="item" style="background: url({{ $s->banner_url }}) center no-repeat">
-                <img data-src="{{ $s->banner_mb_url }}" class="lazyload" />
+                <img data-src="{{ $s->banner_url }}" class="lazyload" />
                 <div class="container">
                     <div class="copy">
                         <h2 class="mainTt">{!! nl2br($s->head_title1) !!}</h2>

@@ -8,7 +8,7 @@ $(document).ready(function() {
 
         var isErr = false;
 
-        if ($('#custLang').val() == 'vn') {
+        if ($('#custLang').val() == "vi") {
             name_str = 'Xin vui lòng nhập họ tên';
             phone_str = 'Xin vui lòng nhập số điện thoại';
             email_str = 'Xin vui lòng nhập email';
@@ -53,11 +53,8 @@ $(document).ready(function() {
             
 
             var type = "POST";
-            var url = window.location.href;
-            url = url.replace('index.html', '');
-            url = url.replace('index-en.html', '');
 
-            var ajaxurl = url + 'php/sendmail';
+            var ajaxurl = host_url + '/sendemail';
             var formData = {
                 name: $("#custName").val(),
                 email: $("#custEmail").val(),
@@ -67,6 +64,9 @@ $(document).ready(function() {
                 type: type,
                 url: ajaxurl,
                 data: formData,
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                },
                 dataType: 'json',
                 success: function (data) {
                     console.log('email sent');

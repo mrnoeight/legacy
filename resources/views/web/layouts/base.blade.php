@@ -61,6 +61,19 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
 
+    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-157950355-17"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'UA-157950355-17');
+	</script> -->
+
+	<!--Start GTM code-->
+	<!-- <script>var dataLayer = [{ 'trackingId': 'UA-157950355-17' }];</script>
+	<script src="//crm.twin.vn/scripts/tgtm.js"></script> -->
+	<!--End GTM code-->
 
 </head>
 
@@ -69,7 +82,8 @@
     $oFooterLogo = tk1GetFooterLogo();
     $arrMenuText = tk1GetMenu(); 
     $arrFooterText = tk1GetFooter(); 
-    $arrSidebarText = tk1GetSidebar(); 
+    $arrDisables = tk1GetDisabledPages();
+    $arrSidebarText = tk1GetSidebar();
 @endphp
 
 <body>
@@ -85,8 +99,12 @@
                 <nav>
                     <a href="{{ route('home') }}" {{$menu_active['home']}}>{{ isset($arrMenuText['menu_home']) ? $arrMenuText['menu_home'] :  __('Trang chủ') }}</a>
                     <a href="{{ route('home') }}#locationWrap" {{$menu_active['location']}}>{{ isset($arrMenuText['menu_location']) ? $arrMenuText['menu_location'] : __('Vị trí')}}</a>
+                    @if (!in_array('thong-tin-can-ho', $arrDisables))
                     <a href="{{ route('apartment') }}" {{$menu_active['apartment']}}>{{ isset($arrMenuText['menu_apartment']) ? $arrMenuText['menu_apartment'] : __('Thông tin căn hộ')}}</a>
+                    @endif
+                    @if (!in_array('tien-ich', $arrDisables))
                     <a href="{{ route('tienich') }}" {{$menu_active['utilities']}}>{{ isset($arrMenuText['menu_amenities']) ? $arrMenuText['menu_amenities'] : __('Tiện ích')}}</a>
+                    @endif
                     <a href="{{ route('gallery') }}" {{$menu_active['gallery']}}>{{ isset($arrMenuText['menu_gallery']) ? $arrMenuText['menu_gallery'] : __('Thư viện')}}</a>
 
                 </nav>
@@ -94,7 +112,9 @@
 
             <div class="right">
                 <nav>
+                    @if (!in_array('tin-tuc', $arrDisables))
                     <a href="{{ route('news') }}" {{$menu_active['news']}}>{{ isset($arrMenuText['menu_news']) ? $arrMenuText['menu_news'] : __('Tin tức')}}</a>
+                    @endif
                     <!-- <a href="#" class="">VR 360 tour</a> -->
                     <a href="{{ route('lancaster') }}" {{$menu_active['lancaster']}}>{{ isset($arrMenuText['menu_lancaster']) ? $arrMenuText['menu_lancaster'] : 'Lancaster By Trung Thuy' }}</a>
                     <a href="{{ route('progress') }}" {{$menu_active['progress']}}>{{ isset($arrMenuText['menu_progress']) ? $arrMenuText['menu_progress'] :  __('Tiến độ')}}</a>
@@ -120,8 +140,12 @@
                 <nav>
                     <a href="{{ route('home') }}" {{$menu_active['home']}}>{{ isset($arrMenuText['menu_home']) ? $arrMenuText['menu_home'] :  __('Trang chủ') }}</a>
                     <a href="{{ route('home') }}#locationWrap" {{$menu_active['location']}}>{{ isset($arrMenuText['menu_location']) ? $arrMenuText['menu_location'] : __('Vị trí')}}</a>
+                    @if (!in_array('thong-tin-can-ho', $arrDisables))
                     <a href="{{ route('apartment') }}" {{$menu_active['apartment']}}>{{ isset($arrMenuText['menu_apartment']) ? $arrMenuText['menu_apartment'] : __('Thông tin căn hộ')}}</a>
+                    @endif
+                    @if (!in_array('tien-ich', $arrDisables))
                     <a href="{{ route('tienich') }}" {{$menu_active['utilities']}}>{{ isset($arrMenuText['menu_amenities']) ? $arrMenuText['menu_amenities'] : __('Tiện ích')}}</a>
+                    @endif
                     <a href="{{ route('gallery') }}" {{$menu_active['gallery']}}>{{ isset($arrMenuText['menu_gallery']) ? $arrMenuText['menu_gallery'] : __('Thư viện')}}</a>
                 </nav>
             </div>
@@ -130,7 +154,9 @@
                     class="lazyload"></a>
             <div class="right">
                 <nav>
+                    @if (!in_array('tin-tuc', $arrDisables))
                     <a href="{{ route('news') }}" {{$menu_active['news']}}>{{ isset($arrMenuText['menu_news']) ? $arrMenuText['menu_news'] : __('Tin tức')}}</a>
+                    @endif
                     <a href="{{ route('lancaster') }}" {{$menu_active['lancaster']}}>{{ isset($arrMenuText['menu_lancaster']) ? $arrMenuText['menu_lancaster'] : 'Lancaster By Trung Thuy' }}</a>
                     <a href="{{ route('progress') }}" {{$menu_active['progress']}}>{{ isset($arrMenuText['menu_progress']) ? $arrMenuText['menu_progress'] :  __('Tiến độ')}}</a>
                     <a href="{{ route('home') }}#infomationWrap" {{$menu_active['about']}}>{{ isset($arrMenuText['menu_contact']) ? $arrMenuText['menu_contact'] :  __('Liên hệ')}}</a>
@@ -173,50 +199,55 @@
                         <span class="subMb js-subMenuMb"><img data-src="{{ asset('assets/images/ar-1.png') }}"
                                 class="lazyload"></span>
                         <div class="submenu">
-                            <a href="{{ route('home') }}#overviewWrap">Tổng quan dự án</a>
-                            <a href="{{ route('home') }}#aboutUsWrap">Vài nét về Tập đoàn Trung Thuỷ</a>
-                            <a href="{{ route('home') }}#galleryWrap">Hình ảnh dự án</a>
-                            <a href="{{ route('home') }}#partnerWrap">Đối tác</a>
-                            <a href="{{ route('home') }}#infomationWrap">Liên hệ</a>
+                            <a href="{{ route('home') }}#overviewWrap">{{__('Tổng quan dự án')}}</a>
+                            <a href="{{ route('home') }}#aboutUsWrap">{{__('Vài nét về Tập đoàn Trung Thủy')}}</a>
+                            <a href="{{ route('home') }}#galleryWrap">{{__('Hình ảnh dự án')}}</a>
+                            <a href="{{ route('home') }}#partnerWrap">{{__('Đối tác')}}</a>
+                            <a href="{{ route('home') }}#infomationWrap">{{__('Liên hệ')}}</a>
                         </div>
                     </li>
                     <li>
                         <a href="{{ route('home') }}#locationWrap" {{$menu_active['location']}}>{{ isset($arrMenuText['menu_location']) ? $arrMenuText['menu_location'] : __('Vị trí')}}</a>
                     </li>
+                    @if (!in_array('thong-tin-can-ho', $arrDisables))
                     <li>
                         <a href="{{ route('apartment') }}" {{$menu_active['apartment']}}>{{ isset($arrMenuText['menu_apartment']) ? $arrMenuText['menu_apartment'] : __('Thông tin căn hộ')}}</a>
                         <span class="subMb js-subMenuMb"><img data-src="{{ asset('assets/images/ar-1.png') }}"
                                 class="lazyload"></span>
                         <div class="submenu">
-                            <a href="{{ route('apartment') }}#masterplan">Masterplan</a>
-                            <a href="{{ route('apartment') }}#floorplan">Mặt bằng tiện ích</a>
-                            <a href="{{ route('apartment') }}#towerFloorplan">Mặt bằng toà</a>
+                            <a href="{{ route('apartment') }}#masterplan">Master plan</a>
+                            <a href="{{ route('apartment') }}#floorplan">{{ isset($arrMenuText['ground_utility']) ? $arrMenuText['ground_utility'] : 'Mặt bằng tiện ích' }}</a>
+                            <a href="{{ route('apartment') }}#rooftop">{{ isset($arrMenuText['floor_plan']) ? $arrMenuText['floor_plan'] : 'Mặt bằng toà' }}</a>
                         </div>
                     </li>
+                    @endif
+                    @if (!in_array('tien-ich', $arrDisables))
                     <li>
                         <a href="{{ route('tienich') }}" {{$menu_active['utilities']}}>{{ isset($arrMenuText['menu_amenities']) ? $arrMenuText['menu_amenities'] : __('Tiện ích')}}</a>
                         <span class="subMb js-subMenuMb"><img data-src="{{ asset('assets/images/ar-1.png') }}"
                                 class="lazyload"></span>
                         <div class="submenu">
-                            <a href="{{ route('tienich') }}#PrivateLegacyclub">Private Legacy club</a>
-                            <a href="{{ route('tienich') }}#ShoppingCenter">Trung tâm thương mại</a>
-                            <a href="{{ route('tienich') }}#HealthUtility">Tiện ích sức khoẻ</a>
-                            <a href="{{ route('tienich') }}#Entertainment">Giải trí </a>
-                            <a href="{{ route('tienich') }}#Business">Business</a>
+                            <a href="{{ route('tienich') }}#PrivateLegacyclub">{{__('Private Legacy club')}}</a>
+                            <a href="{{ route('tienich') }}#ShoppingCenter">{{__('Xu hướng thời thượng')}}</a>
+                            <a href="{{ route('tienich') }}#HealthUtility">{{__('Sức khỏe')}}</a>
+                            <a href="{{ route('tienich') }}#Entertainment">{{__('Giải trí')}} </a>
+                            <a href="{{ route('tienich') }}#Business">{{__('Business')}}</a>
                         </div>
                     </li>
+                    @endif
                     <li><a href="{{ route('gallery') }}" {{$menu_active['gallery']}}>{{ isset($arrMenuText['menu_gallery']) ? $arrMenuText['menu_gallery'] : __('Thư viện')}}</a></li>
-
+                    @if (!in_array('tin-tuc', $arrDisables))
                     <li><a href="{{ route('news') }}" {{$menu_active['news']}}>{{ isset($arrMenuText['menu_news']) ? $arrMenuText['menu_news'] : __('Tin tức')}}</a></li>
+                    @endif
                     <!-- <li><a href="#" class="">VR 360 tour</a></li> -->
                     <li>
                         <a href="{{ route('lancaster') }}" {{$menu_active['lancaster']}}>{{ isset($arrMenuText['menu_lancaster']) ? $arrMenuText['menu_lancaster'] : 'Lancaster By Trung Thuy' }}</a>
                         <span class="subMb js-subMenuMb"><img data-src="{{ asset('assets/images/ar-1.png') }}"
                                 class="lazyload"></span>
                         <div class="submenu">
-                            <a href="{{ route('lancaster') }}#LancasterTheMaster">Lancaster The Master</a>
-                            <a href="{{ route('lancaster') }}#LancasterClub">Lancaster Club</a>
-                            <a href="{{ route('lancaster') }}#ConsultingTeam">Đội ngũ tư vấn</a>
+                            <a href="{{ route('lancaster') }}#LancasterTheMaster">{{ isset($arrMenuText['lan.master']) ? $arrMenuText['lan.master'] : __('Lancaster The Master')}}</a>
+                            <a href="{{ route('lancaster') }}#LancasterClub">{{ isset($arrMenuText['lan.club']) ? $arrMenuText['lan.club'] : __('Lancaster Club')}}</a>
+                            <a href="{{ route('lancaster') }}#ConsultingTeam">{{ isset($arrMenuText['lan.consultant']) ? $arrMenuText['lan.consultant'] : __('Đội ngũ tư vấn')}}</a>
                         </div>
                     </li>
                     <li><a href="{{ route('progress') }}" {{$menu_active['progress']}}>{{ isset($arrMenuText['menu_progress']) ? $arrMenuText['menu_progress'] :  __('Tiến độ')}}</a></li>
@@ -278,7 +309,7 @@
                     </div>
                 </div>
                 <div class="share">
-                    <a href="{{isset($arrFooterText['footer.facebook']) ? $arrFooterText['footer.facebook'] : 'https://www.facebook.com/LancasterbyTrungThuy/' }}" target="_blank"><img
+                    <a href="{{isset($arrFooterText['footer.facebook']) ? $arrFooterText['footer.facebook'] : 'https://www.facebook.com/LancasterbyTrungThuy/'}}" target="_blank"><img
                             data-src="{{ asset('assets/images/ico-fb.png') }}" class="lazyload" /></a>
                     <a href="{{isset($arrFooterText['footer.youtube']) ? $arrFooterText['footer.youtube'] : 'https://www.youtube.com/channel/UCrcWCZlgmHcgQV6L02e75kg'}}" target="_blank"><img
                             data-src="{{ asset('assets/images/ico-yt.png') }}" class="lazyload" /></a>
@@ -297,13 +328,23 @@
             </svg>
 
         </div>
-        <a class="item ttg" href="{{ $arrSidebarText['trungthuy'] }}" target="_blank"></a>
-        <a class="item vr360" href="{{$arrSidebarText['vr']}}"></a>
-        <a class="item messenger" href="{{$arrSidebarText['chat']}}"></a>
-        <a class="pdf" href="{{$arrSidebarText['brochure']}}">
+        @if (!in_array('trungthuy', $arrSidebarText['disables']))
+        <a class="item ttg" href="{{ isset($arrSidebarText['trungthuy']) ? $arrSidebarText['trungthuy'] : 'https://trungthuy.com/' }}" target="_blank"></a>
+        @endif
+
+        @if (!in_array('vr', $arrSidebarText['disables']))
+        <a class="item vr360" href="{{isset($arrSidebarText['vr']) ? $arrSidebarText['vr'] : '#'}}"></a>
+        @endif
+
+        @if (!in_array('chat', $arrSidebarText['disables']))
+        <a class="item messenger" href="{{isset($arrSidebarText['chat']) ? $arrSidebarText['chat'] : '#'}}"></a>
+        @endif
+
+        @if (!in_array('brochure', $arrSidebarText['disables']))
+        <a class="pdf" href="{{isset($arrSidebarText['brochure']) ? $arrSidebarText['brochure'] : '#'}}">
             <div class="copy">
-                <p>{{$arrSidebarText['click']}}</p>
-                <h2>{{$arrSidebarText['ebrochure']}}</h2>
+                <p>{{isset($arrSidebarText['click']) ? $arrSidebarText['click'] : 'click to download'}}</p>
+                <h2>{{isset($arrSidebarText['ebrochure']) ? $arrSidebarText['ebrochure'] : 'e - brochure'}}</h2>
             </div>
             <div class="iconSvg">
                 <svg width="1em" height="1em" viewBox="0 0 25 26" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -325,6 +366,7 @@
                 </svg>
             </div>
         </a>
+        @endif
     </div>
 
     <div id="FloorPlanDetail" class="floorPlanDetailPu">

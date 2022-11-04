@@ -68,6 +68,7 @@ class StoreHomepage extends TranslatableFormRequest
     {
         return [
             'page_name' => ['nullable', 'string'],
+            'enabled' => ['sometimes', 'boolean'],
         ];
     }
 

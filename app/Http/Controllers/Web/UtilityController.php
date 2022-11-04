@@ -16,7 +16,7 @@ class UtilityController extends Controller
 
     public function index()
     {
-        $oPage = Homepage::where('page_name', 'tien-ich')->first();
+        $oPage = Homepage::where('page_name', 'tien-ich')->where('enabled',0)->firstOrFail();
         $oSliders = BlockInfo::where('block_type', 'slider_facilities')->get();  
         $oMidSliders = BlockInfo::where('block_type', 'slider_facilities2')->get();        
         $healths = BlockInfo::where('block_type', 'health_utilities')->get();        

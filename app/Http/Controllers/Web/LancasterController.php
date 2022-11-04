@@ -25,8 +25,13 @@ class LancasterController extends Controller
         $oText = BlockInfo::where('block_type', 'lancaster_text')->get();
 
         $arrText = [];
-        foreach ($oText as $text)
+        $arrSecDisables = [];
+        foreach ($oText as $text) {
             $arrText[$text->block_name] = $text->head_title1;
+            if ($text->enabled == 1)
+                $arrSecDisables[] = $text->block_name;
+        }
+            
         
         $goldCard = $diamondCard = $platinumCard = new BlockInfo;
         foreach ($oCards as $card) {
@@ -49,10 +54,10 @@ class LancasterController extends Controller
                 
         }
 
-        //print_r($arrConsultants);
+        //print_r($arrSecDisables);
 
         $menu_active = ['home'=>'', 'location'=>'', 'apartment'=>'', 'utilities'=>'', 'progress'=>'', 'gallery'=>'', 'news'=>'', 'lancaster'=>' class=active', 'about'=>''];
         
-        return view('web.lancaster', compact('menu_active', 'oPage', 'oMaster', 'oBasic', 'oEnhance', 'oButler', 'goldCard', 'diamondCard', 'platinumCard', 'arrConsultants', 'arrText', 'oPCon'));
+        return view('web.lancaster', compact('menu_active', 'oPage', 'oMaster', 'oBasic', 'oEnhance', 'oButler', 'goldCard', 'diamondCard', 'platinumCard', 'arrConsultants', 'arrText', 'oPCon', 'arrSecDisables'));
     }
 }

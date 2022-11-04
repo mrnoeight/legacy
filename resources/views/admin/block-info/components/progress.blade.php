@@ -19,8 +19,22 @@
 <div class="row">
     @foreach($locales as $locale)
         <div class="col"@if(!$loop->first) v-show="isFormLocalized && currentLocale == '{{ $locale }}'" v-cloak @endif>
+            <div class="form-group row" :class="{'has-danger': errors.has('head_tag1_{{ $locale }}'), 'has-success': this.fields.head_tag1_{{ $locale }} && this.fields.head_tag1_{{ $locale }}.valid }">
+                <label for="head_tag1_{{ $locale }}" class="col-md-2 col-form-label text-md-right">Title</label>
+                <div class="col-md-9" :class="{'col-xl-8': !isFormLocalized }">
+                    <textarea v-model="form.head_tag1.{{ $locale }}" v-validate="''" class="form-control" :class="{'form-control-danger': errors.has('head_tag1_{{ $locale }}'), 'form-control-success': this.fields.head_tag1_{{ $locale }} && this.fields.head_tag1_{{ $locale }}.valid }" id="head_tag1_{{ $locale }}" head_tag1="head_tag1_{{ $locale }}" placeholder="" ></textarea>
+                    <div v-if="errors.has('head_tag1_{{ $locale }}')" class="form-control-feedback form-text" v-cloak>{{'{{'}} errors.first('head_tag1_{{ $locale }}') }}</div>
+                </div>
+            </div>
+        </div>
+    @endforeach
+</div>
+
+<div class="row">
+    @foreach($locales as $locale)
+        <div class="col"@if(!$loop->first) v-show="isFormLocalized && currentLocale == '{{ $locale }}'" v-cloak @endif>
             <div class="form-group row" :class="{'has-danger': errors.has('head_title1_{{ $locale }}'), 'has-success': this.fields.head_title1_{{ $locale }} && this.fields.head_title1_{{ $locale }}.valid }">
-                <label for="head_title1_{{ $locale }}" class="col-md-2 col-form-label text-md-right">Title</label>
+                <label for="head_title1_{{ $locale }}" class="col-md-2 col-form-label text-md-right">Description</label>
                 <div class="col-md-9" :class="{'col-xl-8': !isFormLocalized }">
                     <textarea v-model="form.head_title1.{{ $locale }}" v-validate="''" class="form-control" :class="{'form-control-danger': errors.has('head_title1_{{ $locale }}'), 'form-control-success': this.fields.head_title1_{{ $locale }} && this.fields.head_title1_{{ $locale }}.valid }" id="head_title1_{{ $locale }}" head_title1="head_title1_{{ $locale }}" placeholder="" ></textarea>
                     <div v-if="errors.has('head_title1_{{ $locale }}')" class="form-control-feedback form-text" v-cloak>{{'{{'}} errors.first('head_title1_{{ $locale }}') }}</div>

@@ -1,8 +1,8 @@
 @extends('web.layouts.base')
 
-@section('title', 'News')
+@section('title') {{ $news->head_title1 }} @endsection
 
-@section('hidden_page', 'News')
+@section('description') {{ $news->head_tag1 }} @endsection
 
 @section('content')
 
@@ -14,9 +14,9 @@
     <section class="section newsDetailWrap">
         <div class="container">
             <div class="top">
-                <h4>Tin tức</h4>
+                <h4>{{__('Tin tức')}}</h4>
                 <h2 class="mainTt">{{ $news->head_title1 }}</h2>
-                <p class="date">{{__('Ngày đăng')}}: <strong>{{ \Carbon\Carbon::parse($news->block_date)->formatLocalized('%d %B %Y')  }}</strong></p>
+                <p class="date">{{__('Ngày đăng')}}: <strong>{{ tk1FormatDateLocal($news->block_date, 2)  }}</strong></p>
                 <p class="cap">{{ $news->head_tag1 }} </p>
             </div>
             <div class="content">
@@ -37,7 +37,7 @@
                     <div class="copy">
                         <h3>{{ $n->head_title1 }}</h3>
                         <div class="bot">
-                            <p class="date">{{ \Carbon\Carbon::parse($n->block_date)->formatLocalized('%d %B %Y')  }}</p>
+                            <p class="date">{{ tk1FormatDateLocal($n->block_date, 2)  }}</p>
                             <a href="#">
                                 <svg width="1em" height="1em" viewBox="0 0 12 12" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">

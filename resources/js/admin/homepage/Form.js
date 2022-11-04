@@ -19,10 +19,11 @@ Vue.component('homepage-form', {
                 page_name:  '',
                 seo_title:  this.getLocalizedFormDefaults(),
                 seo_description:  this.getLocalizedFormDefaults(),
+                enabled:  false ,
                 //seo_author:  '',
                 
             },
-            mediaCollections: ['banner', 'banner_mb', 'middle_banner', 'middle_banner_mb']
+            mediaCollections: ['banner', 'banner_mb', 'middle_banner', 'middle_banner_mb', 'map', 'map_mb', 'map_en', 'map_en_mb']
         }
     }
 

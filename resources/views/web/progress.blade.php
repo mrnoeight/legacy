@@ -1,8 +1,8 @@
 @extends('web.layouts.base')
 
-@section('title', 'Tien do')
+@section('title') {{ $oPage->seo_title }} @endsection
 
-@section('hidden_page', 'Tien do')
+@section('description') {{ $oPage->seo_description }} @endsection
 
 @section('content')
 
@@ -24,7 +24,7 @@
             <div class="progresslist">
                 @foreach ($arr as $p)
                 <div data-popup="idProHere{{ $p->id }}" class="item animate">
-                    <h3>{{tk1FormatDateLocal($p->block_date)}}</h3>
+                    <h3>{{$p->head_tag1}}</h3>
                     <div class="imgPage">
                         <div style="background: url({{ $p->gallery_url }}) center no-repeat">
                         </div>
@@ -49,7 +49,7 @@
 @foreach ($arr as $p)
 <div id="idProHere{{$p->id}}" class="popup popupProgress">
     <div class="btnClose jsClosePopupProgress"></div>
-    <h3>{{__('Tháng')}} {{ \Carbon\Carbon::parse($p->block_date)->formatLocalized('%m - %Y')  }}</h3>
+    <h3>{{ $p->head_tag1  }}</h3>
     <div class="slideProgressPopup">
         @foreach ($p->getListGalleryImage() as $k=>$v)
         <div class="item">

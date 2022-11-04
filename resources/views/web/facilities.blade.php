@@ -1,8 +1,8 @@
 @extends('web.layouts.base')
 
-@section('title', 'Tien ich')
+@section('title') {{ $oPage->seo_title }} @endsection
 
-@section('hidden_page', 'Tien ich')
+@section('description') {{ $oPage->seo_description }} @endsection
 
 @section('content')
 

@@ -1,8 +1,8 @@
 @extends('web.layouts.base')
 
-@section('title', 'Homepage')
+@section('title') {{ $oPage->seo_title }} @endsection
 
-@section('hidden_page', 'Homepage')
+@section('description') {{ $oPage->seo_description }} @endsection
 
 @section('content')
 <!-- MAIN PAGE -->
@@ -42,8 +42,9 @@
                 <p>{{ $oPage->mid_desc1 }}</p>
             </div>
         </div>
-        <div class="img parallax animate" data-image-src="{{ $oPage->middle_banner_url }}" data-parallax="scroll"
-            data-bleed="0" data-speed="0.4"></div>
+        <div class="img parallax animate"
+            data-image-src="{{ tk1IsMobile() ? $oPage->middle_banner_mb_url : $oPage->middle_banner_url }}"
+            data-parallax="scroll" data-bleed="0" data-speed="0.4"></div>
         <div class="container">
             <div class="overviewInfo">
                 <div class="item">
@@ -80,8 +81,8 @@
 					<h2 class="mainTt">{!! nl2br($arrText['location']) !!}</h2>
 				</div>
 			</div>
-			<img class="map pc" src="assets/images/demo/map.jpg" />
-            <img class="map mb" src="assets/images/demo/map.jpg" />
+			<img class="map pc" src="{{ $app->getLocale() == 'en' ? $oPage->map_en_url : $oPage->map_url }}" />
+            <img class="map mb" src="{{ $app->getLocale() == 'en' ? $oPage->map_en_mb_url : $oPage->map_mb_url }}" />
 		</section>
     <!-- <section class="section locationWrap">
         <div class="container mb">
@@ -249,19 +250,21 @@
             <h2 class="mainTt">{!! nl2br($arrText['lancaster']) !!}</h2>
         </div>
         <div class="container animate">
-            <form>
+            <form id="frmRegistration" method="POST">
+                <input type="hidden" name="custLang" id="custLang" value="{{ $app->getLocale() }}" />
                 <div class="ctIp">
-                    <input type="text" placeholder="{!! $arrText['name'] !!}" />
-                    <span class="erro"></span>
+                    <input type="text" name="custName" class="o2o-name" id="custName" placeholder="{!! $arrText['name'] !!}" />
+                    <span class="erro" id="custNameErr"></span>
                 </div>
                 <div class="ctIp">
-                    <input type="text" placeholder="{!! $arrText['phone'] !!}" />
-                    <span class="erro"></span>
+                    <input type="text" name="custPhone" class="o2o-phone" id="custPhone" placeholder="{!! $arrText['phone'] !!}" />
+                    <span class="erro" id="custPhoneErr"></span>
                 </div>
                 <div class="ctIp">
-                    <input type="text" placeholder="{!! $arrText['Email'] !!}" />
-                    <span class="erro"></span>
+                    <input type="text" name="custEmail" id="custEmail" class="o2o-email" placeholder="{!! $arrText['Email'] !!}" />
+                    <span class="erro" id="custEmailErr"></span>
                 </div>
+                
                 <div class="btnWrap">
                     <button class="btnSlider style2 btnSliderNext js_Submit">
                         <svg width="100%" height="100%" viewBox="0 0 100 100" preserveAspectRatio="none">

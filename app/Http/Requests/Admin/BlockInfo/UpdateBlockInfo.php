@@ -49,6 +49,7 @@ class UpdateBlockInfo extends TranslatableFormRequest
             'info6' => ['nullable', 'string'],
             'info7' => ['nullable', 'string'],
             'block_date' => ['nullable', 'date'],
+            'enabled' => ['nullable', 'boolean'],
         ];
     }
 

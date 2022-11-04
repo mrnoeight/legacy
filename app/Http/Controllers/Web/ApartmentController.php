@@ -16,7 +16,7 @@ class ApartmentController extends Controller
 
     public function index()
     {
-        $oPage = Homepage::where('page_name', 'thong-tin-can-ho')->first();
+        $oPage = Homepage::where('page_name', 'thong-tin-can-ho')->where('enabled',0)->firstOrFail();
         $oMaster = BlockInfo::where('block_type', 'master_plan')->first();
         $oFloor6 = BlockInfo::where('block_type', 'floor6')->first();
         $oRoofs = BlockInfo::where('block_type', 'rooftop')->get();

@@ -6,7 +6,7 @@
             <li class="nav-item panel0"><a class="nav-link" href="{{ url('admin/block-infos?block_type=slider_home') }}"><i class="nav-icon"></i> TTG Info</a></li>
             <li class="nav-item panel0"><a class="nav-link" href="{{ url('admin/block-infos?block_type=gallery_home') }}"><i class="nav-icon"></i> Image Gallery</a></li>
             <li class="nav-item panel0"><a class="nav-link" href="{{ url('admin/block-infos?block_type=partner') }}"><i class="nav-icon"></i> Partners</a></li>
-            <li class="nav-item panel0"><a class="nav-link" href="{{ url('admin/block-infos?block_type=location') }}"><i class="nav-icon"></i> Location</a></li>
+            <!-- <li class="nav-item panel0"><a class="nav-link" href="{{ url('admin/block-infos?block_type=location') }}"><i class="nav-icon"></i> Location</a></li> -->
             <li class="nav-item panel0"><a class="nav-link" href="{{ url('admin/block-infos?block_type=home_text') }}"><i class="nav-icon"></i> Homepage Text</a></li>
             
             <li class="nav-title accordion" data-id="1">Apartment Info Page</li>

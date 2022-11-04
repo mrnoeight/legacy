@@ -15763,7 +15763,7 @@ canvas {
   flex-direction: column;
   padding: 0;
   color: #fff;
-  background: #485779;
+  background: #A3815F;
 }
 .sidebar .sidebar-close {
   position: absolute;
@@ -15844,7 +15844,7 @@ canvas {
 
 li.accordion:after {
   content: '\002B';
-  color: #777;
+  color: #fff;
   font-weight: bold;
   float: right;
   margin-left: 5px;
@@ -15863,7 +15863,7 @@ li.accordion.active:after {
 
 /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
 .active, .accordion:hover {
-  background-color: #4273FA;
+  background-color: #8D704E;
 }
 .sidebar .nav-divider {
   height: 10px;
@@ -15912,7 +15912,7 @@ li.accordion.active:after {
 }
 .sidebar .nav-link:hover {
   color: #fff;
-  background: #4273FA;
+  background: #8D704E;
 }
 .sidebar .nav-link:hover .nav-icon {
   color: #fff;
@@ -16198,7 +16198,7 @@ li.accordion.active:after {
     bottom: 0;
     width: 50px;
     height: 50px;
-    background-color: #3e4c69;
+    background-color: #62503B;
   }
   .sidebar-minimized .sidebar .sidebar-nav {
     padding-bottom: 50px;
@@ -16216,7 +16216,7 @@ li.accordion.active:after {
     overflow: visible;
   }
   .sidebar-minimized .sidebar .nav-item:hover > .nav-link {
-    background: #4273FA;
+    background: #8D704E;
   }
   .sidebar-minimized .sidebar .nav-item:hover > .nav-link .nav-icon {
     color: #fff;

@@ -37,7 +37,7 @@ class Homepage extends Model implements HasMedia
         'seo_title',
         'seo_description',
         'seo_author',
-    
+        'enabled',
     ];
     
     
@@ -49,7 +49,7 @@ class Homepage extends Model implements HasMedia
 
     public $translatable = ['head_tag1', 'head_title1', 'head_desc1', 'mid_tag1', 'mid_title1', 'mid_desc1', 'info1', 'info2','info3','info4','info5','seo_title','seo_description','seo_author'];
     
-    protected $appends = ['resource_url', 'banner_url', 'banner_mb_url', 'middle_banner_url', 'middle_banner_mb_url'];
+    protected $appends = ['resource_url', 'banner_url', 'banner_mb_url', 'middle_banner_url', 'middle_banner_mb_url', 'map_url', 'map_mb_url', 'map_en_url', 'map_en_mb_url'];
     
 
     /* ************************ ACCESSOR ************************* */
@@ -76,6 +76,26 @@ class Homepage extends Model implements HasMedia
             ->maxNumberOfFiles(1);
 
         $this->addMediaCollection('middle_banner_mb')
+            ->accepts('image/*')
+            ->maxFilesize(5*1024*1024) // Set the file size limit
+            ->maxNumberOfFiles(1);
+
+        $this->addMediaCollection('map')
+            ->accepts('image/*')
+            ->maxFilesize(5*1024*1024) // Set the file size limit
+            ->maxNumberOfFiles(1);
+            
+        $this->addMediaCollection('map_mb')
+            ->accepts('image/*')
+            ->maxFilesize(5*1024*1024) // Set the file size limit
+            ->maxNumberOfFiles(1);
+
+        $this->addMediaCollection('map_en')
+            ->accepts('image/*')
+            ->maxFilesize(5*1024*1024) // Set the file size limit
+            ->maxNumberOfFiles(1);
+        
+        $this->addMediaCollection('map_en_mb')
             ->accepts('image/*')
             ->maxFilesize(5*1024*1024) // Set the file size limit
             ->maxNumberOfFiles(1);
@@ -140,5 +160,25 @@ class Homepage extends Model implements HasMedia
     public function getMiddleBannerMbUrlAttribute(): ?string
     {
         return $this->getFirstMediaUrl('middle_banner_mb') ? : "";
+    }
+
+    public function getMapUrlAttribute(): ?string
+    {
+        return $this->getFirstMediaUrl('map') ? : "";
+    }
+
+    public function getMapMbUrlAttribute(): ?string
+    {
+        return $this->getFirstMediaUrl('map_mb') ? : "";
+    }
+
+    public function getMapEnUrlAttribute(): ?string
+    {
+        return $this->getFirstMediaUrl('map_en') ? : "";
+    }
+
+    public function getMapEnMbUrlAttribute(): ?string
+    {
+        return $this->getFirstMediaUrl('map_en_mb') ? : "";
     }
 }

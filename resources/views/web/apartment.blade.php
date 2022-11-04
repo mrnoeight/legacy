@@ -1,8 +1,8 @@
 @extends('web.layouts.base')
 
-@section('title', 'Thong tin can ho')
+@section('title') {{ $oPage->seo_title }} @endsection
 
-@section('hidden_page', 'Thong tin can ho')
+@section('description') {{ $oPage->seo_description }} @endsection
 
 @section('content')
 
@@ -50,10 +50,10 @@
         </div>
         <div class="btnWrap center">
             <div class="btn whiteBg ShowMore">
-                <span>SEE MORE</span>
+                <span>{{__('Xem thêm')}}</span>
             </div>
             <div class="btn whiteBg ShowLess">
-                <span>SEE LESS</span>
+                <span>{{__('Rút gọn')}}</span>
             </div>
         </div>
 
@@ -96,10 +96,10 @@
                 </div>
                 <div class="btnWrap center">
                     <div class="btn transBg ShowMore">
-                        <span>SEE MORE</span>
+                        <span>{{__('Xem thêm')}}</span>
                     </div>
                     <div class="btn transBg ShowLess">
-                        <span>SEE LESS</span>
+                        <span>{{__('Rút gọn')}}</span>
                     </div>
                 </div>
             </div>
@@ -262,10 +262,10 @@
         </div>
         <div class="btnWrap center">
             <div class="btn transBg ShowMore">
-                <span>SEE MORE</span>
+                <span>{{__('Xem thêm')}}</span>
             </div>
             <div class="btn transBg ShowLess">
-                <span>SEE LESS</span>
+                <span>{{__('Rút gọn')}}</span>
             </div>
         </div>
         </div>

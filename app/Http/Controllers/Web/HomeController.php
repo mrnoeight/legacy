@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
 use App\Models\Homepage;
 use App\Models\BlockInfo;
+use Mail;
 
 class HomeController extends Controller
 {
@@ -19,7 +20,7 @@ class HomeController extends Controller
         $oPartners = BlockInfo::where('block_type', 'partner')->get();
         $oLocations = BlockInfo::where('block_type', 'location')->get();
         $oText = BlockInfo::where('block_type', 'home_text')->get();
-
+        
         $arrText = [];
         foreach ($oText as $text)
             $arrText[$text->block_name] = $text->head_title1;
@@ -57,5 +58,20 @@ class HomeController extends Controller
         return \response()->json(['status' => 1, 
                                     'data' => $data,
                                 ]);
+    }
+
+    function sendEmail(Request $request) 
+    {
+        $data = $request->all();
+        Mail::send('mail', $data, function($message) {
+            $message->to('mrnoeight@gmail.com')->subject
+                ('Legacy Lancaster Registration');
+            $message->from('ttgholding.vn@gmail.com','Info'); //ttgholding.vn@gmail.com
+        });
+
+        return \response()->json(['status'=>1, 
+                                        'data'=>'Good!', 
+                                        'message'=>'Email sent!',
+                                    ]);
     }
 }

@@ -1,8 +1,8 @@
 @extends('web.layouts.base')
 
-@section('title', 'Lancaster by Trung Thuy')
+@section('title') {{ $oPage->seo_title }} @endsection
 
-@section('hidden_page', 'Lancaster by Trung Thuy')
+@section('description') {{ $oPage->seo_description }} @endsection
 
 @section('content')
 
@@ -79,6 +79,7 @@
             </div>
         </div>
     </section>
+    @if (!in_array('lan.club', $arrSecDisables))
     <section id="LancasterClub" class="lancasterClubWrap">
         <div class="contentLans des">
             <img class="lazyload bgClubDes" data-src="{{asset('assets/images/demo/bg-club.jpg') }}" alt="">
@@ -196,6 +197,7 @@
         </div>
         <div class="ovlCard"></div>
     </section>
+    @endif
 
     <section class="captionCardWrap">
         <div class="caption">
@@ -228,6 +230,7 @@
         </div>
     </section>
 
+    @if (!in_array('lan.consultant', $arrSecDisables))
     <section id="ConsultingTeam" class="teamPageWrap pd1" style="background: url({{ $oPCon->banner_url }}) center no-repeat" >
         <img class="lazyload bgClubMb" data-src="{{ asset('assets/images/demo/bg-team.jpg') }}" alt="">
         <div class="container">
@@ -242,7 +245,7 @@
             </div>
         </div>
     </section>
-
+    @endif
 
 </main>
 

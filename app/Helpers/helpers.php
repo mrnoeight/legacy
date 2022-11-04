@@ -7,6 +7,20 @@ use Illuminate\Support\Facades\Session;
 use App\Models\Homepage;
 use App\Models\BlockInfo;
 
+if (!function_exists('tk1GetDisabledPages')) {
+    function tk1GetDisabledPages()
+    {
+        $oDisables = Homepage::where('enabled', 1)->get();
+
+        $arrDisables = [];
+        foreach ($oDisables as $d) {
+            $arrDisables[] = $d->page_name;
+        }
+
+        return $arrDisables;
+    }
+}
+
 if (!function_exists('tk1GetLogo')) {
     function tk1GetLogo()
     {
@@ -28,7 +42,10 @@ if (!function_exists('tk1GetFooterLogo')) {
 if (!function_exists('tk1GetMenu')) {
     function tk1GetMenu()
     {
-        $oText = BlockInfo::where('block_type', 'menu_text')->get();
+        $oText = BlockInfo::where('block_type', 'menu_text')
+                            ->orWhere('block_type','apartment_text')
+                            ->orWhere('block_type','lancaster_text')
+                            ->get();
 
         $arrMenuText = [];
         foreach ($oText as $t) {
@@ -59,8 +76,11 @@ if (!function_exists('tk1GetSidebar')) {
         $oText = BlockInfo::where('block_type', 'sidebar_text')->get();
 
         $arrMenuText = [];
+        $arrMenuText['disables'] = [];
         foreach ($oText as $t) {
             $arrMenuText[$t->block_name] = $t->head_title1;
+            if ($t->enabled == 1)
+                $arrMenuText['disables'][] = $t->block_name;
         }
 
         return $arrMenuText;
@@ -69,18 +89,25 @@ if (!function_exists('tk1GetSidebar')) {
 
 
 if (!function_exists('tk1FormatDateLocal')) {
-    function tk1FormatDateLocal($date)
+    function tk1FormatDateLocal($date, $type=1)
     {
         if ($date == '' || $date == null)
             return null;
         
         $language = Session::get('language', config('app.locale'));
 
-        if ($language == 'en')
-            return Carbon::parse($date)->format('F Y');
-        else
-            return 'Tháng '.Carbon::parse($date)->format('m - Y');
-            
+        if ($type == 1) {
+            if ($language == 'en')
+                return Carbon::parse($date)->format('F Y');
+            else
+                return 'Tháng '.Carbon::parse($date)->format('m - Y');
+        }
+        else {
+            if ($language == 'en')
+                return Carbon::parse($date)->format('d F Y');
+            else
+                return Carbon::parse($date)->format('d/m/Y');
+        }
     }
 }
 
@@ -115,6 +142,15 @@ if (!function_exists('tk1FormatDate2')) {
             return Carbon::parse($date)->format('d/m/Y');
     }
 }
+
+if (!function_exists('tk1IsMobile')) {
+    function tk1IsMobile()
+    {
+        //echo $_SERVER["HTTP_USER_AGENT"];
+        return preg_match("/(android|avantgo|blackberry|bolt|boost|cricket|docomo|fone|hiptop|mini|mobi|palm|phone|pie|tablet|up\.browser|up\.link|webos|wos)/i", $_SERVER["HTTP_USER_AGENT"]);
+    }
+}
+
 
 if (!function_exists('tk1BetweenDates')) {
     function tk1BetweenDates($from, $to)

@@ -16,7 +16,7 @@ class NewsController extends Controller
 
     public function index()
     {
-        $oPage = Homepage::where('page_name', 'tin-tuc')->first();
+        $oPage = Homepage::where('page_name', 'tin-tuc')->where('enabled',0)->firstOrFail();
         $oNews = BlockInfo::where('block_type', 'news')->get();
 
         $menu_active = ['home'=>'', 'location'=>'', 'apartment'=>'', 'utilities'=>'', 'progress'=>'', 'gallery'=>'', 'news'=>' class=active', 'lancaster'=>'', 'about'=>''];

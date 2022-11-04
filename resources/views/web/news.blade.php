@@ -1,8 +1,8 @@
 @extends('web.layouts.base')
 
-@section('title', 'Tin tuc')
+@section('title') {{ $oPage->seo_title }} @endsection
 
-@section('hidden_page', 'Tin tuc')
+@section('description') {{ $oPage->seo_description }} @endsection
 
 @section('content')
 
@@ -30,7 +30,7 @@
                     <div class="copy">
                         <h3>{{ $news->head_title1 }}</h3>
                         <div class="bot">
-                            <p class="date">{{ \Carbon\Carbon::parse($news->block_date)->formatLocalized('%d %B %Y')  }}</p>
+                            <p class="date">{{ tk1FormatDateLocal($news->block_date, 2)  }}</p>
                             <a href="#">
                                 <svg width="1em" height="1em" viewBox="0 0 12 12" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">

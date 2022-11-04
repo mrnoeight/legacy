@@ -36,6 +36,7 @@ Vue.component('block-info-form', {
                 info4:  '' ,
                 info5:  '' ,
                 block_date: '',
+                enabled:  false ,
             },
             mediaCollections: ['banner', 'banner_mb', 'gallery']
         }

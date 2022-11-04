@@ -286,3 +286,62 @@
 </div>
 
 
+<div class="ml-md-auto" :class="isFormLocalized ? 'col-md-8' : 'col-md-10'">
+    @if($mode === 'edit')
+        @include('brackets/admin-ui::admin.includes.media-uploader', [
+            'mediaCollection' => $homepage->getMediaCollection('map'),
+            'media' => $homepage->getThumbs200ForCollection('map'),
+            'label' => 'Map Image'
+        ])
+    @else
+        @include('brackets/admin-ui::admin.includes.media-uploader', [
+            'mediaCollection' => app(App\Models\Homepage::class)->getMediaCollection('map'),
+            'label' => 'Map Image'
+        ])
+    @endif
+</div>
+
+<div class="ml-md-auto" :class="isFormLocalized ? 'col-md-8' : 'col-md-10'">
+    @if($mode === 'edit')
+        @include('brackets/admin-ui::admin.includes.media-uploader', [
+            'mediaCollection' => $homepage->getMediaCollection('map_mb'),
+            'media' => $homepage->getThumbs200ForCollection('map_mb'),
+            'label' => 'Mobile Map Image'
+        ])
+    @else
+        @include('brackets/admin-ui::admin.includes.media-uploader', [
+            'mediaCollection' => app(App\Models\Homepage::class)->getMediaCollection('map_mb'),
+            'label' => 'Mobile Map Image'
+        ])
+    @endif
+</div>
+
+<div class="ml-md-auto" :class="isFormLocalized ? 'col-md-8' : 'col-md-10'">
+    @if($mode === 'edit')
+        @include('brackets/admin-ui::admin.includes.media-uploader', [
+            'mediaCollection' => $homepage->getMediaCollection('map_en'),
+            'media' => $homepage->getThumbs200ForCollection('map_en'),
+            'label' => 'Map Image (EN)'
+        ])
+    @else
+        @include('brackets/admin-ui::admin.includes.media-uploader', [
+            'mediaCollection' => app(App\Models\Homepage::class)->getMediaCollection('map_en'),
+            'label' => 'Map Image (EN)'
+        ])
+    @endif
+</div>
+
+<div class="ml-md-auto" :class="isFormLocalized ? 'col-md-8' : 'col-md-10'">
+    @if($mode === 'edit')
+        @include('brackets/admin-ui::admin.includes.media-uploader', [
+            'mediaCollection' => $homepage->getMediaCollection('map_en_mb'),
+            'media' => $homepage->getThumbs200ForCollection('map_en_mb'),
+            'label' => 'Mobile Map Image (EN)'
+        ])
+    @else
+        @include('brackets/admin-ui::admin.includes.media-uploader', [
+            'mediaCollection' => app(App\Models\Homepage::class)->getMediaCollection('map_en_mb'),
+            'label' => 'Mobile Map Image (EN)'
+        ])
+    @endif
+</div>

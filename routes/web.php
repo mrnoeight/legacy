@@ -20,6 +20,7 @@ Route::group(['namespace' => 'App\Http\Controllers\Web'], function() {
         Route::get('/', ['uses'=>'HomeController@index'])->name('home');
         Route::get('/change-language/{language}', 'HomeController@changeLanguage')->name('change_language');
         Route::post('/apartment-info', 'HomeController@getApartmentInfo')->name('apartment_info');
+        Route::post('/sendemail', 'HomeController@sendEmail')->name('send_email');
         Route::get('/thong-tin-can-ho', ['uses'=>'ApartmentController@index'])->name('apartment');
         Route::get('/tien-ich', ['uses'=>'UtilityController@index'])->name('tienich');
         Route::get('/thu-vien', ['uses'=>'GalleryController@index'])->name('gallery');

@@ -34,7 +34,8 @@ class BlockInfo extends Model implements HasMedia
         'info7',
         'block_name',
         'block_type',
-        'block_date'
+        'block_date',
+        'enabled',
     ];
     
     
