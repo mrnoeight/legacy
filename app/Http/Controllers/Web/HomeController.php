@@ -51,6 +51,7 @@ class HomeController extends Controller
 
         $aparts = BlockInfo::where('info2', $apartment->info2)
                             ->where('info3', $apartment->info3)
+                            ->where('block_type', $apartment->block_type)
                             ->where('id','<>',$apartment->id)
                             ->orderBy('id', 'asc')
                             ->get();
