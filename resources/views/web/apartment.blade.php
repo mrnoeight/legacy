@@ -785,11 +785,11 @@
                         </ul>
                     </div> -->
                     <div rel="tow-a-5" class="hintFp">
-                        <div id-floorplan="A30.11" class="item js-floorplandetail">
+                        <div id-floorplan="A30.11 - DUPLEX" class="item js-floorplandetail">
                             <span style="background-color: #DDFCE2;"></span>
                             <p>{{__('Căn hộ 4 phòng ngủ')}}</p>
                         </div>
-                        <div id-floorplan="A30.06" class="item js-floorplandetail">
+                        <div id-floorplan="A30.06 - DUPLEX" class="item js-floorplandetail">
                             <span style="background-color: #FCAB61;"></span>
                             <p>{{__('Căn hộ 3 phòng ngủ + 1')}}</p>
                         </div>
