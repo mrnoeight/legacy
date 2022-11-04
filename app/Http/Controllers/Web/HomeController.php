@@ -49,11 +49,28 @@ class HomeController extends Controller
         $apartment = BlockInfo::where('block_name', $_POST['code'])->first();
         $oText = BlockInfo::where('block_type', 'apartment_text')->get();
 
+        $aparts = BlockInfo::where('info2', $apartment->info2)
+                            ->where('info3', $apartment->info3)
+                            ->where('id','<>',$apartment->id)
+                            ->orderBy('id', 'asc')
+                            ->get();
+
         $arrText = [];
         foreach ($oText as $text)
             $arrText[$text->block_name] = $text->head_title1;
-//print_r($arrText);exit;
-        $data = view('web.apartment_info', compact('apartment', 'arrText'))->render();
+
+        $backA = '';
+        $nextA = '';
+        foreach ($aparts as $a) {
+            //echo $a->info2.' '.$a->id;
+            if ($backA == '' && $a->id < $apartment->id)
+                $backA = $a->block_name;
+
+            if ($nextA == '' && $a->id > $apartment->id)
+                $nextA = $a->block_name;
+        }
+        //echo $backA. ' '.$nextA;
+        $data = view('web.apartment_info', compact('apartment', 'arrText', 'backA', 'nextA'))->render();
 
         return \response()->json(['status' => 1, 
                                     'data' => $data,

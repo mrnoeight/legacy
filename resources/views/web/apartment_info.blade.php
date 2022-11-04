@@ -26,20 +26,24 @@
                 <img data-src="{{ $apartment->banner_url }}" class="lazyload" />
 
                 <div class="opSlideGallery">
-                    <div class="btnSlider style2 btnSliderPrev">
+                    @if ($backA != '')
+                    <div class="btnSlider style2 btnSliderPrev" id="backApartment" data-code="{{$backA}}">
                         <svg width="100%" height="100%" viewBox="0 0 100 100" preserveAspectRatio="none">
                             <circle class=" circle" cx="50" cy="50" r="48" stroke="#a3815f" stroke-width="2"
                                 fill="none" />
                         </svg>
 
                     </div>
-                    <div class="btnSlider style2 btnSliderNext">
+                    @endif
+                    @if ($nextA != '')
+                    <div class="btnSlider style2 btnSliderNext" id="nextApartment" data-code="{{$nextA}}">
                         <svg width="100%" height="100%" viewBox="0 0 100 100" preserveAspectRatio="none">
                             <circle class="circle" cx="50" cy="50" r="48" stroke="#a3815f" stroke-width="2"
                                 fill="none" />
                         </svg>
 
                     </div>
+                    @endif
 
                 </div>
             </div>

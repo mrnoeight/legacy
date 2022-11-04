@@ -87,9 +87,9 @@ $(document).ready(function() {
         return false;
     });
 
-    // $( "#tow-a-1, #tow-a-2, #tow-a-3, #tow-a-4, #tow-a-5" ).click(function(e) {
-    //     updateApartment('A08.01');
-    // });
+    
+
+
 
     
 });
@@ -121,6 +121,18 @@ function updateApartment(code) {
             // });
             $('.js-closefloorplandetail').on("click",function(){
                 $('#FloorPlanDetail').stop(true,true).fadeOut();
+            });
+
+            $('#nextApartment').click(function(e) {
+                var code = $(this).attr("data-code")
+                console.log(code);
+                updateApartment(code);
+            });
+
+            $('#backApartment').click(function(e) {
+                var code = $(this).attr("data-code")
+                console.log(code);
+                updateApartment(code);
             });
         },
         error: function (data) {
