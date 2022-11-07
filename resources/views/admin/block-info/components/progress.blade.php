@@ -97,4 +97,19 @@
     @endif
 </div>
 
+<div class="ml-md-auto" :class="isFormLocalized ? 'col-md-8' : 'col-md-10'">
+    @if($mode === 'edit')
+        @include('brackets/admin-ui::admin.includes.media-uploader', [
+            'mediaCollection' => $blockInfo->getMediaCollection('banner_mb'),
+            'media' => $blockInfo->getThumbs200ForCollection('banner_mb'),
+            'label' => 'Thumbnail'
+        ])
+    @else
+        @include('brackets/admin-ui::admin.includes.media-uploader', [
+            'mediaCollection' => app(App\Models\BlockInfo::class)->getMediaCollection('banner_mb'),
+            'label' => 'Thumbnail'
+        ])
+    @endif
+</div>
+
 

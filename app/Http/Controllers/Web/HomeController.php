@@ -82,7 +82,7 @@ class HomeController extends Controller
     {
         $data = $request->all();
         Mail::send('mail', $data, function($message) {
-            $message->to('mrnoeight@gmail.com')->subject
+            $message->to('nam.designer@gmail.com')->subject
                 ('Legacy Lancaster Registration');
             $message->from('ttgholding.vn@gmail.com','Info'); //ttgholding.vn@gmail.com
         });
