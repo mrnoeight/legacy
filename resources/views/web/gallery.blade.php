@@ -44,6 +44,8 @@
 
     </section>
     <div class="spaceH"></div>
+
+    @if ($oPage->enabled == 0)
     <section class="section galleryWrap">
         <div class="container">
             <div class="ttPage">
@@ -68,6 +70,7 @@
 
     </section>
     <div class="spaceH"></div>
+    @endif
 
 </main>
 

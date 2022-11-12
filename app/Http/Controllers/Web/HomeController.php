@@ -15,9 +15,9 @@ class HomeController extends Controller
     public function index()
     {
         $oPage = Homepage::where('page_name', 'trang-chu')->first();
-        $oSliders = BlockInfo::where('block_type', 'slider_home')->get();
-        $oGalleries = BlockInfo::where('block_type', 'gallery_home')->get();
-        $oPartners = BlockInfo::where('block_type', 'partner')->get();
+        $oSliders = BlockInfo::where('block_type', 'slider_home')->orderBy('order_id')->get();
+        $oGalleries = BlockInfo::where('block_type', 'gallery_home')->orderBy('order_id')->get();
+        $oPartners = BlockInfo::where('block_type', 'partner')->orderBy('order_id')->get();
         $oLocations = BlockInfo::where('block_type', 'location')->get();
         $oText = BlockInfo::where('block_type', 'home_text')->get();
         

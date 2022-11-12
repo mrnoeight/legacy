@@ -281,6 +281,7 @@ Route::middleware(['auth:' . config('admin-auth.defaults.guard'), 'admin'])->gro
             Route::post('/',                                            'BlockInfoController@store')->name('store');
             Route::get('/{blockInfo}/edit',                             'BlockInfoController@edit')->name('edit');
             Route::post('/bulk-destroy',                                'BlockInfoController@bulkDestroy')->name('bulk-destroy');
+            Route::post('/update-order',                                'BlockInfoController@updateOrder')->name('update-order');
             Route::post('/{blockInfo}',                                 'BlockInfoController@update')->name('update');
             Route::delete('/{blockInfo}',                               'BlockInfoController@destroy')->name('destroy');
         });

@@ -26,6 +26,6 @@ return [
     |
     */
 
-    'media_folder' => env('WYSIWYG_MEDIA_FOLDER', 'uploads'),
+    'media_folder' => env('WYSIWYG_MEDIA_FOLDER', 'public/uploads'),
 
 ];

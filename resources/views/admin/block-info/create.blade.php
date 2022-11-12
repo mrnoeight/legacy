@@ -43,7 +43,7 @@
                     @include('admin.block-info.components.slider')
                 @elseif (in_array($_GET['block_type'], array('gallery_home', 'partner', 'master_gallery', 'gallery_photo')))
                     @include('admin.block-info.components.block_image')
-                @elseif (in_array($_GET['block_type'], array('f_pool', 'f_yoga', 'f_playground', 'f_sauna', 'f_gym', 'f_park')))
+                @elseif (substr($_GET['block_type'], 0, 2 ) == 'f_')
                     @include('admin.block-info.components.amenities')
                 @elseif (in_array($_GET['block_type'], array('health_utilities', 'entertainment', 'business')))
                     @include('admin.block-info.components.utilities')

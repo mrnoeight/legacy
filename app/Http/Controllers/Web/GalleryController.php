@@ -16,8 +16,8 @@ class GalleryController extends Controller
     public function index()
     {
         $oPage = Homepage::where('page_name', 'thu-vien')->first();
-        $oVideos = BlockInfo::where('block_type', 'video')->get();
-        $oPhotos = BlockInfo::where('block_type', 'gallery_photo')->get();
+        $oVideos = BlockInfo::where('block_type', 'video')->orderBy('order_id')->get();
+        $oPhotos = BlockInfo::where('block_type', 'gallery_photo')->orderBy('order_id')->get();
 
         $menu_active = ['home'=>'', 'location'=>'', 'apartment'=>'', 'utilities'=>'', 'progress'=>'', 'gallery'=>' class=active', 'news'=>'', 'lancaster'=>'', 'about'=>''];
         

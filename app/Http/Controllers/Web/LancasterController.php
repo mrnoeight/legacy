@@ -16,12 +16,12 @@ class LancasterController extends Controller
     {
         $oPage = Homepage::where('page_name', 'lancaster-by-trung-thuy')->first();
         $oPCon = Homepage::where('page_name', 'consultant-image')->first();
-        $oMaster = BlockInfo::where('block_type', 'master_gallery')->get();  
-        $oBasic = BlockInfo::where('block_type', 'basic_service')->get();        
-        $oEnhance = BlockInfo::where('block_type', 'enhance_service')->get();        
-        $oButler = BlockInfo::where('block_type', 'butler_service')->get(); 
+        $oMaster = BlockInfo::where('block_type', 'master_gallery')->orderBy('order_id')->get();  
+        $oBasic = BlockInfo::where('block_type', 'basic_service')->orderBy('order_id')->get();        
+        $oEnhance = BlockInfo::where('block_type', 'enhance_service')->orderBy('order_id')->get();        
+        $oButler = BlockInfo::where('block_type', 'butler_service')->orderBy('order_id')->get(); 
         $oCards = BlockInfo::where('block_type', 'member_card')->get();     
-        $oConsultants = BlockInfo::where('block_type', 'consultant')->get();
+        $oConsultants = BlockInfo::where('block_type', 'consultant')->orderBy('order_id')->get();
         $oText = BlockInfo::where('block_type', 'lancaster_text')->get();
 
         $arrText = [];

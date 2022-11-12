@@ -199,6 +199,7 @@
     </section>
     @endif
 
+    @if (!in_array('lan.club', $arrSecDisables))
     <section class="captionCardWrap">
         <div class="caption">
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nisi, adipiscing convallis ut ut diam ut
@@ -229,6 +230,7 @@
             </div>
         </div>
     </section>
+    @endif
 
     @if (!in_array('lan.consultant', $arrSecDisables))
     <section id="ConsultingTeam" class="teamPageWrap pd1" style="background: url({{ $oPCon->banner_url }}) center no-repeat" >

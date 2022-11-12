@@ -139,7 +139,7 @@
                     @endphp
                     @foreach ($entertainments as $s)
                     <div class="hDot" indexSlider="{{ $i++ }}">
-                        <div class="item">
+                        <div data-popup="popup_{{ $s->block_name }}" class="item">
                             <img data-src="{{ $s->banner_url }}" alt="" class="lazyload">
                             <h2>{!! nl2br($s->head_title1) !!}</h2>
                         </div>
@@ -179,8 +179,8 @@
                         $i = 0;
                     @endphp
                     @foreach ($business as $s)
-                    <div class="hDot" indexSlider="0">
-                        <div class="item">
+                    <div class="hDot" indexSlider="{{ $i++ }}">
+                        <div data-popup="popup_{{ $s->block_name }}" class="item">
                             <img data-src="{{ $s->banner_url }}" alt="" class="lazyload">
                             <h2>{!! nl2br($s->head_title1) !!}</h2>
                         </div>
@@ -210,11 +210,11 @@
         </div>
     </section>
 
-
-    <div id="popup_pool" class="popup">
+    @foreach ($arrSubServices as $n=>$sub)
+    <div id="popup_{{$n}}" class="popup">
         <div class="btnClose jsClosePopupUti"></div>
         <div class="slideAboutPopup">
-            @foreach ($pool as $s)
+            @foreach ($sub as $s)
             <div class="item" style="background: url({{ $s->banner_url }}) center no-repeat">
                 <img data-src="{{ $s->banner_url }}" class="lazyload" />
                 <div class="container">
@@ -227,91 +227,8 @@
             @endforeach
         </div>
     </div>
-
-    <div id="popup_gym" class="popup">
-        <div class="btnClose jsClosePopupUti"></div>
-        <div class="slideAboutPopup">
-            @foreach ($gym as $s)
-            <div class="item" style="background: url({{ $s->banner_url }}) center no-repeat">
-                <img data-src="{{ $s->banner_url }}" class="lazyload" />
-                <div class="container">
-                    <div class="copy">
-                        <h2 class="mainTt">{!! nl2br($s->head_title1) !!}</h2>
-                        <p>{!! nl2br($s->info1) !!}</p>
-                    </div>
-                </div>
-            </div>
-            @endforeach
-        </div>
-    </div>
-
-    <div id="popup_sauna" class="popup">
-        <div class="btnClose jsClosePopupUti"></div>
-        <div class="slideAboutPopup">
-            @foreach ($sauna as $s)
-            <div class="item" style="background: url({{ $s->banner_url }}) center no-repeat">
-                <img data-src="{{ $s->banner_url }}" class="lazyload" />
-                <div class="container">
-                    <div class="copy">
-                        <h2 class="mainTt">{!! nl2br($s->head_title1) !!}</h2>
-                        <p>{!! nl2br($s->info1) !!}</p>
-                    </div>
-                </div>
-            </div>
-            @endforeach
-        </div>
-    </div>
-
-    <div id="popup_playground" class="popup">
-        <div class="btnClose jsClosePopupUti"></div>
-        <div class="slideAboutPopup">
-            @foreach ($playground as $s)
-            <div class="item" style="background: url({{ $s->banner_url }}) center no-repeat">
-                <img data-src="{{ $s->banner_url }}" class="lazyload" />
-                <div class="container">
-                    <div class="copy">
-                        <h2 class="mainTt">{!! nl2br($s->head_title1) !!}</h2>
-                        <p>{!! nl2br($s->info1) !!}</p>
-                    </div>
-                </div>
-            </div>
-            @endforeach
-        </div>
-    </div>
-
-    <div id="popup_yoga" class="popup">
-        <div class="btnClose jsClosePopupUti"></div>
-        <div class="slideAboutPopup">
-            @foreach ($yoga as $s)
-            <div class="item" style="background: url({{ $s->banner_url }}) center no-repeat">
-                <img data-src="{{ $s->banner_url }}" class="lazyload" />
-                <div class="container">
-                    <div class="copy">
-                        <h2 class="mainTt">{!! nl2br($s->head_title1) !!}</h2>
-                        <p>{!! nl2br($s->info1) !!}</p>
-                    </div>
-                </div>
-            </div>
-            @endforeach
-        </div>
-    </div>
-
-    <div id="popup_park" class="popup">
-        <div class="btnClose jsClosePopupUti"></div>
-        <div class="slideAboutPopup">
-            @foreach ($park as $s)
-            <div class="item" style="background: url({{ $s->banner_url }}) center no-repeat">
-                <img data-src="{{ $s->banner_url }}" class="lazyload" />
-                <div class="container">
-                    <div class="copy">
-                        <h2 class="mainTt">{!! nl2br($s->head_title1) !!}</h2>
-                        <p>{!! nl2br($s->info1) !!}</p>
-                    </div>
-                </div>
-            </div>
-            @endforeach
-        </div>
-    </div>
+    @endforeach
+    
 </main>
 
 @endsection
