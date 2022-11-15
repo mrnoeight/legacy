@@ -31,7 +31,7 @@
             <div class="listImg">
                 @foreach ($oMaster as $master)
                 <div class="imgPage">
-                    <div style="background: url({{ $master->banner_url }}) center no-repeat"></div>
+                    <div style="background: url({{ $app->getLocale() == 'en' && $master->banner_mb_url != '' ? $master->banner_mb_url : $master->banner_url }}) center no-repeat"></div>
                     <img data-src="{{ asset('assets/images/thumb3.gif') }}" class="lazyload" />
                 </div>
                 @endforeach

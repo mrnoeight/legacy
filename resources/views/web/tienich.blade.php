@@ -28,7 +28,7 @@
                 <img data-src="{{ $s->banner_url }}" class="lazyload" />
                 <div class="container">
                     <div class="copy">
-                        <h2 class="mainTt">{!! nl2br($s->head_title1) !!}</h2>
+                        <h2 class="mainTt">{!! tk1IsMobile() ? ($s->head_tag1 != '' ? nl2br($s->head_tag1) : nl2br($s->head_title1)) : nl2br($s->head_title1) !!}</h2>
                         <p>{{ $s->head_desc1 }}</p>
                     </div>
                 </div>
@@ -51,7 +51,7 @@
             </div>
         </div>
     </section>
-    <div class="spaceH"></div>
+    <!-- <div class="spaceH"></div>
     <section id="ShoppingCenter" class="section aboutUsWrap">
         <div class="slideAbout">
             @foreach ($oMidSliders as $s)
@@ -83,7 +83,7 @@
 
             </div>
         </div>
-    </section>
+    </section> -->
 
     <section class="utilitiesWrap">
         <div class="container"></div>
@@ -102,7 +102,7 @@
                     <div class="hDot" indexSlider="{{ $i++ }}">
                         <div data-popup="popup_{{ $s->block_name }}" class="item">
                             <img data-src="{{ $s->banner_url }}" alt="" class="lazyload">
-                            <h2>{!! nl2br($s->head_title1) !!}</h2>
+                            <h2>{!! tk1IsMobile() ? ($s->head_tag1 != '' ? nl2br($s->head_tag1) : nl2br($s->head_title1)) : nl2br($s->head_title1) !!}</h2>
                         </div>
                     </div>
                     @endforeach
@@ -141,7 +141,7 @@
                     <div class="hDot" indexSlider="{{ $i++ }}">
                         <div data-popup="popup_{{ $s->block_name }}" class="item">
                             <img data-src="{{ $s->banner_url }}" alt="" class="lazyload">
-                            <h2>{!! nl2br($s->head_title1) !!}</h2>
+                            <h2>{!! tk1IsMobile() ? ($s->head_tag1 != '' ? nl2br($s->head_tag1) : nl2br($s->head_title1)) : nl2br($s->head_title1) !!}</h2>
                         </div>
                     </div>
                     @endforeach
@@ -167,7 +167,7 @@
             </div>
 
         </div>
-        <div id="Business" class="utilitiesSliderWrap animate">
+        <!-- <div id="Business" class="utilitiesSliderWrap animate">
             <div class="copy">
                 <h2 class="mainTt">{!! nl2br($oPage->info3) !!}</h2>
                 <p>{!! nl2br($oPage->info4) !!}
@@ -182,7 +182,7 @@
                     <div class="hDot" indexSlider="{{ $i++ }}">
                         <div data-popup="popup_{{ $s->block_name }}" class="item">
                             <img data-src="{{ $s->banner_url }}" alt="" class="lazyload">
-                            <h2>{!! nl2br($s->head_title1) !!}</h2>
+                            <h2>{!! tk1IsMobile() ? ($s->head_tag1 != '' ? nl2br($s->head_tag1) : nl2br($s->head_title1)) : nl2br($s->head_title1) !!}</h2>
                         </div>
                     </div>
                     @endforeach
@@ -207,7 +207,7 @@
                 </div>
             </div>
 
-        </div>
+        </div> -->
     </section>
 
     @foreach ($arrSubServices as $n=>$sub)
@@ -219,7 +219,7 @@
                 <img data-src="{{ $s->banner_url }}" class="lazyload" />
                 <div class="container">
                     <div class="copy">
-                        <h2 class="mainTt">{!! nl2br($s->head_title1) !!}</h2>
+                        <h2 class="mainTt">{!! tk1IsMobile() ? ($s->head_tag1 != '' ? nl2br($s->head_tag1) : nl2br($s->head_title1)) : nl2br($s->head_title1) !!}</h2>
                         <p>{!! nl2br($s->info1) !!}</p>
                     </div>
                 </div>

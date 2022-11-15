@@ -109,6 +109,9 @@ class BlockInfoController extends Controller
         // Sanitize input
         $sanitized = $request->getSanitized();
         $sanitized['block_type'] = $_GET['block_type'];
+
+        if (in_array($_GET['block_type'], array('health_utilities', 'entertainment', 'business')))
+            $sanitized['block_name'] = $_GET['block_type'].'_'.rand(1000, 9999).'_'.rand(10000, 99999).'_'.rand(100, 999);
         
 
         // Store the BlockInfo

@@ -30,13 +30,28 @@
     @endforeach
 </div>
 
-<div class="form-group row align-items-center" :class="{'has-danger': errors.has('block_name'), 'has-success': fields.block_name && fields.block_name.valid }">
+<div class="row">
+    @foreach($locales as $locale)
+        <div class="col"@if(!$loop->first) v-show="isFormLocalized && currentLocale == '{{ $locale }}'" v-cloak @endif>
+            <div class="form-group row" :class="{'has-danger': errors.has('head_tag1_{{ $locale }}'), 'has-success': this.fields.head_tag1_{{ $locale }} && this.fields.head_tag1_{{ $locale }}.valid }">
+                <label for="head_tag1_{{ $locale }}" class="col-md-2 col-form-label text-md-right">Title (Mobile)</label>
+                
+                <div class="col-md-9" :class="{'col-xl-8': !isFormLocalized }">
+                    <textarea v-model="form.head_tag1.{{ $locale }}" v-validate="''" class="form-control" :class="{'form-control-danger': errors.has('head_tag1_{{ $locale }}'), 'form-control-success': this.fields.head_tag1_{{ $locale }} && this.fields.head_tag1_{{ $locale }}.valid }" id="head_tag1_{{ $locale }}" head_tag1="head_tag1_{{ $locale }}" placeholder="Title for mobile"></textarea>
+                    <div v-if="errors.has('head_tag1_{{ $locale }}')" class="form-control-feedback form-text" v-cloak>{{'{{'}} errors.first('head_tag1_{{ $locale }}') }}</div>
+                </div>
+            </div>
+        </div>
+    @endforeach
+</div>
+
+<!-- <div class="form-group row align-items-center" :class="{'has-danger': errors.has('block_name'), 'has-success': fields.block_name && fields.block_name.valid }">
     <label for="block_name" class="col-form-label text-md-right" :class="isFormLocalized ? 'col-md-4' : 'col-md-2'">Type</label>
         <div :class="isFormLocalized ? 'col-md-4' : 'col-md-9 col-xl-8'">
         <input type="text" v-model="form.block_name" v-validate="''" @input="validate($event)" class="form-control" :class="{'form-control-danger': errors.has('block_name'), 'form-control-success': fields.block_name && fields.block_name.valid}" id="block_name" name="block_name" placeholder="">
         <div v-if="errors.has('block_name')" class="form-control-feedback form-text" v-cloak>@{{ errors.first('block_name') }}</div>
     </div>
-</div>
+</div> -->
 
 
 <div class="ml-md-auto" :class="isFormLocalized ? 'col-md-8' : 'col-md-10'">
