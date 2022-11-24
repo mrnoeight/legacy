@@ -25,6 +25,8 @@
         </div>
     </section>
     <div class="spaceH"></div>
+    
+    @if ($oNews->isNotEmpty())
     <section class="section newsWrap">
         <div class="container">
             <div class="newsList">
@@ -56,6 +58,7 @@
         </div>
     </section>
     <div class="spaceH"></div>
+    @endif
 
 
 </main>

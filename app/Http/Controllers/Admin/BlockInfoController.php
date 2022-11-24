@@ -52,7 +52,15 @@ class BlockInfoController extends Controller
                     $query->where('block_type', $request->get('block_type'));
                     session(['block_type' => $request->get('block_type')]);
                 }
-            }
+
+                if ($request->has('block_type') && \in_array($request->block_type, array('health_utilities', 'entertainment', 'business', 'slider_home', 'gallery_home', 'partner', 'slider_facilities', 'slider_facilities2', 'gallery_photo', 'video', 'master_gallery', 'basic_service', 'enhance_service', 'butler_service', 'consultant'))) {
+                    $query->orderBy('order_id');
+                }
+
+                if (substr($_GET['block_type'], 0, 2 ) == 'f_') {
+                    $query->orderBy('order_id');
+                }
+            },
         );
 
 
@@ -66,8 +74,13 @@ class BlockInfoController extends Controller
         }
         if ($_GET['block_type'] == 'progress')
             return view('admin.block-info.progress', ['data' => $data]);
-        else if ($_GET['block_type'] == 'health_utilities')
+        else if (in_array($_GET['block_type'], array('health_utilities', 'entertainment', 'business')))
             return view('admin.block-info.health_utilities', ['data' => $data]);
+        else if (in_array($_GET['block_type'], array('slider_home', 'gallery_home', 'partner', 'slider_facilities', 'slider_facilities2', 'gallery_photo', 'video', 'master_gallery', 'basic_service', 'enhance_service', 'butler_service', 'consultant')))
+            return view('admin.block-info.index_gallery', ['data' => $data]);
+        else if (substr($_GET['block_type'], 0, 2 ) == 'f_') {
+            return view('admin.block-info.index_gallery', ['data' => $data]);
+        }
         else
             return view('admin.block-info.index', ['data' => $data]);
     }
@@ -96,6 +109,9 @@ class BlockInfoController extends Controller
         // Sanitize input
         $sanitized = $request->getSanitized();
         $sanitized['block_type'] = $_GET['block_type'];
+
+        if (in_array($_GET['block_type'], array('health_utilities', 'entertainment', 'business')))
+            $sanitized['block_name'] = $_GET['block_type'].'_'.rand(1000, 9999).'_'.rand(10000, 99999).'_'.rand(100, 999);
         
 
         // Store the BlockInfo
@@ -204,6 +220,17 @@ class BlockInfoController extends Controller
 
                     // TODO your code goes here
                 });
+        });
+
+        return response(['message' => trans('brackets/admin-ui::admin.operation.succeeded')]);
+    }
+
+    public function updateOrder(IndexBlockInfo $request) : Response
+    {
+        //print_r($request->arrID);exit;
+        DB::transaction(static function () use ($request) {
+            foreach ($request->arrID as $i=>$id)
+                BlockInfo::where('id', $id)->update(['order_id' => $i]);
         });
 
         return response(['message' => trans('brackets/admin-ui::admin.operation.succeeded')]);

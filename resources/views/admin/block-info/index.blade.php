@@ -15,6 +15,10 @@
                     <div class="card-header">
                     @if (isset($_GET['parent']) && $_GET['parent'] == 'health_utilities')
                         <i class="fa fa-align-justify"></i> <a href="{{ url('admin/block-infos?block_type=health_utilities') }}">Return to Health Amenities</a>
+                    @elseif (isset($_GET['parent']) && $_GET['parent'] == 'entertainment')
+                        <i class="fa fa-align-justify"></i> <a href="{{ url('admin/block-infos?block_type=entertainment') }}">Return to Entertainment</a>
+                    @elseif (isset($_GET['parent']) && $_GET['parent'] == 'business')
+                        <i class="fa fa-align-justify"></i> <a href="{{ url('admin/block-infos?block_type=business') }}">Return to Business</a>
                     @else
                         <i class="fa fa-align-justify"></i> {{ trans('admin.block-info.actions.index') }}
                     @endif
@@ -69,7 +73,7 @@
                                                         href="#" class="text-primary" @click="onBulkItemsClickedAllUncheck()">{{ trans('brackets/admin-ui::admin.listing.uncheck_all_items') }}</a>  </span>
 
                                             <span class="pull-right pr-2">
-                                                <button class="btn btn-sm btn-danger pr-3 pl-3" @click="bulkDelete('/admin/block-infos/bulk-destroy')">{{ trans('brackets/admin-ui::admin.btn.delete') }}</button>
+                                                <button class="btn btn-sm btn-danger pr-3 pl-3" @click="bulkDelete('{{env('APP_URL', '')}}/admin/block-infos/bulk-destroy')">{{ trans('brackets/admin-ui::admin.btn.delete') }}</button>
                                             </span>
 
                                         </td>

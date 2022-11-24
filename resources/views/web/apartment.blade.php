@@ -363,7 +363,7 @@
                             @endforeach
                         </div>
                         <select class="listPlanTowSelect">
-                            <option value="" hidden>chọn tầng</option>
+                            <option value="" hidden>{{__('chọn tầng')}}</option>
                             @foreach ($oFloorA as $i=>$f)
                             <option floorDetail="tow-a-{{++$i}}" floor="{{ $f->head_title1 }}">{{ $f->head_title1 }}</option>
                             @endforeach
@@ -388,7 +388,7 @@
                             @endforeach
                         </div>
                         <select class="listPlanTowSelect">
-                            <option value="" hidden>chọn tầng</option>
+                            <option value="" hidden>{{__('chọn tầng')}}</option>
                             @foreach ($oFloorC as $i=>$f)
                             <option floorDetail="tow-c-{{++$i}}" floor="{{ $f->head_title1 }}">{{ $f->head_title1 }}</option>
                             @endforeach
@@ -413,7 +413,7 @@
                             @endforeach
                         </div>
                         <select class="listPlanTowSelect">
-                            <option value="" hidden>chọn tầng</option>
+                            <option value="" hidden>{{__('chọn tầng')}}</option>
                             @foreach ($oFloorB as $i=>$f)
                             <option floorDetail="tow-b-{{++$i}}" floor="{{ $f->head_title1 }}">{{ $f->head_title1 }}</option>
                             @endforeach

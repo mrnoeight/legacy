@@ -15,9 +15,9 @@ class HomeController extends Controller
     public function index()
     {
         $oPage = Homepage::where('page_name', 'trang-chu')->first();
-        $oSliders = BlockInfo::where('block_type', 'slider_home')->get();
-        $oGalleries = BlockInfo::where('block_type', 'gallery_home')->get();
-        $oPartners = BlockInfo::where('block_type', 'partner')->get();
+        $oSliders = BlockInfo::where('block_type', 'slider_home')->orderBy('order_id')->get();
+        $oGalleries = BlockInfo::where('block_type', 'gallery_home')->orderBy('order_id')->get();
+        $oPartners = BlockInfo::where('block_type', 'partner')->orderBy('order_id')->get();
         $oLocations = BlockInfo::where('block_type', 'location')->get();
         $oText = BlockInfo::where('block_type', 'home_text')->get();
         
@@ -49,11 +49,29 @@ class HomeController extends Controller
         $apartment = BlockInfo::where('block_name', $_POST['code'])->first();
         $oText = BlockInfo::where('block_type', 'apartment_text')->get();
 
+        $aparts = BlockInfo::where('info2', $apartment->info2)
+                            ->where('info3', $apartment->info3)
+                            ->where('block_type', $apartment->block_type)
+                            ->where('id','<>',$apartment->id)
+                            ->orderBy('id', 'asc')
+                            ->get();
+
         $arrText = [];
         foreach ($oText as $text)
             $arrText[$text->block_name] = $text->head_title1;
-//print_r($arrText);exit;
-        $data = view('web.apartment_info', compact('apartment', 'arrText'))->render();
+
+        $backA = '';
+        $nextA = '';
+        foreach ($aparts as $a) {
+            //echo $a->info2.' '.$a->id;
+            if ($backA == '' && $a->id < $apartment->id)
+                $backA = $a->block_name;
+
+            if ($nextA == '' && $a->id > $apartment->id)
+                $nextA = $a->block_name;
+        }
+        //echo $backA. ' '.$nextA;
+        $data = view('web.apartment_info', compact('apartment', 'arrText', 'backA', 'nextA'))->render();
 
         return \response()->json(['status' => 1, 
                                     'data' => $data,
@@ -64,7 +82,7 @@ class HomeController extends Controller
     {
         $data = $request->all();
         Mail::send('mail', $data, function($message) {
-            $message->to('mrnoeight@gmail.com')->subject
+            $message->to('nam.designer@gmail.com')->subject
                 ('Legacy Lancaster Registration');
             $message->from('ttgholding.vn@gmail.com','Info'); //ttgholding.vn@gmail.com
         });

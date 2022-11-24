@@ -26,7 +26,7 @@
                 <div data-popup="idProHere{{ $p->id }}" class="item animate">
                     <h3>{{$p->head_tag1}}</h3>
                     <div class="imgPage">
-                        <div style="background: url({{ $p->gallery_url }}) center no-repeat">
+                        <div style="background: url({{ $p->banner_mb_url }}) center no-repeat">
                         </div>
                         <img data-src="{{ asset('assets/images/b.gif') }}" class="lazyload" />
                     </div>

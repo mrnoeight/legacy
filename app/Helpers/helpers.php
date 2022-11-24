@@ -87,6 +87,13 @@ if (!function_exists('tk1GetSidebar')) {
     }
 }
 
+if (!function_exists('tk1StripStyle')) {
+    function tk1StripStyle($string)
+    {
+        return preg_replace('/(<[^>]+) style=".*?"/i', '$1', $string);
+    }
+}
+
 
 if (!function_exists('tk1FormatDateLocal')) {
     function tk1FormatDateLocal($date, $type=1)

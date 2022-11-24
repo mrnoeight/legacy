@@ -8,12 +8,12 @@
 <!-- MAIN PAGE -->
 <main id="pHome">
     <section id="bannerPage" class="bannerPage  go-up">
-        <div class="img" style="background: url({{ $oPage->banner_url }}) bottom no-repeat"
+        <div class="img" style="background: url({{ $app->getLocale() == 'en' && $oPage->banner_en_url != '' ? $oPage->banner_en_url : $oPage->banner_url }}) bottom no-repeat"
             data-paroller-factor="0.4" data-paroller-type="background" data-paroller-direction="vertical"></div>
         <!-- <div class="imgMb" style="background: url({{ $oPage->banner_mb_url }}) bottom no-repeat"
             data-paroller-factor="-0.2" data-paroller-type="background" data-paroller-direction="vertical"></div> -->
         <div  class="imgMb" >
-            <img src="{{ $oPage->banner_mb_url }}" />
+            <img src="{{ $app->getLocale() == 'en' && $oPage->banner_mb_en_url != '' ? $oPage->banner_mb_en_url : $oPage->banner_mb_url }}" />
         </div>
 
         <!-- <div class="container">

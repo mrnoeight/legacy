@@ -17,7 +17,7 @@ class NewsController extends Controller
     public function index()
     {
         $oPage = Homepage::where('page_name', 'tin-tuc')->where('enabled',0)->firstOrFail();
-        $oNews = BlockInfo::where('block_type', 'news')->get();
+        $oNews = BlockInfo::where('block_type', 'news')->orderBy('block_date', 'DESC')->get();
 
         $menu_active = ['home'=>'', 'location'=>'', 'apartment'=>'', 'utilities'=>'', 'progress'=>'', 'gallery'=>'', 'news'=>' class=active', 'lancaster'=>'', 'about'=>''];
         
@@ -29,8 +29,10 @@ class NewsController extends Controller
         $id = intval($id);
 
         $news = BlockInfo::findOrFail($id);
+        $news->head_desc1 = tk1StripStyle($news->head_desc1);
         $news->head_desc1 = str_replace("<p><br></p>", "", $news->head_desc1);
-        $oNews = BlockInfo::where('block_type', 'news')->where('id', '<>', $id)->get()->take(3);
+        
+        $oNews = BlockInfo::where('block_type', 'news')->where('id', '<>', $id)->orderBy('block_date', 'DESC')->get()->take(3);
 
         $menu_active = ['home'=>'', 'location'=>'', 'apartment'=>'', 'utilities'=>'', 'progress'=>'', 'gallery'=>'', 'news'=>' class=active', 'lancaster'=>'', 'about'=>''];
         

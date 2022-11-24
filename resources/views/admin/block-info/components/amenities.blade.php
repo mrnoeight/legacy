@@ -33,6 +33,21 @@
 <div class="row">
     @foreach($locales as $locale)
         <div class="col"@if(!$loop->first) v-show="isFormLocalized && currentLocale == '{{ $locale }}'" v-cloak @endif>
+            <div class="form-group row" :class="{'has-danger': errors.has('head_tag1_{{ $locale }}'), 'has-success': this.fields.head_tag1_{{ $locale }} && this.fields.head_tag1_{{ $locale }}.valid }">
+                <label for="head_tag1_{{ $locale }}" class="col-md-2 col-form-label text-md-right">Title (Mobile)</label>
+                
+                <div class="col-md-9" :class="{'col-xl-8': !isFormLocalized }">
+                    <textarea v-model="form.head_tag1.{{ $locale }}" v-validate="''" class="form-control" :class="{'form-control-danger': errors.has('head_tag1_{{ $locale }}'), 'form-control-success': this.fields.head_tag1_{{ $locale }} && this.fields.head_tag1_{{ $locale }}.valid }" id="head_tag1_{{ $locale }}" head_tag1="head_tag1_{{ $locale }}" placeholder="Title for mobile"></textarea>
+                    <div v-if="errors.has('head_tag1_{{ $locale }}')" class="form-control-feedback form-text" v-cloak>{{'{{'}} errors.first('head_tag1_{{ $locale }}') }}</div>
+                </div>
+            </div>
+        </div>
+    @endforeach
+</div>
+
+<div class="row">
+    @foreach($locales as $locale)
+        <div class="col"@if(!$loop->first) v-show="isFormLocalized && currentLocale == '{{ $locale }}'" v-cloak @endif>
             <div class="form-group row" :class="{'has-danger': errors.has('info1_{{ $locale }}'), 'has-success': this.fields.info1_{{ $locale }} && this.fields.info1_{{ $locale }}.valid }">
                 <label for="info1_{{ $locale }}" class="col-md-2 col-form-label text-md-right">Description</label>
                 
@@ -85,17 +100,4 @@
     @endforeach
 </div>
 
-<div class="row">
-    @foreach($locales as $locale)
-        <div class="col"@if(!$loop->first) v-show="isFormLocalized && currentLocale == '{{ $locale }}'" v-cloak @endif>
-            <div class="form-group row" :class="{'has-danger': errors.has('info1_{{ $locale }}'), 'has-success': this.fields.info1_{{ $locale }} && this.fields.info1_{{ $locale }}.valid }">
-                <label for="info1_{{ $locale }}" class="col-md-2 col-form-label text-md-right">{{ trans('admin.homepage.columns.info1') }}</label>
-                
-                <div class="col-md-9" :class="{'col-xl-8': !isFormLocalized }">
-                    <textarea rows="8" v-model="form.info1.{{ $locale }}" v-validate="''" class="form-control" :class="{'form-control-danger': errors.has('info1_{{ $locale }}'), 'form-control-success': this.fields.info1_{{ $locale }} && this.fields.info1_{{ $locale }}.valid }" id="info1_{{ $locale }}" info1="info1_{{ $locale }}" placeholder="{{ trans('admin.homepage.columns.info1') }}"></textarea>
-                    <div v-if="errors.has('info1_{{ $locale }}')" class="form-control-feedback form-text" v-cloak>{{'{{'}} errors.first('info1_{{ $locale }}') }}</div>
-                </div>
-            </div>
-        </div>
-    @endforeach
-</div> -->
+ -->

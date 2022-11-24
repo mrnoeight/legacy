@@ -49,7 +49,7 @@ class Homepage extends Model implements HasMedia
 
     public $translatable = ['head_tag1', 'head_title1', 'head_desc1', 'mid_tag1', 'mid_title1', 'mid_desc1', 'info1', 'info2','info3','info4','info5','seo_title','seo_description','seo_author'];
     
-    protected $appends = ['resource_url', 'banner_url', 'banner_mb_url', 'middle_banner_url', 'middle_banner_mb_url', 'map_url', 'map_mb_url', 'map_en_url', 'map_en_mb_url'];
+    protected $appends = ['resource_url', 'banner_url', 'banner_mb_url' , 'banner_en_url', 'banner_mb_en_url', 'middle_banner_url', 'middle_banner_mb_url', 'map_url', 'map_mb_url', 'map_en_url', 'map_en_mb_url'];
     
 
     /* ************************ ACCESSOR ************************* */
@@ -65,7 +65,17 @@ class Homepage extends Model implements HasMedia
             ->maxFilesize(5*1024*1024) // Set the file size limit
             ->maxNumberOfFiles(1);
 
+        $this->addMediaCollection('banner_en')
+            ->accepts('image/*')
+            ->maxFilesize(5*1024*1024) // Set the file size limit
+            ->maxNumberOfFiles(1);
+
         $this->addMediaCollection('banner_mb')
+            ->accepts('image/*')
+            ->maxFilesize(5*1024*1024) // Set the file size limit
+            ->maxNumberOfFiles(1);
+
+        $this->addMediaCollection('banner_mb_en')
             ->accepts('image/*')
             ->maxFilesize(5*1024*1024) // Set the file size limit
             ->maxNumberOfFiles(1);
@@ -147,9 +157,19 @@ class Homepage extends Model implements HasMedia
         return $this->getFirstMediaUrl('banner') ? : "";
     }
 
+    public function getBannerEnUrlAttribute(): ?string
+    {
+        return $this->getFirstMediaUrl('banner_en') ? : "";
+    }
+
     public function getBannerMbUrlAttribute(): ?string
     {
         return $this->getFirstMediaUrl('banner_mb') ? : "";
+    }
+
+    public function getBannerMbEnUrlAttribute(): ?string
+    {
+        return $this->getFirstMediaUrl('banner_mb_en') ? : "";
     }
 
     public function getMiddleBannerUrlAttribute(): ?string

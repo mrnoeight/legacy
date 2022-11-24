@@ -19,5 +19,8 @@
         "sass": "^1.32.6",
         "sass-loader": "^8.0.2",
         "vue-loader": "15.9.5"
+    },
+    "dependencies": {
+        "vuedraggable": "^2.24.3"
     }
 }

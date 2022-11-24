@@ -243,6 +243,21 @@
 <div class="ml-md-auto" :class="isFormLocalized ? 'col-md-8' : 'col-md-10'">
     @if($mode === 'edit')
         @include('brackets/admin-ui::admin.includes.media-uploader', [
+            'mediaCollection' => $homepage->getMediaCollection('banner_en'),
+            'media' => $homepage->getThumbs200ForCollection('banner_en'),
+            'label' => 'Banner (EN)'
+        ])
+    @else
+        @include('brackets/admin-ui::admin.includes.media-uploader', [
+            'mediaCollection' => app(App\Models\Homepage::class)->getMediaCollection('banner_en'),
+            'label' => 'Banner (EN)'
+        ])
+    @endif
+</div>
+
+<div class="ml-md-auto" :class="isFormLocalized ? 'col-md-8' : 'col-md-10'">
+    @if($mode === 'edit')
+        @include('brackets/admin-ui::admin.includes.media-uploader', [
             'mediaCollection' => $homepage->getMediaCollection('banner_mb'),
             'media' => $homepage->getThumbs200ForCollection('banner_mb'),
             'label' => 'Mobile Banner'
@@ -251,6 +266,21 @@
         @include('brackets/admin-ui::admin.includes.media-uploader', [
             'mediaCollection' => app(App\Models\Homepage::class)->getMediaCollection('banner_mb'),
             'label' => 'Mobile Banner'
+        ])
+    @endif
+</div>
+
+<div class="ml-md-auto" :class="isFormLocalized ? 'col-md-8' : 'col-md-10'">
+    @if($mode === 'edit')
+        @include('brackets/admin-ui::admin.includes.media-uploader', [
+            'mediaCollection' => $homepage->getMediaCollection('banner_mb_en'),
+            'media' => $homepage->getThumbs200ForCollection('banner_mb_en'),
+            'label' => 'Mobile Banner (EN)'
+        ])
+    @else
+        @include('brackets/admin-ui::admin.includes.media-uploader', [
+            'mediaCollection' => app(App\Models\Homepage::class)->getMediaCollection('banner_mb_en'),
+            'label' => 'Mobile Banner (EN)'
         ])
     @endif
 </div>

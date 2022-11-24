@@ -31,7 +31,7 @@
             <div class="listImg">
                 @foreach ($oMaster as $master)
                 <div class="imgPage">
-                    <div style="background: url({{ $master->banner_url }}) center no-repeat"></div>
+                    <div style="background: url({{ $app->getLocale() == 'en' && $master->banner_mb_url != '' ? $master->banner_mb_url : $master->banner_url }}) center no-repeat"></div>
                     <img data-src="{{ asset('assets/images/thumb3.gif') }}" class="lazyload" />
                 </div>
                 @endforeach
@@ -199,6 +199,7 @@
     </section>
     @endif
 
+    @if (!in_array('lan.club', $arrSecDisables))
     <section class="captionCardWrap">
         <div class="caption">
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nisi, adipiscing convallis ut ut diam ut
@@ -229,6 +230,7 @@
             </div>
         </div>
     </section>
+    @endif
 
     @if (!in_array('lan.consultant', $arrSecDisables))
     <section id="ConsultingTeam" class="teamPageWrap pd1" style="background: url({{ $oPCon->banner_url }}) center no-repeat" >
