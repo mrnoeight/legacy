@@ -216,9 +216,9 @@
                                 class="lazyload"></span>
                         <div class="submenu">
                             <a href="{{ route('apartment') }}">{{__('MẶT BẰNG TIỆN ÍCH TẦNG TRỆT')}}</a>
-                            <a href="{{ route('apartment') }}">{{__('MẶT BẰNG TIỆN ÍCH TẦNG 6')}}</a>
-                            <a href="{{ route('apartment') }}">{{__('MẶT BẰNG TIỆN ÍCH TẦNG 20')}}</a>
-                            <a href="{{ route('apartment') }}">{{__('MẶT BẰNG TIỆN ÍCH TẦNG THƯỢNG')}}</a>
+                            <a href="{{ route('apartment') }}?floorplan=tab1">{{__('MẶT BẰNG TIỆN ÍCH TẦNG 6')}}</a>
+                            <a href="{{ route('apartment') }}?floorplan=tab2">{{__('MẶT BẰNG TIỆN ÍCH TẦNG 20')}}</a>
+                            <a href="{{ route('apartment') }}?floorplan=tab3">{{__('MẶT BẰNG TIỆN ÍCH TẦNG THƯỢNG')}}</a>
                             <!-- <a href="{{ route('apartment') }}#masterplan">Master plan</a>
                             <a href="{{ route('apartment') }}#floorplan">{{ isset($arrMenuText['ground_utility']) ? $arrMenuText['ground_utility'] : 'Mặt bằng tiện ích' }}</a>
                             <a href="{{ route('apartment') }}#rooftop">{{ isset($arrMenuText['floor_plan']) ? $arrMenuText['floor_plan'] : 'Mặt bằng toà' }}</a> -->
